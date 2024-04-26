@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Témoins de Christ - @yield('title')</title>
+    <title>Temoins de Christ - @yield('title')</title>
     <link rel="icon" type="image/x-icon" href="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +21,9 @@
 
     <!-- Libraries Stylesheet -->
 
-    @vite('resources/lib/animate/animate.min.css')
     @vite('resources/lib/owlcarousel/assets/owl.carousel.min.css')
     @vite('resources/lib/lightbox/css/lightbox.min.css')
+    @vite('resources/lib/animate/animate.min.css')
 
 
     <!-- Customized Bootstrap Stylesheet -->
@@ -30,7 +31,13 @@
 
     <!-- Template Stylesheet -->
     @vite('resources/css/style.css')
-
+    @vite('resources/lib/owlcarousel/owl.carousel.min.js')
+    @vite('resources/lib/counterup/counterup.min.js')
+    @vite('resources/lib/wow/wow.min.js')
+    @vite('resources/lib/lightbox/js/lightbox.min.js')
+    @vite('resources/lib/waypoints/waypoints.min.js')
+    @vite('resources/lib/easing/easing.min.js')
+    @vite('resources/js/main.js')
     @vite('resources/js/app.js')
 </head>
 
@@ -45,21 +52,20 @@
 <!-- Spinner End -->
 
 
-@include('.partials.topbar')
+{{--@include('.partials.topbar')--}}
 
 @include('.partials.navbar')
 
 @include('.partials.carousel')
 
-@include('.partials.banner')
 
-
+{{--@include('.partials.banner')--}}
 
 @yield('content')
 
 @include('.partials.footer')
 
-@include('partials.copyright')
+@include('.partials.copyright')
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
@@ -68,6 +74,8 @@
 <!-- JavaScript Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" ></script>
+
 
 </body>
 

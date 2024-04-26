@@ -7,5 +7,9 @@ Route::get('/', function () {
 });
 
 Route::get('/accueil', function () {
-    return view('layouts.app');
+    return view('index');
+});
+
+Route::get('/galerie', function () {
+    return view('galerie');
 });

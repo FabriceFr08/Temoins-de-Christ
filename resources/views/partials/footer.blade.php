@@ -5,8 +5,8 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <h4 class="text-white mb-4">JustDanc</h4>
-                                <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                                <h4 class="text-white mb-4">Temoins de Christ</h4>
+                                <p class="text-white mb-3"> Mais vous recevrez une puissance, le Saint Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu'aux extrémités de la terre</p>
                                 <div class="d-flex">
                                     <a class="btn btn-lg-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
@@ -35,8 +35,8 @@
                             <div class="d-flex align-items-center">
                                 <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fas fa-envelope"></i></a>
                                 <div class="text-white ms-2">
-                                    <p class="mb-0">info@example.com</p>
-                                    <p class="mb-0">info@example.com</p>
+                                    <p class="mb-0">1000temoinsde</p>
+                                    <p class="mb-0">christ@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -56,11 +56,11 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <h4 class="text-white mb-4">Newsletter</h4>
-                                <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                                <h4 class="text-white mb-4">Temoins de Christ</h4>
+                                <p class="text-white mb-3">Inscrivez vous pour recevoir toute nouvelle information concernant nos activités.</p>
                                 <div class="position-relative mx-auto rounded-pill">
-                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                                    <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email">
+                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">S'inscrire</button>
                                 </div>
                             </div>
                         </div>
