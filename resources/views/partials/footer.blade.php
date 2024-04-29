@@ -43,14 +43,14 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="#" class="footer-link"> About Us</a>
-                            <a href="#" class="footer-link"> Classes</a>
-                            <a href="#" class="footer-link"> Privacy Policy</a>
-                            <a href="#" class="footer-link"> Terms & Conditions</a>
-                            <a href="#" class="footer-link"> Schedule</a>
-                            <a href="#" class="footer-link"> FAQ</a>
-                            <a href="#" class="footer-link"> Contact Us</a>
+                            <h4 class="text-white mb-4">Nos activités</h4>
+                            <a href="#" class="footer-link"> Evangélisation</a>
+                            <a href="#" class="footer-link"> Samedi de Réveil</a>
+                            <a href="#" class="footer-link"> Notre galerie</a>
+{{--                            <a href="#" class="footer-link"> Terms & Conditions</a>--}}
+{{--                            <a href="#" class="footer-link"> Schedule</a>--}}
+{{--                            <a href="#" class="footer-link"> FAQ</a>--}}
+{{--                            <a href="#" class="footer-link"> Contact Us</a>--}}
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
