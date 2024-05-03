@@ -21,3 +21,6 @@ Route::get('/bibliotheque-hfc', function () {
 Route::get('/formations', function () {
     return view('formation');
 })->name('formation');
+
+Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']
+)->name('blog');

@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{route('index')}}" class="nav-item nav-link active">Accueil</a>
-                <a href="{{route('galerie')}}" class="nav-item nav-link">Blog</a>
+                <a href="{{route('blog')}}" class="nav-item nav-link">Blog</a>
                 <a href="{{route('bibliotheque')}}" class="nav-item nav-link">Bibliothèque HFC</a>
                 <a href="{{route('formation')}}" class="nav-item nav-link">Formations</a>
                 <div class="nav-item dropdown">

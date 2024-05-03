@@ -2,7 +2,6 @@
 
 @section('title', 'Formations')
 
-
 @section('content')
 
     <!-- Pricing Plan Start -->

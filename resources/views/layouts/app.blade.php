@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Temoins de Christ - @yield('title')</title>
+    <title>@yield('title') - Temoins de Christ</title>
     <link rel="icon" type="image/x-icon" href="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
