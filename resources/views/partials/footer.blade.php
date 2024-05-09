@@ -8,10 +8,10 @@
                                 <h4 class="text-white mb-4">Temoins de Christ</h4>
                                 <p class="text-white mb-3"> Mais vous recevrez une puissance, le Saint Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu'aux extrémités de la terre</p>
                                 <div class="d-flex">
-                                    <a class="btn btn-lg-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn btn-lg-square btn-success rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -20,20 +20,20 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Address</h4>
                             <div class="d-flex align-items-center mb-3">
-                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fas fa-map-marker-alt"></i></a>
+                                <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fas fa-map-marker-alt"></i></a>
                                 <div class="text-white ms-2">
                                     <p class="mb-0">0123.. Street, New York, USA</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-3">
-                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fa fa-phone-alt"></i></a>
+                                <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fa fa-phone-alt"></i></a>
                                 <div class="text-white ms-2">
                                     <p class="mb-0">+012 345 67890</p>
                                     <p class="mb-0">+012 345 67890</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
-                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fas fa-envelope"></i></a>
+                                <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fas fa-envelope"></i></a>
                                 <div class="text-white ms-2">
                                     <p class="mb-0">1000temoinsde</p>
                                     <p class="mb-0">christ@gmail.com</p>
@@ -60,7 +60,7 @@
                                 <p class="text-white mb-3">Inscrivez vous pour recevoir toute nouvelle information concernant nos activités.</p>
                                 <div class="position-relative mx-auto rounded-pill">
                                     <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email">
-                                    <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">S'inscrire</button>
+                                    <button type="button" class="btn btn-success rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">S'inscrire</button>
                                 </div>
                             </div>
                         </div>

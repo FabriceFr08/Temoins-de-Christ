@@ -8,10 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'titre',
+        'contenu',
+        'datePublication',
+        'categorie_article_id',
+        'image',
 
-    public function categorie_article()
+    ];
+
+    public function categorie()
     {
-        return $this->belongsTo(CategorieArticle::class);
+        return $this->belongsTo(CategorieArticle::class, 'categorie_article_id');
     }
 
     public function commentaires()

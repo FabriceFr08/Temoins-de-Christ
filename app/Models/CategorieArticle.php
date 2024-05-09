@@ -9,6 +9,12 @@ class CategorieArticle extends Model
 {
     use HasFactory;
 
+    protected $table = 'categorie_articles';
+
+    protected $fillable = [
+        'nomCategorie',
+    ];
+
     public function articles()
     {
         return $this->hasMany(Article::class);

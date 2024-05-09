@@ -24,7 +24,7 @@
                             <p class="border-bottom border-light mb-2 pb-2">Plante l'univers de la formation</p>
                             <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>
                         </div>
-                        <a href="" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
+                        <a href="" class="btn btn-success py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
@@ -54,7 +54,7 @@
                             <p class="border-bottom border-light mb-2 pb-2">Témoigner de Christ</p>
                             <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>
                         </div>
-                        <a href="" class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
+                        <a href="" class="btn btn-success py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                         Tu auras aussi un accompagnateur attitré, qui sera avec toi durant toute la formation, pour t’aider à persévérer jusqu’au bout, en répondant à toutes tes questions.
                     </p>
 
-{{--                    <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Learn More</a>--}}
+{{--                    <a class="btn btn-success rounded-pill text-white py-3 px-5" href="#">Learn More</a>--}}
                 </div>
             </div>
         </div>

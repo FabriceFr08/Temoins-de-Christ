@@ -544,21 +544,21 @@
                         <div class="col">
                             <div class="row wow fadeInRight" data-wow-delay="0.3s">
                                 <div class="d-flex align-items-center col-md mb-5">
-                                    <div class="mb-3"><i class="fa fa-home fa-2x text-primary"></i></div>
+                                    <div class="mb-3"><i class="fa fa-home fa-2x text-success"></i></div>
                                     <div class="ms-4">
                                         <h4>Pays</h4>
                                         <p class="mb-0">CAMEROUN, Yaoundé</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center col-md mb-5">
-                                    <div class="mb-3"><i class="fa fa-map-marker-alt fa-2x text-primary"></i></div>
+                                    <div class="mb-3"><i class="fa fa-map-marker-alt fa-2x text-success"></i></div>
                                     <div class="ms-4">
                                         <h4>Addresse</h4>
                                         <p class="mb-0">GP BITENG</p>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center mb-5 col-md">
-                                    <div class="mb-3"><i class="fa fa-phone-alt fa-2x text-primary"></i></div>
+                                    <div class="mb-3"><i class="fa fa-phone-alt fa-2x text-success"></i></div>
                                     <div class="ms-4">
                                         <h4>Mobile</h4>
                                         <p class="mb-0">+237 658010572</p>

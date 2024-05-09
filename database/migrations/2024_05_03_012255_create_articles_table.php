@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('titre');
             $table->text('contenu');
+            $table->string('image')->nullable(); // Nouveau champ pour l'image
             $table->date('datePublication');
             $table->foreignId('categorie_article_id')->constrained();
             $table->timestamps();
