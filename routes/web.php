@@ -6,7 +6,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/galerie', function () {
@@ -20,6 +20,19 @@ Route::get('/bibliotheque-hfc', function () {
 Route::get('/formations', function () {
     return view('formation');
 })->name('formation');
+
+Route::get('/reseau', function () {
+    return view('reseau_tdc.index');
+})->name('reseau');
+
+Route::get('/inscription', function () {
+    return view('reseau_tdc.inscription');
+})->name('inscription');
+
+
+Route::get('/don', function () {
+    return view('don');
+})->name('don');
 
 
 Route::get('/blog', [FrontController::class, 'articles'])->name('blog');

@@ -45,7 +45,7 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Nos activités</h4>
                             <a href="#" class="footer-link"> Evangélisation</a>
-                            <a href="#" class="footer-link"> Samedi de Réveil</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSes7lro5XUR3xxn3CBtxNns1M9wyCbX2oc2hL3379cC-F9uYA/viewform" class="footer-link"> Samedi de Réveil</a>
                             <a href="#" class="footer-link"> Notre galerie</a>
 {{--                            <a href="#" class="footer-link"> Terms & Conditions</a>--}}
 {{--                            <a href="#" class="footer-link"> Schedule</a>--}}
