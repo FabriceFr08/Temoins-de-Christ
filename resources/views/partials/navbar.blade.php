@@ -12,21 +12,21 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{route('index')}}" class="nav-item nav-link active">Accueil</a>
                 <a href="{{route('blog')}}" class="nav-item nav-link">Blog</a>
-                <a href="{{route('bibliotheque')}}" class="nav-item nav-link">Bibliothèque HFC</a>
+{{--                <a href="{{route('bibliotheque')}}" class="nav-item nav-link">Bibliothèque HFC</a>--}}
                 <a href="{{route('formation')}}" class="nav-item nav-link">Formations</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Activités</a>
                     <div class="dropdown-menu m-0">
                         <a href="classes.html" class="dropdown-item">Evangélisation</a>
-                        <a href="training.html" class="dropdown-item">Samedi de Réveil</a>
-                        <a href="testimonial.html" class="dropdown-item">Témoignages</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSes7lro5XUR3xxn3CBtxNns1M9wyCbX2oc2hL3379cC-F9uYA/viewform" class="dropdown-item">Samedi de Réveil</a>
+                        <a href="testimonial.html" class="dropdown-item">Jeudi des témoins embrasés</a>
                     </div>
                 </div>
                 <a href="blog.html" class="nav-item nav-link">Réseau des TDC</a>
 
 {{--                <a href="contact.html" class="nav-item nav-link">Articles</a>--}}
             </div>
-            <a href="#" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire un don</a>
+            <a href="{{route('don')}}" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire un don</a>
         </div>
     </nav>
 </div>
