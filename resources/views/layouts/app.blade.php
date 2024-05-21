@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Temoins de Christ - @yield('title')</title>
+    <title>@yield('title') - Temoins de Christ</title>
     <link rel="icon" type="image/x-icon" href="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -45,7 +45,7 @@
 
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
         <span class="sr-only">Loading...</span>
     </div>
 </div>
@@ -56,7 +56,7 @@
 
 @include('.partials.navbar')
 
-@include('.partials.carousel')
+{{-- @include('.partials.carousel') --}}
 
 
 {{--@include('.partials.banner')--}}
@@ -68,7 +68,7 @@
 @include('.partials.copyright')
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+<a href="#" class="btn btn-success btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
 
 <!-- JavaScript Libraries -->

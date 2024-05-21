@@ -112,7 +112,7 @@
 
 .topbar {
     padding: 2px 10px 2px 20px;
-    background: var(--bs-primary) !important;
+    background: var(--bs-success) !important;
 }
 
 .topbar a,
@@ -128,7 +128,7 @@
 
 @media (max-width: 576px) {
     .topbar {
-        display: none;    
+        display: none;
     }
 }
 /*** Topbar End ***/
@@ -155,7 +155,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--bs-primary) !important;
+    color: var(--bs-success) !important;
 }
 
 .navbar-light .navbar-brand img {
@@ -191,7 +191,7 @@
 }
 
 .dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary);
+    background: var(--bs-success);
     color: var(--bs-white);
 }
 
@@ -211,7 +211,7 @@
 
     .navbar.navbar-expand-lg .navbar-toggler {
         padding: 10px 20px;
-        border: 1px solid var(--bs-primary);
+        border: 1px solid var(--bs-success);
         color: var(--bs-primary);
     }
 
@@ -241,7 +241,7 @@
         border-bottom: 1px solid rgba(255, 255, 255, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: var(--bs-light) !important;
@@ -253,7 +253,7 @@
 
 /*** Carousel Hero Header Start ***/
 .header-carousel {
-    position: relative; 
+    position: relative;
 }
 
 .header-carousel .owl-nav .owl-prev {
@@ -264,8 +264,8 @@
     left: 20px;
     transform: translateY(-50%);
     border-radius: 60px;
-    background: var(--bs-primary);
-    color: var(--bs-white);
+    background: var(--bs-success);
+    color: var(--bs-success);
     font-size: 26px;
     display: flex;
     align-items: center;
@@ -281,8 +281,8 @@
     right: 20px;
     transform: translateY(-50%);
     border-radius: 60px;
-    background: var(--bs-primary);
-    color: var(--bs-white);
+    background: var(--bs-success);
+    color: var(--bs-success);
     font-size: 26px;
     display: flex;
     align-items: center;
@@ -297,8 +297,8 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+    box-shadow: inset 100px 0 0 0 var(--bs-success) !important;
+    color: var(--bs-success) !important;
 }
 
 @media (max-width: 576px) {
@@ -311,7 +311,7 @@
     .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
         width: 95% !important;
     }
- 
+
 }
 
 .header-carousel .header-carousel-item,
@@ -352,13 +352,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .3);
 }
 
 .header-carousel .header-carousel-item .carousel-caption .carousel-caption-content {
     position: relative;
     width: 75%;
-    
+
 }
 /*** Carousel Hero Header End ***/
 
@@ -371,7 +371,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
 }
 
 @media (max-width: 992px) {
@@ -415,7 +415,7 @@
     top: 0;
     border-radius: 10px 10px 0 0;
     background-color: var(--bs-primary);
-    
+
 }
 .counter-facts .counter .counter-icon {
     position: relative;
@@ -426,7 +426,7 @@
     line-height: 90px;
     color: var(--bs-primary) !important;
     display: flex;
-    
+
 }
 
 .counter-facts .counter h3 {
@@ -446,7 +446,7 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .counter-facts .counter { margin-bottom: 40px; 
+    .counter-facts .counter { margin-bottom: 40px;
     }
 }
 /*** Counter Facts End ***/
@@ -575,7 +575,7 @@
 .blog-carousel .owl-nav .owl-prev:hover,
 .blog-carousel .owl-nav .owl-next:hover {
     box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+    color: var(--bs-success) !important;
 }
 
 .blog .blog-item .blog-img {
@@ -620,7 +620,7 @@
 .team-carousel .owl-nav .owl-prev:hover,
 .team-carousel .owl-nav .owl-next:hover {
     box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+    color: var(--bs-succes) !important;
 }
 
 .team .team-carousel .team-item .team-img {
@@ -746,7 +746,7 @@
     height: 44px;
     border-radius: 50%;
     transition: 0.5s;
-    
+
 
 }
 
@@ -864,7 +864,7 @@
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     box-shadow: inset 100px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+    color: var(--bs-success) !important;
 }
 /*** Testimonial End ***/
 
@@ -872,7 +872,7 @@
 /*** Contact Start ***/
 .contact button.btn.btn-primary.w-100:hover {
     box-shadow: inset 700px 0 0 0 var(--bs-light) !important;
-    color: var(--bs-primary) !important;
+    color: var(--bs-success) !important;
 }
 /*** Contact End ***/
 

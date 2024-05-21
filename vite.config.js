@@ -12,7 +12,7 @@ export default defineConfig({
                 'resources/lib/owlcarousel/assets/owl.carousel.min.css',
                 'resources/lib/lightbox/css/lightbox.min.css',
                 'resources/lib/animate/animate.min.css',
-                'resources/lib/lightbox/css/lightbox.min.map',
+                // 'resources/lib/lightbox/css/lightbox.min.map',
 
                 'resources/lib/owlcarousel/owl.carousel.min.js',
                 'resources/lib/counterup/counterup.min.js',
