@@ -12,7 +12,7 @@
             <div class="owl-carousel testimonial-carousel pt-5 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="testimonial-item border text-center rounded">
                     <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                        <img class="img-fluid " src="img/don/paypal.png" alt="img">
+                        <img class="img-fluid" src="img/don/paypal.png" alt="img">
                     </div>
                     <div class="position-relative" style="margin-top: 140px;">
                         <h5 class="mb-0">Paypal</h5>

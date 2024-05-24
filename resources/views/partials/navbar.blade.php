@@ -17,12 +17,12 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Activités</a>
                     <div class="dropdown-menu m-0">
-                        <a href="classes.html" class="dropdown-item">Evangélisation</a>
+                        <a href="" class="dropdown-item">Evangélisation</a>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSes7lro5XUR3xxn3CBtxNns1M9wyCbX2oc2hL3379cC-F9uYA/viewform" class="dropdown-item">Samedi de Réveil</a>
-                        <a href="testimonial.html" class="dropdown-item">Jeudi des témoins embrasés</a>
+                        <a href="" class="dropdown-item">Jeudi des témoins embrasés</a>
                     </div>
                 </div>
-                <a href="blog.html" class="nav-item nav-link">Réseau des TDC</a>
+                <a href="{{route('reseau')}}" class="nav-item nav-link">Réseau des TDC</a>
 
 {{--                <a href="contact.html" class="nav-item nav-link">Articles</a>--}}
             </div>
