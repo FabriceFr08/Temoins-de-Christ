@@ -1,73 +1,176 @@
 @extends('layouts.app')
 
 @section('title', 'Faire un don')
+
 @section('content')
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5">
-        <div class="container py-5">
-            <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">FAIRE UN DON</h4>
-                <h1 class="display-5 mb-0 wow fadeInUp" data-wow-delay="0.3s">Faire un don pour soutenir l'oeuvre</h1>
+    <!-- Don -->
+    <div class="container py-5">
+        <div class="pb-5 text-center">
+            <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">FAIRE UN DON</h4>
+            <h6 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.3s">Pour les dîmes, offrandes, prémices & partenariat avec Frère Elior ou son ministère</h6>
+
+        </div>
+        <div class="row text-center">
+            <!-- PayPal -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/don/cam.jpg" alt="PayPal" class="img-fluid mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Caméroun</h5>
+                        <button type="button" class="btn btn-outline-secondary btn-donation" data-method="PayPal" data-bs-toggle="modal" data-bs-target="#camerounModal">
+                            Vous êtes au cameroun
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="owl-carousel testimonial-carousel pt-5 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="testimonial-item border text-center rounded">
-                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                        <img class="img-fluid " src="img/don/paypal.png" alt="img">
+            <!-- Carte Bancaire -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/don/rdc.jpg" alt="Carte Bancaire" class="img-fluid mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">RDC</h5>
+                        <button type="button" class="btn btn-outline-secondary btn-donation" data-method="Carte Bancaire" data-bs-toggle="modal" data-bs-target="#rdcModal">
+                            Vous êtes en RDC
+                        </button>
                     </div>
-                    <div class="position-relative" style="margin-top: 140px;">
-                        <h5 class="mb-0">Paypal</h5>
-{{--                        <p>Profession</p>--}}
-                    </div>
-{{--                    <div class="testimonial-content p-4">--}}
-{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
                 </div>
-                <div class="testimonial-item border text-center rounded">
-                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                        <img class="img-fluid" src="img/don/visa.png" alt="img">
+            </div>
+            <!-- Western Union -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/don/senegal.jpg" alt="Western Union" class="img-fluid mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Sénégal</h5>
+                        <button type="button" class="btn btn-outline-secondary btn-donation" data-method="Western Union" data-bs-toggle="modal" data-bs-target="#senegalModal">
+                            Vous êtes au Sénégal
+                        </button>
                     </div>
-                    <div class="position-relative" style="margin-top: 140px;">
-                        <h5 class="mb-0">Carte Bancaire</h5>
-{{--                        <p>Profession</p>--}}
-
-                    </div>
-{{--                    <div class="testimonial-content p-4">--}}
-{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
                 </div>
-                <div class="testimonial-item border text-center rounded">
-                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                        <img class="img-fluid rounded-circle" src="img/don/Western-Union.jpg" alt="img">
+            </div>
+            <!-- Autre Méthode -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="img/don/monde.jpg" alt="Autre Méthode" class="img-fluid mb-3" style="width: 100px; height: 100px;">
+                        <h5 class="card-title">Partout</h5>
+                        <button type="button" class="btn btn-outline-secondary btn-donation" data-method="Autre Méthode" data-bs-toggle="modal" data-bs-target="#otherModal">
+                            Partout au monde
+                        </button>
                     </div>
-                    <div class="position-relative" style="margin-top: 140px;">
-                        <h5 class="mb-0">Western Union</h5>
-{{--                        <p>Profession</p>--}}
-                    </div>
-{{--                    <div class="testimonial-content p-4">--}}
-{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
-{{--                        </p>--}}
-{{--                    </div>--}}
                 </div>
-{{--                <div class="testimonial-item border text-center rounded">--}}
-{{--                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">--}}
-{{--                        <img class="img-fluid rounded-circle" src="img/don/M-pesa-logo.png" alt="img">--}}
-{{--                    </div>--}}
-{{--                    <div class="position-relative" style="margin-top: 140px;">--}}
-{{--                        <h5 class="mb-0">Western Union</h5>--}}
-{{--                        <p>Profession</p>--}}
-{{--                    </div>--}}
-{{--                    --}}{{--                    <div class="testimonial-content p-4">--}}
-{{--                    --}}{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
-{{--                    --}}{{--                        </p>--}}
-{{--                    --}}{{--                    </div>--}}
-{{--                </div>--}}
-
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="camerounModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">Cameroun</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div> Orange Money : 690515097</div><br/>
+                    <div> MTN Mobile Money : 681037893</div><br/>
+                    <div>Nom : SONKOUE Foundje Jonathan Junior</div>
+                </div>
+                <div class="modal-footer">
+{{--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>--}}
+{{--                    <button type="button" class="btn btn-primary">Faire un don</button>--}}
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="rdcModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">RDC</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div> Orange Money : +243 812224755</div><br/>
+                    <div> M-Pesa : +243 891237049</div><br/>
+                    <div>Nom : Mathieu GBOMA</div>
+                </div>
+                <div class="modal-footer">
+{{--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>--}}
+                    {{--                    <button type="button" class="btn btn-primary">Faire un don</button>--}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="senegalModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">Sénégal</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div> Orange Money : 785332300</div><br/>
+
+                    <div>Nom : Lauriane Evodie Niankini</div>
+                </div>
+                <div class="modal-footer">
+{{--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>--}}
+                    {{--                    <button type="button" class="btn btn-primary">Faire un don</button>--}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="otherModal" tabindex="-1" role="dialog" aria-labelledby="donationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donationModalLabel">Canada, USA, partout dans le monde</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div> Paypal : eliorkossia2@gmail.com || <a href="https://paypal.me./eliorkossia2"></a> </div><br/>
+
+                    <div> Interac Canada : eliorkossia@gmail.com</div><br/>
+
+                    <div>Western Union / MoneyGram / Ria Transfer</div><br/>
+
+                    <div>Prénom : Kossia</div>
+                    <div>Nom : GBOMA</div>
+                    <div>Villet et Pays : Ermont, France</div>
+                    <div>Tel : +33 7 67 74 49 33</div>
+
+                </div>
+                <div class="modal-footer">
+{{--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>--}}
+                    {{--                    <button type="button" class="btn btn-primary">Faire un don</button>--}}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function(){
+            $('#donationModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Bouton qui a déclenché le modal
+                var method = button.data('method') // Extraire l'info depuis les attributs data-*
+
+                var modal = $(this)
+                modal.find('.modal-title').text('Faire un don via ' + method)
+                modal.find('.modal-body').html('<p>Instructions spécifiques pour faire un don via ' + method + '.</p>')
+            })
+        });
+    </script>
+@endpush

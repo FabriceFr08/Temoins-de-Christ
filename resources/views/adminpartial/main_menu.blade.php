@@ -40,6 +40,25 @@
                     </li>
                 </ul>
             </li>
+            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="Templates">Réseau</span></a>
+                <ul class="menu-content">
+                    <li><a class="menu-item" href="#"><i></i><span data-i18n="Vertical">Villes</span></a>
+                        <ul class="menu-content">
+                            <li class="{{ Request::is('villes/create') ? 'active' : '' }}">
+                                <a class="menu-item" href="{{ route('villes.create') }}">
+                                    <i></i><span data-i18n="Classic Menu">Ajouter une ville</span>
+                                </a>
+                            </li>
+                            <li class="{{ Request::is('villes') ? 'active' : '' }}">
+                                <a class="menu-item" href="{{ route('villes.index') }}">
+                                    <i></i><span>lister les villes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

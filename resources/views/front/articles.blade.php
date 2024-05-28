@@ -25,7 +25,7 @@
                             <a href="{{ route('article.show', $article->id) }}" class="h4 mb-3 d-block">{{ $article->titre }}</a>
                             <p class="mb-3">{{ Str::limit(strip_tags($article->contenu), 200) }}</p>
                             <!-- Ajoutez d'autres détails de l'article et un lien pour lire la suite -->
-                            <a class="btn btn-success rounded-pill text-white py-2 px-4" href="{{ route('article.show', $article->id) }}">Read More</a>
+                            <a class="btn btn-success rounded-pill text-white py-2 px-4" href="{{ route('article.show', $article->id) }}">Lire plus</a>
                         </div>
                     </div>
                 @endforeach

@@ -13,22 +13,28 @@ Route::get('/galerie', function () {
     return view('galerie');
 })->name('galerie');
 
-Route::get('/bibliotheque-hfc', function () {
-    return view('bibliotheque');
-})->name('bibliotheque');
 
 Route::get('/formations', function () {
     return view('formation');
 })->name('formation');
 
+Route::get('/venir-a-christ', function () {
+    return view('venir_a_christ');
+})->name('venir-a-christ');
+
 Route::get('/reseau', function () {
     return view('reseau_tdc.index');
 })->name('reseau');
 
-Route::get('/inscription', function () {
-    return view('reseau_tdc.inscription');
-})->name('inscription');
+Route::get('/profil', function () {
+    return view('reseau_tdc.profil');
+})->name('profil');
 
+Route::controller(\App\Http\Controllers\reseau_tdc\InscriptionController::class)->group(function () {
+    Route::get('/reseau/services', 'index')->name('reseau.services');
+    Route::get('/reseau/inscription', 'create')->name('reseau.inscription');
+    Route::post('/reseau/inscription', 'store')->name('reseau.store');
+});
 
 Route::get('/don', function () {
     return view('don');
@@ -41,29 +47,10 @@ Route::get('/accueil', [FrontController::class, 'index'])->name('index');
 Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name('article.show');
 
 
+Route::resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
 
-// Route::get('/autre', [\App\Http\Controllers\ArticleController::class, 'indexa']
-// )->name('articles');
-// Route::get('/detail', [\App\Http\Controllers\ArticleController::class, 'detail']
-// )->name('blag');
+Route::resource('articles', ArticleController::class);  // Routes pour les articles
 
-
-// Routes pour les catégories d'articles
-Route::get('/categories', [CategorieArticleController::class, 'index'])->name('categories.index');
-Route::get('/categories/create', [CategorieArticleController::class, 'create'])->name('categories.create');
-Route::post('/categories', [CategorieArticleController::class, 'store'])->name('categories.store');
-Route::get('/categories/{categorieArticle}', [CategorieArticleController::class, 'show'])->name('categories.show');
-Route::get('/categories/{categorieArticle}/edit', [CategorieArticleController::class, 'edit'])->name('categories.edit');
-Route::put('/categories/{categorieArticle}', [CategorieArticleController::class, 'update'])->name('categories.update');
-Route::delete('/categories/{categorieArticle}', [CategorieArticleController::class, 'destroy'])->name('categories.destroy');
+Route::resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
 
 
-// Routes pour les articles
-
-Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
-Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
-Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
-Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
-Route::put('/articles/{article}', [ArticleController::class, 'update'])->name('articles.update');
-Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy');
