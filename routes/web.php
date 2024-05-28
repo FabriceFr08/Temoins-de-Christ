@@ -13,13 +13,14 @@ Route::get('/galerie', function () {
     return view('galerie');
 })->name('galerie');
 
-Route::get('/bibliotheque-hfc', function () {
-    return view('bibliotheque');
-})->name('bibliotheque');
 
 Route::get('/formations', function () {
     return view('formation');
 })->name('formation');
+
+Route::get('/venir-a-christ', function () {
+    return view('venir_a_christ');
+})->name('venir-a-christ');
 
 Route::get('/reseau', function () {
     return view('reseau_tdc.index');
@@ -46,14 +47,10 @@ Route::get('/accueil', [FrontController::class, 'index'])->name('index');
 Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name('article.show');
 
 
-
-// Route::get('/autre', [\App\Http\Controllers\ArticleController::class, 'indexa']
-// )->name('articles');
-// Route::get('/detail', [\App\Http\Controllers\ArticleController::class, 'detail']
-// )->name('blag');
-
-
-
 Route::resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
 
 Route::resource('articles', ArticleController::class);  // Routes pour les articles
+
+Route::resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
+
+

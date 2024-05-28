@@ -1,4 +1,5 @@
 import './bootstrap';
+import fr from "intl-tel-input/i18n/fr";
 
 
 let currentStep = 0; // Etape initiale du formulaire
@@ -49,6 +50,7 @@ function validateForm() {
     var x, y, i ,valid = true;
     x = document.getElementsByClassName("step");
     y = x[currentStep].getElementsByTagName("input");
+    
     if (!validateNom() || !validatePrenom() || !validateEmail() || !validatePays() || !validateVille()) {
         valid = false;
     }
@@ -234,53 +236,29 @@ function validateMessage() {
 //     return valid;
 // }
 
-
-
-
-// Function to populate the select element with country options
-// Function to fetch countries and populate the select element
-async function fetchCountries() {
-    try {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        const countries = await response.json();
-
-        populateCountrySelect(countries);
-    } catch (error) {
-        console.error('Error fetching countries:', error);
-    }
-}
-
-// Function to populate the select element with country options
-function populateCountrySelect(countries) {
-    // Sort countries alphabetically by their common name
-    countries.sort((a, b) => {
-        if (a.name.common < b.name.common) return -1;
-        if (a.name.common > b.name.common) return 1;
-        return 0;
-    });
-
-    const select = document.getElementById('countrySelect');
-    countries.forEach(country => {
-        const option = document.createElement('option');
-        option.value = country.cca2; // Code du pays
-        option.textContent = country.name.common; // Nom du pays
-        option.style.backgroundImage = `url(${country.flags.svg})`; // Drapeau du pays
-        option.style.backgroundRepeat = 'no-repeat';
-        option.style.backgroundPosition = 'left center'; // Positionnement du drapeau
-        option.style.paddingLeft = '25px'; // Ajustement du padding pour laisser de l'espace pour le drapeau
-        select.appendChild(option);
-    });
+// Récupérer l'adresse ip du client
+function getIp(callback) {
+    fetch('https://ipinfo.io/json?token=c20c9d51a874a9', { headers: { 'Accept': 'application/json' }})
+        .then((resp) => resp.json())
+        .catch(() => {
+            return {
+                country: 'us',
+            };
+        })
+        .then((resp) => callback(resp.country));
 }
 
 const input = document.querySelector("#phone");
-console.log(input)
+
 window.intlTelInput(input, {
+    autoPlaceholder: "polite",
+    initialCountry: "auto",
+    geoIpLookup: getIp,
+    i18n: fr,
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
 });
 
 
-// Call the function to fetch and populate countries on page load
-document.addEventListener('DOMContentLoaded', fetchCountries);
 
 // Exposer la fonction globalement
 window.nextPrev = nextPrev;

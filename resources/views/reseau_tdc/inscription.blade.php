@@ -92,7 +92,7 @@
 
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="tel" class="form-control" name="telephone" id="phone" placeholder="Téléphone" required>
+                                            <input type="tel" class="form-control" name="telephone" id="phone" required>
                                             <div id="phoneError" class="invalid-feedback" style="display: none;"></div>
 
                                         </div>

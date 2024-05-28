@@ -9,6 +9,12 @@ class Ville extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'nom',
+        'pays_id'
+    ];
+
     public function pays()
     {
         return $this->belongsTo(Pays::class, 'pays_id');

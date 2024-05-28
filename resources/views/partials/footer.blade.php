@@ -7,12 +7,12 @@
                             <div class="footer-item">
                                 <h4 class="text-white mb-4">Temoins de Christ</h4>
                                 <p class="text-white mb-3"> Mais vous recevrez une puissance, le Saint Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu'aux extrémités de la terre</p>
-                                <div class="d-flex">
-                                    <a class="btn btn-lg-square btn-success rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+{{--                                <div class="d-flex">--}}
+{{--                                    <a class="btn btn-lg-square btn-success rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>--}}
+{{--                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>--}}
+{{--                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>--}}
+{{--                                    <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>

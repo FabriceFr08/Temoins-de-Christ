@@ -13,9 +13,9 @@
 
                 <!-- Recherche -->
                 <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-12 col-sm-6 col-md-3 mb-3">
                         <div class="form-floating">
-                            <select type="text" class="form-select" name="secteur_id" id="secteur" required>
+                            <select class="form-select" name="secteur_id" id="secteur" required>
                                 <option></option>
                                 @foreach($secteurs as $secteur)
                                     <option value="{{$secteur->id}}"> {{$secteur->nom}}</option>
@@ -24,9 +24,9 @@
                             <label for="secteur">Secteur d'activité</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-12 col-sm-6 col-md-3 mb-3">
                         <div class="form-floating">
-                            <select type="text" class="form-select" name="pays_id" id="pays" placeholder="Pays" required>
+                            <select class="form-select" name="pays_id" id="pays" placeholder="Pays" required>
                                 <option></option>
                                 @foreach($pays as $pays)
                                     <option value="{{$pays->id}}"> {{$pays->nom}}</option>
@@ -35,9 +35,9 @@
                             <label for="pays">Pays</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">
+                    <div class="col-12 col-sm-6 col-md-3 mb-3">
                         <div class="form-floating">
-                            <select type="text" class="form-select" name="ville_id" id="ville" required>
+                            <select class="form-select" name="ville_id" id="ville" required>
                                 <option></option>
                                 @foreach($villes as $ville)
                                     <option value="{{$ville->id}}"> {{$ville->nom}}</option>
@@ -46,11 +46,13 @@
                             <label for="ville">Ville</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3 d-flex align-items-center">
+                    <div class="col-12 col-sm-6 col-md-3 mb-3 d-flex align-items-center">
                         <button type="submit" class="btn btn-secondary text-white py-3 px-6 w-100">Rechercher</button>
                     </div>
                 </div>
                 <!-- Recherche -->
+
+
 
                 <div class="pt-5">
                     <div class="row">
@@ -58,7 +60,7 @@
                             <div class="col-md-4 mb-4">
                                 <div class="testimonial-item border text-center rounded">
                                     <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                                        <img  src="img/testimonial-1.jpg" class="img-fluid"  alt="img">
+{{--                                        <img  src="img/testimonial-1.jpg" class="img-fluid"  alt="img">--}}
                                     </div>
                                     <div class="position-relative" style="margin-top: 140px;">
                                         <h5 class="mb-0">{{$service->prestataire->nom}} {{$service->prestataire->prenom}}</h5>

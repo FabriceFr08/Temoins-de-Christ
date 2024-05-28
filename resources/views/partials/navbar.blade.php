@@ -2,7 +2,7 @@
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
         <a href="#" class="navbar-brand p-0">
-            <h3 class="text-success m-0"><img src="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}" alt="Temoins de Christ">Temoins de Christ</h3>
+            <h3 class="text-success m-0"><img src="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}" alt="img">Temoins de Christ</h3>
 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

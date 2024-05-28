@@ -11,6 +11,7 @@ use App\Models\Secteur;
 use App\Models\Service;
 use App\Models\Ville;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class InscriptionController extends Controller
 {

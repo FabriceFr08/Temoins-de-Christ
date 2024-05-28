@@ -4,7 +4,7 @@
             <div class="navbar-header">
                 <ul class="nav navbar-nav flex-row">
                     <li class="nav-item mobile-menu d-lg-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
-                    <li class="nav-item mr-auto"><a class="navbar-brand" href="index.html"><img class="brand-logo" alt="modern admin logo" src="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
+                    <li class="nav-item mr-auto"><a class="navbar-brand" href=""><img class="brand-logo" alt="modern admin logo" src="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
                             <h3 class="brand-text">TDC</h3>
                         </a></li>
                     <li class="nav-item d-none d-lg-block nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
