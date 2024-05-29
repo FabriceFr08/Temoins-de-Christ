@@ -27,7 +27,8 @@ class FrontController extends Controller
 
     public function articles()
     {
-        $articles = Article::all(); 
+        $articles = Article::all();
+
         return view('front.articles', compact('articles'));
     }
 }

@@ -22,18 +22,25 @@ Route::get('/venir-a-christ', function () {
     return view('venir_a_christ');
 })->name('venir-a-christ');
 
+Route::get('/venir-a-christ1', function () {
+    return view('venir_a_christ1');
+})->name('venir-a-christ1');
+
 Route::get('/reseau', function () {
     return view('reseau_tdc.index');
 })->name('reseau');
 
 Route::get('/profil', function () {
-    return view('reseau_tdc.profil');
+    return view('reseau_tdc.show');
 })->name('profil');
 
 Route::controller(\App\Http\Controllers\reseau_tdc\InscriptionController::class)->group(function () {
     Route::get('/reseau/services', 'index')->name('reseau.services');
+    Route::get('/reseau/services/{service}', 'show')->name('reseau.services.show');
     Route::get('/reseau/inscription', 'create')->name('reseau.inscription');
     Route::post('/reseau/inscription', 'store')->name('reseau.store');
+    Route::get('/reseau/filter', 'filter')->name('services.filter');
+
 });
 
 Route::get('/don', function () {

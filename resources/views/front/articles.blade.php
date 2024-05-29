@@ -6,6 +6,7 @@
     <!-- Blogs Start -->
     <div class="container-fluid blog pb-5">
         <div class="container pb-5">
+
             <div class="pb-5">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Blog</h4>
                 <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Nos Articles</h1>
