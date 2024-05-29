@@ -32,25 +32,25 @@ class ServiceStoreRequest extends FormRequest
         ];
     }
 
-    public function validated($key = null, $default = null)
-    {
-        $validated = parent::validated();
-
-        // Préparer les données pour la colonne JSON reseaux_sociaux
-        $reseauxSociaux = [
-            'tiktok' => $validated['tiktok'] ?? null,
-            'facebook' => $validated['facebook'] ?? null,
-            'instagram' => $validated['instagram'] ?? null,
-        ];
-
-        // Retourner les données avec le champ JSON
-        return [
-            'nomService' => $validated['nomService'],
-            'siteWeb' => $validated['siteWeb'] ?? null,
-            'commentaire' => $validated['commentaire'],
-            'secteur_id' => $validated['secteur_id'],
-            'reseaux_sociaux' => $reseauxSociaux,
-        ];
-    }
+//    public function validated($key = null, $default = null)
+//    {
+//        $validated = parent::validated();
+//
+//        // Préparer les données pour la colonne JSON reseaux_sociaux
+////        $reseauxSociaux = [
+////            'tiktok' => $validated['tiktok'] ?? null,
+////            'facebook' => $validated['facebook'] ?? null,
+////            'instagram' => $validated['instagram'] ?? null,
+////        ];
+//
+//        // Retourner les données avec le champ JSON
+//        return [
+//            'nomService' => $validated['nomService'],
+//            'siteWeb' => $validated['siteWeb'] ?? null,
+//            'commentaire' => $validated['commentaire'],
+//            'secteur_id' => $validated['secteur_id'],
+//            'tiktok' => $reseauxSociaux,
+//        ];
+//    }
 
 }

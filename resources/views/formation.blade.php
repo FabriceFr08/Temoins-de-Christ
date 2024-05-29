@@ -6,10 +6,22 @@
 
     <!-- Pricing Plan Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 75px;">
+
+        <div class="container py-5">
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>
+                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
+            </div>
+            <p class="h4">
+                Besoin de délivrance dans un domaine ? Veuillez cliquer ici
+            </p>
+            <a href="{{route('venir-a-christ')}}"  class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">J'ai besoin de délivrance</a>
+
+        </div>
         <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">FORMATIONS</h5>
-                <h1 class="display-5 mb-0">Nos différentes offres</h1>
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Nos formations</h4>
+                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
             </div>
             <div class="row g-5">
 {{--                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">--}}

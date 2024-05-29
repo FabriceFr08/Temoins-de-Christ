@@ -18,18 +18,18 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="text-white mb-4">Address</h4>
+                            <h4 class="text-white mb-4">Addresse</h4>
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fas fa-map-marker-alt"></i></a>
                                 <div class="text-white ms-2">
-                                    <p class="mb-0">0123.. Street, New York, USA</p>
+                                    <p class="mb-0">........</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center mb-3">
                                 <a class="btn btn-lg-square btn-success rounded-circle mx-2" href=""><i class="fa fa-phone-alt"></i></a>
                                 <div class="text-white ms-2">
-                                    <p class="mb-0">+012 345 67890</p>
-                                    <p class="mb-0">+012 345 67890</p>
+                                    <p class="mb-0">+33 767744933</p>
+{{--                                    <p class="mb-0">+012 345 67890</p>--}}
                                 </div>
                             </div>
                             <div class="d-flex align-items-center">
@@ -68,4 +68,5 @@
                 </div>
             </div>
 </div>
-        <!-- Footer End -->
+
+<!-- Footer End -->

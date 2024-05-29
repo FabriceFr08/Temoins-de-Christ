@@ -22,7 +22,7 @@
                         <a href="" class="dropdown-item">Jeudi des témoins embrasés</a>
                     </div>
                 </div>
-                <a href="{{route('reseau')}}" class="nav-item nav-link">Réseau des TDC</a>
+                <a href="{{route('reseau')}}" class="nav-item nav-link">Réseau</a>
 
 {{--                <a href="contact.html" class="nav-item nav-link">Articles</a>--}}
             </div>

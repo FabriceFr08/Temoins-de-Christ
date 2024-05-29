@@ -50,7 +50,7 @@ function validateForm() {
     var x, y, i ,valid = true;
     x = document.getElementsByClassName("step");
     y = x[currentStep].getElementsByTagName("input");
-    
+
     if (!validateNom() || !validatePrenom() || !validateEmail() || !validatePays() || !validateVille()) {
         valid = false;
     }
@@ -264,34 +264,6 @@ window.intlTelInput(input, {
 window.nextPrev = nextPrev;
 
 
-$(document).ready(function() {
-    // Masquer toutes les options du select des villes au chargement de la page
-    $('#ville option').hide();
-
-    // Initialiser le select2 pour le select des pays
-    $('#pays').select2({
-        placeholder: "Sélectionnez un pays",
-        width: '100%'
-    }).on('change', function() {
-        const selectedPaysId = $(this).val();
-        const villeSelect = $('#ville');
-
-        // Masquer toutes les options du select des villes
-        villeSelect.find('option').hide();
-
-        // Afficher seulement les options correspondant au pays sélectionné
-        villeSelect.find('option[data-pays="' + selectedPaysId + '"]').show();
-
-        // Rafraîchir le champ de sélection des villes avec Select2
-        villeSelect.val(null).trigger('change');
-    });
-
-    // Initialiser le select2 pour le select des villes
-    $('#ville').select2({
-        placeholder: "Sélectionnez une ville",
-        width: '100%',
-    });
-});
 
 const selectPays = document.getElementById('pays');
 const selectVille = document.getElementById('ville');
@@ -319,6 +291,21 @@ $('#secteur').select2({
     width: '100%',
 });
 
+// $('#pays').select2({
+//     placeholder: "Sélectionnez un secteur",
+//     width: '100%',
+// });
+
+$(document).ready(function(){
+    $('#donationModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Bouton qui a déclenché le modal
+        var method = button.data('method') // Extraire l'info depuis les attributs data-*
+
+        var modal = $(this)
+        modal.find('.modal-title').text('Faire un don via ' + method)
+        modal.find('.modal-body').html('<p>Instructions spécifiques pour faire un don via ' + method + '.</p>')
+    })
+});
 
 
 
