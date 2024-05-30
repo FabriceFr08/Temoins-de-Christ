@@ -1,23 +1,12 @@
+# check that mod_rewrite is enabled
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews -Indexes
-    </IfModule>
-
+    # enable the runtime rewrite engine
     RewriteEngine On
 
-    # Pour éviter les problèmes de trailing slash (barre oblique à la fin de l'URL)
-    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    # serve existing files from /public folder as if they were in your base directory
+    RewriteCond %{REQUEST_URI} !public/
+    RewriteRule (.*) /public/$1 [L]
 
-    # Rediriger toute requête vers le fichier public/index.php
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
-
-</IfModule>
-
-# Autoriser l'accès à certains répertoires spécifiques
-<IfModule mod_headers.c>
-    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
-        Header set Access-Control-Allow-Origin "*"
-    </FilesMatch>
+    # route everything else to /public/index.php
+    RewriteRule ^ /public/index.php [L]
 </IfModule>
