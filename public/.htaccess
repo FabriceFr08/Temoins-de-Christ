@@ -16,9 +16,6 @@
 
 
 
-
-RewriteRule ^ /public/index.php [L]
-
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
