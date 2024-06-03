@@ -18,13 +18,13 @@
                         <p class="mb-4">Les champs avec * sont obligatoires<a class="text-primary fw-bold" href=""></a>.</p>
                         <form id="form" method="POST" action="{{route('reseau.store')}}">
                             @csrf
-{{--                            <ul id="progressbar">--}}
-{{--                                <li class="active" id="info"><strong>Informations personnelles</strong></li>--}}
-{{--                                <li id=""><strong>Informations sur le service à proposer</strong></li>--}}
-{{--                            </ul>--}}
-{{--                            <div class="progress">--}}
-{{--                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>--}}
-{{--                            </div> <br/><br/>--}}
+                            <ul id="progressbar">
+                                <li class="active" id="info"><strong>Informations personnelles</strong></li>
+                                <li id=""><strong>Informations sur le service à proposer</strong></li>
+                            </ul>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> <br/><br/>
 
                             <div class="step">
                                 <div class="row g-3">
@@ -54,8 +54,14 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="text" style="background: #FFFFFF" class="form-control" name="promotion_tdc" id="promotion" placeholder="Project">
-                                            <label for="project">Promotion TDC</label>
+                                            <select type="text" class="form-select " name="promotion" id="promotion" required>
+                                                <option></option>
+                                                <option value="tdc"> Témoins de Christ</option>
+                                                <option value="vac"> Victoire avec Christ</option>
+                                            </select>
+                                            <div id="promotionError" class="invalid-feedback" style="display: none;"></div>
+
+                                            <label for="pays">TDC ou Victoire avec Christ * </label>
                                         </div>
                                     </div>
 
@@ -76,12 +82,11 @@
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
                                             <select type="text" class="form-select" name="ville_id" id="ville" required>
-                                                <option value=""></option> <!-- Option vide par défaut -->
+                                                <option></option> <!-- Option vide par défaut -->
                                                 @foreach($villes as $ville)
                                                     <option value="{{$ville->id}}" data-pays="{{$ville->pays_id}}" style="display: none;">{{$ville->nom}}</option>
                                                 @endforeach
                                             </select>
-
 
                                             <div id="villeError" class="invalid-feedback" style="display: none;"></div>
 
@@ -129,12 +134,13 @@
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
                                             <input type="url" class="form-control" name="siteWeb" id="site" placeholder="Site web">
+                                            <div id="siteError" class="invalid-feedback"></div>
                                             <label for="site">Site web</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="url" class="form-control" name="tiktok" id="tiktok" placeholder="Page Tiktok">
+                                            <input type="text" class="form-control" name="tiktok" id="tiktok" placeholder="Page Tiktok">
                                             <label for="project">Page Tiktok</label>
                                         </div>
                                     </div>
@@ -142,13 +148,13 @@
 
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="url" class="form-control" name="facebook" id="facebook" placeholder="Page Facebook">
+                                            <input type="text" class="form-control" name="facebook" id="facebook" placeholder="Page Facebook">
                                             <label for="facebook">Page Facebook</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="url" class="form-control" name="instagram" id="instagram" placeholder="Page Instagram">
+                                            <input type="text" class="form-control" name="instagram" id="instagram" placeholder="Page Instagram">
                                             <label for="instagram">Instagram</label>
                                         </div>
                                     </div>

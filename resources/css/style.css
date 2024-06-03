@@ -903,82 +903,6 @@
 
 /*** Formulaire d'inscription ***/
 
-#progressbar {
-    margin-bottom: 30px;
-    overflow: hidden;
-    color: lightgrey
-}
-
-#progressbar .active {
-    color: #673AB7
-}
-
-#progressbar li {
-    list-style-type: none;
-    font-size: 16px;
-    width: 30%;
-    float: left;
-    position: relative;
-    font-weight: 400
-}
-
-#progressbar #account:before {
-    font-family: FontAwesome;
-    content: "\f13e"
-}
-
-#progressbar #personal:before {
-    font-family: FontAwesome, serif;
-    content: "\f007"
-}
-
-#progressbar #payment:before {
-    font-family: FontAwesome;
-    content: "\f030"
-}
-
-#progressbar #confirm:before {
-    font-family: FontAwesome;
-    content: "\f00c"
-}
-
-#progressbar li:before {
-    width: 50px;
-    height: 50px;
-    line-height: 45px;
-    display: block;
-    font-size: 20px;
-    color: #ffffff;
-    background: lightgray;
-    border-radius: 50%;
-    margin: 0 auto 10px auto;
-    padding: 2px
-}
-
-#progressbar li:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: lightgray;
-    position: absolute;
-    left: 0;
-    top: 25px;
-    z-index: -1
-}
-
-#progressbar li.active:before,
-#progressbar li.active:after {
-    background: #673AB7
-}
-
-.progress {
-    height: 20px
-}
-
-.progress-bar {
-    background-color: #673AB7
-}
-
 #prevBtn, #nextBtn {
     margin-left: 10px; /* Espacement entre les boutons */
     width: auto; /* Ajuste la largeur des boutons */
@@ -996,32 +920,6 @@
 
 }
 
-.select2-container .select2-selection--single {
-    height: calc(3.5rem + 2px) !important; /* Match the form-control height */
-    padding: .875rem 1.5rem .875rem .75rem !important; /* Match the form-control padding */
-    font-size: 1rem; /* Match the form-control font-size */
-    line-height: 1.5; /* Match the form-control line-height */
-    color: #495057; /* Match the form-control color */
-    background-color: #fff; /* Match the form-control background */
-    border: 1px solid #ced4da !important; /* Match the form-control border */
-    border-radius: 10px !important; /* Match the form-control border-radius */
-    box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%) !important; /* Match the form-control box-shadow */
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Match the form-control transition */
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: calc(3.5rem + 2px) !important; /* Match the form-control height */
-    top: 5px !important; /* Align arrow vertically */
-}
-.select2-container .select2-selection--single .select2-selection__rendered {
-    padding-left: 0 !important; /* Remove extra padding */
-}
-.form-floating > .select2-container--default .select2-selection--single, .form-floating > .select2-container--default .select2-selection--multiple {
-    height: calc(3.5rem + 2px) !important;
-}
-.form-floating > .select2-container--default .select2-selection--single .select2-selection__rendered, .form-floating > .select2-container--default .select2-selection--multiple .select2-selection__rendered {
-    padding-top: calc(.875rem + 1px) !important;
-    padding-bottom: calc(.875rem + 1px) !important;
-}
 
 
 

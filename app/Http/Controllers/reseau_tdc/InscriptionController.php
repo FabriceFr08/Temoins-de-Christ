@@ -35,7 +35,7 @@ class InscriptionController extends Controller
 
     public function store(PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
     {
-        //dd($prestataireStoreRequest);
+        dd($prestataireStoreRequest);
         $service = $serviceStoreRequest->validated();
         $prestataire = Prestataire::create($prestataireStoreRequest->validated());  // Enregistrement du prestataire
         $service['prestataire_id'] = $prestataire->id;
@@ -43,6 +43,13 @@ class InscriptionController extends Controller
 
         return redirect()->route('reseau.services')->with('success', 'Enregistrement réussi');
 
+    }
 
+    public function checkEmail(Request $request)
+    {
+        $email = $request->input('email');
+        $exists = Prestataire::where('email', $email)->exists();
+
+        return response()->json(['exists' => $exists]);
     }
 }

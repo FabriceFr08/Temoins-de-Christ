@@ -46,11 +46,12 @@ Route::get('/blog', [FrontController::class, 'articles'])->name('blog');
 Route::get('/accueil', [FrontController::class, 'index'])->name('index');
 Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name('article.show');
 
+Route::post('/check-email', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'checkEmail'])->name('check.email');
+
+
 
 Route::resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
-
 Route::resource('articles', ArticleController::class);  // Routes pour les articles
-
 Route::resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
 
 
