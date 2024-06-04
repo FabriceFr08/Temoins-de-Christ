@@ -11,18 +11,36 @@ function showTab(n) {
     console.log(x)
     x[n].style.display = "inline";
     //... and fix the Previous/Next buttons:
-    if (n == 0) {
+    if (n === 0) {
         document.getElementById("prevBtn").style.display = "none";
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n === (x.length - 1)) {
+        fillRecap();
         document.getElementById("nextBtn").innerHTML = "Valider";
     } else {
         document.getElementById("nextBtn").innerHTML = "Suivant";
     }
     //... and run a function that will display the correct step indicator:
     //fixStepIndicator(n)
+}
+
+function fillRecap() {
+    $("#recapNom").text($("#nom").val());
+    $("#recapPrenom").text($("#prenom").val());
+    $("#recapEmail").text($("#email").val());
+    $("#recapPromotion").text($("#promotion option:selected").text());
+    $("#recapPays").text($("#pays option:selected").text());
+    $("#recapVille").text($("#ville option:selected").text());
+    $("#recapPhone").text($("#phone").val());
+    $("#recapSecteur").text($("#secteur option:selected").text());
+    $("#recapService").text($("#service").val());
+    $("#recapSite").text($("#site").val());
+    $("#recapTiktok").text($("#tiktok").val());
+    $("#recapFacebook").text($("#facebook").val());
+    $("#recapInstagram").text($("#instagram").val());
+    $("#recapMessage").text($("#message").val());
 }
 
 export function nextPrev(n) {
@@ -42,28 +60,31 @@ export function nextPrev(n) {
     }
     // Otherwise, display the correct tab:
     showTab(currentStep);
+    updateProgressBar(currentStep)
 }
 
+function validateStep1() {
+    return validateNom() && validatePrenom() && validateEmail() && validatePromotion() && validatePays() && validateVille() && validatePhone() ;
+}
+
+function validateStep2(){
+    return validateSecteur() && validateService() && validateMessage() && validateSite();
+}
 function validateForm() {
 
-    // This function deals with validation of the form fields
-    var x, y, i ,valid = true;
-    x = document.getElementsByClassName("step");
-    y = x[currentStep].getElementsByTagName("input");
 
-    if (!validateNom() || !validatePrenom() || !validateEmail() || !validatePays() || !validateVille()) {
-        valid = false;
+    let valid = true;
+    if (currentStep === 0) {
+        valid = validateStep1();
+    } else if (currentStep === 1) {
+        valid = validateStep2();
     }
-    console.log(y)
 
-    // If the valid status is true, mark the step as finished and valid:
     if (valid) {
         document.getElementsByClassName("step")[currentStep].className += " finish";
     }
-    return valid; // return the valid status
+    return valid; //
 }
-
-
 
 
 function validateNom() {
@@ -72,12 +93,12 @@ function validateNom() {
     const nomError = document.getElementById('nomError');
 
     if (value.length === 0) {
-        nom.classList.add("invalid");
+        nom.classList.add("is-invalid");
         nomError.textContent = "Le nom est requis";
         nomError.style.display = "block";
         return false;
     } else {
-        nom.classList.remove("invalid");
+        nom.classList.remove("is-invalid");
         nomError.style.display = "none";
         return true;
     }
@@ -88,12 +109,12 @@ function validatePrenom() {
     const prenomError = document.getElementById('prenomError')
     const value = prenom.value.trim();
     if (value.length === 0) {
-        prenom.classList.add("invalid");
+        prenom.classList.add("is-invalid");
         prenomError.textContent = "Le prénom est requis";
         prenomError.style.display = "block";
         return false;
     } else {
-        prenom.classList.remove("invalid");
+        prenom.classList.remove("is-invalid");
         prenomError.style.display = "none";
         return true;
     }
@@ -103,14 +124,30 @@ function validatePays() {
     const pays = document.getElementById('pays');
     const paysError = document.getElementById('paysError')
     const value = pays.value.trim();
-    if (value === '') {
-        pays.classList.add("invalid");
+    if (value === "") {
+        pays.classList.add("is-invalid");
         paysError.textContent = "Veuillez choisir un pays";
         paysError.style.display = "block";
         return false;
     } else {
-        pays.classList.remove("invalid");
+        pays.classList.remove("is-invalid");
         paysError.style.display = "none";
+        return true;
+    }
+}
+
+function validatePromotion() {
+    const promotion = document.getElementById('promotion');
+    const promotionError = document.getElementById('promotionError')
+    const value = promotion.value.trim();
+    if (value === "") {
+        promotion.classList.add("is-invalid");
+        promotionError.textContent = "Veuillez faire un choix";
+        promotionError.style.display = "block";
+        return false;
+    } else {
+        promotion.classList.remove("is-invalid");
+        promotion.style.display = "none";
         return true;
     }
 }
@@ -119,13 +156,13 @@ function validateVille() {
     const ville = document.getElementById('ville');
     const villeError = document.getElementById('villeError')
     const value = ville.value.trim();
-    if (value === '') {
-        ville.classList.add("invalid");
+    if (value === "") {
+        ville.classList.add("is-invalid");
         villeError.textContent = "Veuillez choisir une ville";
         villeError.style.display = "block";
         return false;
     } else {
-        ville.classList.remove("invalid");
+        ville.classList.remove("is-invalid");
         villeError.style.display = "none";
         return true;
     }
@@ -133,37 +170,71 @@ function validateVille() {
 
 function validateEmail() {
     const email = document.getElementById('email');
-    const emailError = document.getElementById('emailError')
+    const emailError = document.getElementById('emailError');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const value = email.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regular expression for email validation
-    if (!emailRegex.test(value)) {
-        email.classList.add("invalid");
-        emailError.textContent = "Veuillez saisir un email valide";
-        emailError.style.display = "block";
+    if (email.value.trim() === "") {
+        email.classList.add('is-invalid');
+        emailError.style.display = 'block';
+        emailError.textContent = "L'email est requis.";
+        return false;
+    } else if (!emailRegex.test(email.value.trim())) {
+        email.classList.add('is-invalid');
+        emailError.style.display = 'block';
+        emailError.textContent = "L'email n'est pas valide.";
         return false;
     } else {
-        email.classList.remove("invalid");
-        emailError.style.display = "none";
+        email.classList.remove('is-invalid');
+        emailError.style.display = 'none';
         return true;
+        // // Vérification AJAX pour l'unicité de l'email
+        // return checkEmailUniqueness(email.value.trim()).then(isUnique => {
+        //     if (!isUnique) {
+        //         email.classList.add('is-invalid');
+        //         emailError.style.display = 'block';
+        //         emailError.textContent = "L'email existe déjà.";
+        //         return false;
+        //     } else {
+        //         email.classList.remove('is-invalid');
+        //         emailError.style.display = 'none';
+        //         return true;
+        //     }
+        // });
     }
 }
 
+// function checkEmailUniqueness(email) {
+//     return fetch('/check-email', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             //'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+//         },
+//         body: JSON.stringify({ email: email })
+//     })
+//         .then(response => response.json())
+//
+//         .then(data => {
+//             return !data.exists; // Retourne true si l'email n'existe pas, false sinon
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//             return false;
+//         });
+// }
+
 function validatePhone() {
     const phone = document.getElementById('phone');
-    const value = phone.value.trim();
-    if (value === "") {
-        // Check if a phone number has been selected using intl-tel-input
-        if (phone.querySelector(".iti__selected-flag")) {
-            phone.classList.remove("invalid");
-            return true;
-        } else {
-            phone.classList.add("invalid");
-            return false;
-        }
+    const phoneError = document.getElementById('phoneError');
+    //const value = phone.value.trim();
+    if (phone.value.trim() === "" || !iti.isValidNumber() ) {
+        phone.classList.add('is-invalid');
+        phoneError.style.display = 'block';
+        phoneError.textContent = "Le numéro de téléphone n'est pas valide.";
+        return false;
     } else {
-        // Assuming you're also validating the input value itself (not just checking if a number has been selected)
-        // You can add additional validation logic here if needed
+        phone.classList.remove('is-invalid');
+        phoneError.style.display = 'none';
         return true;
     }
 }
@@ -173,12 +244,12 @@ function validateService() {
     const serviceError = document.getElementById('serviceError')
     const value = service.value.trim();
     if (value.length === 0) {
-        service.classList.add("invalid");
+        service.classList.add("is-invalid");
         serviceError.textContent = "Ce champs est requis";
         serviceError.style.display = "block";
         return false;
     } else {
-        service.classList.remove("invalid");
+        service.classList.remove("is-invalid");
         serviceError.style.display = "none";
         return true;
     }
@@ -188,13 +259,13 @@ function validateSecteur(){
     const secteur = document.getElementById('secteur');
     const secteurError = document.getElementById('secteurError')
     const value = secteur.value.trim();
-    if (value === '') {
-        secteur.classList.add("invalid");
+    if (value === "") {
+        secteur.classList.add("is-invalid");
         secteurError.textContent = "Veuillez choisir un secteur d'activité";
         secteurError.style.display = "block";
         return false;
     } else {
-        secteur.classList.remove("invalid");
+        secteur.classList.remove("is-invalid");
         secteurError.style.display = "none";
         return true;
     }
@@ -205,38 +276,37 @@ function validateMessage() {
     const value = message.value.trim();
     const messageError = document.getElementById('messageError');
 
-    if (value.length < 25) {
-        message.classList.add("invalid");
+    if (value.length < 10) {
+        message.classList.add("is-invalid");
         messageError.textContent = "Veuillez entre une description valide";
         messageError.style.display = "block";
         return false;
     } else {
-        message.classList.remove("invalid");
+        message.classList.remove("is-invalid");
         messageError.style.display = "none";
         return true;
     }
 }
 
+function validateSite() {
+    const siteInput = document.getElementById('site');
+    const siteError = document.getElementById('siteError');
+    const siteRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+
+    if (siteInput.value.trim() === "" || !siteRegex.test(siteInput.value.trim())) {
+        siteInput.classList.add('is-invalid');
+        siteError.style.display = 'block';
+        siteError.textContent = "Veuillez entrer une URL de site valide.";
+        return false;
+    } else {
+        siteInput.classList.remove('is-invalid');
+        siteError.style.display = 'none';
+        return true;
+    }
+}
 
 
-// function validateForm() {
-//     var valid = true;
-//
-//     // Validate each field separately
-//     if (!validateNom()) valid = false;
-//     if (!validatePrenom()) valid = false;
-//     if (!validateEmail()) valid = false;
-//     if (!validatePhone()) valid = false;
-//
-//     // If the valid status is true, mark the step as finished and valid:
-//     if (valid) {
-//         document.getElementsByClassName("step")[currentStep].classList.add("finish");
-//     }
-//
-//     return valid;
-// }
-
-// Récupérer l'adresse ip du client
+// Récupérer l'adresse ip du client sa position
 function getIp(callback) {
     fetch('https://ipinfo.io/json?token=c20c9d51a874a9', { headers: { 'Accept': 'application/json' }})
         .then((resp) => resp.json())
@@ -247,31 +317,30 @@ function getIp(callback) {
         })
         .then((resp) => callback(resp.country));
 }
-
 const input = document.querySelector("#phone");
-
-window.intlTelInput(input, {
+const iti = window.intlTelInput(input, {
     autoPlaceholder: "polite",
     initialCountry: "auto",
+    //nationalMode: true,
+    hiddenInput: () => ({ phone: "full_phone", country: "country_code" }),
+    separateDialCode: true,
     geoIpLookup: getIp,
     i18n: fr,
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
 });
 
 
-
 // Exposer la fonction globalement
 window.nextPrev = nextPrev;
-
 
 
 const selectPays = document.getElementById('pays');
 const selectVille = document.getElementById('ville');
 
-
 // Écoutez les changements dans le sélecteur de pays
 selectPays.addEventListener('change', function() {
     const selectedPaysId = this.value;
+    selectVille.value = ""
 
     // Parcourez toutes les options du sélecteur de ville
     Array.from(selectVille.options).forEach(function(option) {
@@ -284,12 +353,21 @@ selectPays.addEventListener('change', function() {
     });
 });
 
+function updateProgressBar(step) {
+    var progressItems = document.querySelectorAll("#progressbar li");
+    var progressBar = document.querySelector(".progress-bar");
+    for (var i = 0; i < progressItems.length; i++) {
+        if (i <= step) {
+            progressItems[i].classList.add("active");
+        } else {
+            progressItems[i].classList.remove("active");
+        }
+    }
+    var progressPercentage = ((step + 1) / progressItems.length) * 100;
+    progressBar.style.width = progressPercentage + "%";
+}
 
 
-$('#secteur').select2({
-    placeholder: "Sélectionnez un secteur",
-    width: '100%',
-});
 
 // $('#pays').select2({
 //     placeholder: "Sélectionnez un secteur",

@@ -42,6 +42,16 @@ class InscriptionController extends Controller
 
         return redirect()->route('reseau.services')->with('success', 'Enregistrement réussi');
 
+
+    }
+
+//    public function checkEmail(Request $request)
+//    {
+//        $email = $request->input('email');
+//        $exists = Prestataire::where('email', $email)->exists();
+//
+//        return response()->json(['exists' => $exists]);
+//    }
     }
 
     public function show(Service $service)
@@ -78,5 +88,6 @@ class InscriptionController extends Controller
 
         return view('reseau_tdc.services', compact('services', 'secteurs', 'pays', 'villes'));
     }
+
 
 }

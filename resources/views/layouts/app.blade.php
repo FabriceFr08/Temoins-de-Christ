@@ -64,7 +64,7 @@
 @include('.partials.navbar')
 
 
- @include('.partials.carousel')
+{{-- @include('.partials.carousel')--}}
 
 
 
