@@ -35,7 +35,7 @@ class InscriptionController extends Controller
 
     public function store(PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
     {
-        dd($prestataireStoreRequest);
+        //dd($prestataireStoreRequest);
         $service = $serviceStoreRequest->validated();
         $prestataire = Prestataire::create($prestataireStoreRequest->validated());  // Enregistrement du prestataire
         $service['prestataire_id'] = $prestataire->id;

@@ -17,12 +17,30 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n === (x.length - 1)) {
+        fillRecap();
         document.getElementById("nextBtn").innerHTML = "Valider";
     } else {
         document.getElementById("nextBtn").innerHTML = "Suivant";
     }
     //... and run a function that will display the correct step indicator:
     //fixStepIndicator(n)
+}
+
+function fillRecap() {
+    $("#recapNom").text($("#nom").val());
+    $("#recapPrenom").text($("#prenom").val());
+    $("#recapEmail").text($("#email").val());
+    $("#recapPromotion").text($("#promotion option:selected").text());
+    $("#recapPays").text($("#pays option:selected").text());
+    $("#recapVille").text($("#ville option:selected").text());
+    $("#recapPhone").text($("#phone").val());
+    $("#recapSecteur").text($("#secteur option:selected").text());
+    $("#recapService").text($("#service").val());
+    $("#recapSite").text($("#site").val());
+    $("#recapTiktok").text($("#tiktok").val());
+    $("#recapFacebook").text($("#facebook").val());
+    $("#recapInstagram").text($("#instagram").val());
+    $("#recapMessage").text($("#message").val());
 }
 
 export function nextPrev(n) {
@@ -42,6 +60,7 @@ export function nextPrev(n) {
     }
     // Otherwise, display the correct tab:
     showTab(currentStep);
+    updateProgressBar(currentStep)
 }
 
 function validateStep1() {
@@ -54,11 +73,11 @@ function validateStep2(){
 function validateForm() {
 
     let valid = true;
-    if (currentStep === 0) {
-        valid = validateStep1();
-    } else if (currentStep === 1) {
-        valid = validateStep2();
-    }
+    // if (currentStep === 0) {
+    //     valid = validateStep1();
+    // } else if (currentStep === 1) {
+    //     valid = validateStep2();
+    // }
 
     if (valid) {
         document.getElementsByClassName("step")[currentStep].className += " finish";
@@ -206,8 +225,8 @@ function validateEmail() {
 function validatePhone() {
     const phone = document.getElementById('phone');
     const phoneError = document.getElementById('phoneError');
-    const value = phone.value.trim();
-    if (phone.value.trim() === "" /*|| !iti.isValidNumber()*/ ) {
+    //const value = phone.value.trim();
+    if (phone.value.trim() === "" || !iti.isValidNumber() ) {
         phone.classList.add('is-invalid');
         phoneError.style.display = 'block';
         phoneError.textContent = "Le numéro de téléphone n'est pas valide.";
@@ -298,9 +317,12 @@ function getIp(callback) {
         .then((resp) => callback(resp.country));
 }
 const input = document.querySelector("#phone");
-window.intlTelInput(input, {
+const iti = window.intlTelInput(input, {
     autoPlaceholder: "polite",
     initialCountry: "auto",
+    //nationalMode: true,
+    hiddenInput: () => ({ phone: "full_phone", country: "country_code" }),
+    separateDialCode: true,
     geoIpLookup: getIp,
     i18n: fr,
     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
@@ -313,7 +335,6 @@ window.nextPrev = nextPrev;
 
 const selectPays = document.getElementById('pays');
 const selectVille = document.getElementById('ville');
-
 
 // Écoutez les changements dans le sélecteur de pays
 selectPays.addEventListener('change', function() {
@@ -330,6 +351,20 @@ selectPays.addEventListener('change', function() {
         }
     });
 });
+
+function updateProgressBar(step) {
+    var progressItems = document.querySelectorAll("#progressbar li");
+    var progressBar = document.querySelector(".progress-bar");
+    for (var i = 0; i < progressItems.length; i++) {
+        if (i <= step) {
+            progressItems[i].classList.add("active");
+        } else {
+            progressItems[i].classList.remove("active");
+        }
+    }
+    var progressPercentage = ((step + 1) / progressItems.length) * 100;
+    progressBar.style.width = progressPercentage + "%";
+}
 
 
 
