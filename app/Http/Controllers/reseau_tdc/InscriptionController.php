@@ -35,13 +35,13 @@ class InscriptionController extends Controller
 
     public function store(PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
     {
-        //dd($prestataireStoreRequest);
         $service = $serviceStoreRequest->validated();
         $prestataire = Prestataire::create($prestataireStoreRequest->validated());  // Enregistrement du prestataire
         $service['prestataire_id'] = $prestataire->id;
         Service::create($service);
 
         return redirect()->route('reseau.services')->with('success', 'Enregistrement réussi');
+
 
     }
 
@@ -52,4 +52,42 @@ class InscriptionController extends Controller
 //
 //        return response()->json(['exists' => $exists]);
 //    }
+    }
+
+    public function show(Service $service)
+    {
+        return view('reseau_tdc.show', compact('service'));
+    }
+
+
+    public function filter(Request $request)
+    {
+        $secteurs = Secteur::all();
+        $pays = Pays::all();
+        $villes = Ville::all();
+
+        $query = Service::query();
+
+        if ($request->has('secteur_id') && $request->secteur_id) {
+            $query->where('secteur_id', $request->secteur_id);
+        }
+
+//        if ($request->has('pays_id') && $request->pays_id) {
+//            $query->whereHas('prestataire', function ($q) use ($request) {
+//                $q->where('pays_id', $request->pays_id);
+//            });
+//        }
+
+        if ($request->has('ville_id') && $request->ville_id) {
+            $query->whereHas('prestataire', function ($q) use ($request) {
+                $q->where('ville_id', $request->ville_id);
+            });
+        }
+
+        $services = $query->get();
+
+        return view('reseau_tdc.services', compact('services', 'secteurs', 'pays', 'villes'));
+    }
+
+
 }

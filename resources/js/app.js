@@ -72,12 +72,13 @@ function validateStep2(){
 }
 function validateForm() {
 
+
     let valid = true;
-    // if (currentStep === 0) {
-    //     valid = validateStep1();
-    // } else if (currentStep === 1) {
-    //     valid = validateStep2();
-    // }
+    if (currentStep === 0) {
+        valid = validateStep1();
+    } else if (currentStep === 1) {
+        valid = validateStep2();
+    }
 
     if (valid) {
         document.getElementsByClassName("step")[currentStep].className += " finish";
@@ -368,6 +369,21 @@ function updateProgressBar(step) {
 
 
 
+// $('#pays').select2({
+//     placeholder: "Sélectionnez un secteur",
+//     width: '100%',
+// });
+
+$(document).ready(function(){
+    $('#donationModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Bouton qui a déclenché le modal
+        var method = button.data('method') // Extraire l'info depuis les attributs data-*
+
+        var modal = $(this)
+        modal.find('.modal-title').text('Faire un don via ' + method)
+        modal.find('.modal-body').html('<p>Instructions spécifiques pour faire un don via ' + method + '.</p>')
+    })
+});
 
 
 

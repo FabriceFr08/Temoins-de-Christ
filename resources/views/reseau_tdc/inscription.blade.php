@@ -6,7 +6,7 @@
     <div class="container-fluid contact py-5">
         <div class="container py-5">
             <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Réseau des TDC</h4>
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Notre Réseau</h4>
                 <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>
             </div>
             <div class="bg-light rounded p-4 pb-0">

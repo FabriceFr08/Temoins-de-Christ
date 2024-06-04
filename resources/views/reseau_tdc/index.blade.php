@@ -21,7 +21,7 @@
                     </p>
 {{--                    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore illum nemo deserunt reiciendis perferendis incidunt ullam expedita dolor, voluptas repellat necessitatibus dolore repellendus dolorum, voluptate dolorem. Debitis quis ipsa ullam neque corrupti maxime ad magni, tempore, aperiam rerum, perspiciatis fuga.--}}
 {{--                    </p>--}}
-                    <a class="btn btn-secondary rounded-pill text-white py-3 px-5" href="{{route('reseau.inscription')}}">S'inscrire</a>
+{{--                    <a class="btn btn-secondary rounded-pill text-white py-3 px-5" href="{{route('reseau.inscription')}}">S'inscrire</a>--}}
                     <a class="btn btn-secondary rounded-pill text-white py-3 px-5" href="{{route('reseau.services')}}">Voir service</a>
 
                 </div>

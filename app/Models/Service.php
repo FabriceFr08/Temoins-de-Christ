@@ -15,7 +15,10 @@ class Service extends Model
         'commentaire',
         'secteur_id',
         'prestataire_id',
-        'reseauxSociaux'
+        'reseauxSociaux',
+        'tiktok',
+        'instagram',
+        'facebook'
     ];
 
     protected $casts = [
