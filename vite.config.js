@@ -5,7 +5,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-
+                'resources/css/app_admin.css',
+                'resources/js/app_admin.js',
                 'resources/css/app.css',
                 'resources/css/style.css',
                 'resources/css/bootstrap.min.css',
@@ -25,11 +26,11 @@ export default defineConfig({
             ],
             refresh: true,
         }),
-
-    ],
-
+    ]
+    /*,
+    
     server : {
         host: '192.168.1.12',
         port: 3000
-    }
+    }*/
 });
