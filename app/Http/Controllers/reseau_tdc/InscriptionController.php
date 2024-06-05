@@ -45,14 +45,14 @@ class InscriptionController extends Controller
 
     }
 
-//    public function checkEmail(Request $request)
-//    {
-//        $email = $request->input('email');
-//        $exists = Prestataire::where('email', $email)->exists();
-//
-//        return response()->json(['exists' => $exists]);
-//    }
+    public function checkEmail(Request $request)
+    {
+        $email = $request->input('email');
+        $exists = Prestataire::where('email', $email)->exists();
+
+        return response()->json(['exists' => $exists]);
     }
+
 
     public function show(Service $service)
     {
