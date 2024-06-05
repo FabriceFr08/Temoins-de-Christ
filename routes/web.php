@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategorieArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\CommentaireController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,3 +55,6 @@ Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('art
 Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
 Route::put('/articles/{article}', [ArticleController::class, 'update'])->name('articles.update');
 Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+
+
+Route::post('/articles/{article}/commentaires', [CommentaireController::class, 'store'])->name('commentaires.store');

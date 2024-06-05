@@ -3,7 +3,7 @@
 @section('title', $article->titre)
 
 @section('content')
-<style>
+ <style>
     /* Styles for article page */
     body {
         font-family: Arial, sans-serif;
@@ -53,14 +53,40 @@
     }
 
 </style>
+{{-- <div class="article-container" >
+    <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
+    <h1 class="article-title">{{ $article->titre }}</h1>
+    <p class="article-author">Auteur de l'article</p>
+    <div class="article-content">
+        {!! $article->contenu !!}
+    </div>
+    <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
+</div> --}}
 <div class="article-container">
     <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
     <h1 class="article-title">{{ $article->titre }}</h1>
     <p class="article-author">Auteur de l'article</p>
     <div class="article-content">
-        {!! $article->contenu !!} 
+        {!! $article->contenu !!}
     </div>
     <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
+
+    <div class="card mt-4">
+        <div class="card-header">
+            Commentaires
+        </div>
+        <div class="card-body">
+            @foreach($article->commentaires as $commentaire)
+                <div class="mb-3">
+                    <strong>{{ $commentaire->commentateur->nom }}</strong> :
+                    <p>{{ $commentaire->commentaire }}</p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+    @include('front.partials.comment_form', ['article' => $article])
+
 </div>
 
 @endsection
