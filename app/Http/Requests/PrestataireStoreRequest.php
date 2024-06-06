@@ -28,7 +28,7 @@ class PrestataireStoreRequest extends FormRequest
             'telephone',
             'ville_id',
             'promotion_tdc',
-            'photo',
+            'photo'
         ];
     }
 }

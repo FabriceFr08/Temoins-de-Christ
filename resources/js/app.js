@@ -33,7 +33,7 @@ function fillRecap() {
     $("#recapPromotion").text($("#promotion option:selected").text());
     $("#recapPays").text($("#pays option:selected").text());
     $("#recapVille").text($("#ville option:selected").text());
-    $("#recapPhone").text($("#phone").val());
+    $("#recapPhone").text(iti.getNumber());
     $("#recapSecteur").text($("#secteur option:selected").text());
     $("#recapService").text($("#service").val());
     $("#recapSite").text($("#site").val());
@@ -68,7 +68,7 @@ function validateStep1() {
 }
 
 function validateStep2(){
-    return validateSecteur() && validateService() && validateMessage() && validateSite();
+    return validateSecteur() && validateService() && validateSite() && validatePhoto() && validateMessage();
 }
 function validateForm() {
 
@@ -235,6 +235,8 @@ function validatePhone() {
     } else {
         phone.classList.remove('is-invalid');
         phoneError.style.display = 'none';
+        phone.value = iti.getNumber()
+
         return true;
     }
 }
@@ -293,17 +295,53 @@ function validateSite() {
     const siteError = document.getElementById('siteError');
     const siteRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
 
-    if (siteInput.value.trim() === "" || !siteRegex.test(siteInput.value.trim())) {
+    if (siteInput.value.trim() === "") {
+        // Si le champ est vide, nous ne faisons rien et retournons true
+        siteInput.classList.remove('is-invalid');
+        siteError.style.display = 'none';
+        return true;
+    } else if (!siteRegex.test(siteInput.value.trim())) {
+        // Si le champ n'est pas vide mais ne correspond pas au format requis
         siteInput.classList.add('is-invalid');
         siteError.style.display = 'block';
         siteError.textContent = "Veuillez entrer une URL de site valide.";
         return false;
     } else {
+        // Si le champ n'est pas vide et correspond au format requis
         siteInput.classList.remove('is-invalid');
         siteError.style.display = 'none';
         return true;
     }
 }
+
+function validatePhoto() {
+    const photoInput = document.getElementById('photo');
+    const photoError = document.getElementById('photoError');
+
+    // Vérifier si aucun fichier n'est sélectionné
+    if (photoInput.files.length === 0 || !photoInput.files[0]) {
+        photoInput.classList.remove('is-invalid');
+        photoError.style.display = 'none';
+        return true; // Le champ est valide car aucun fichier n'est sélectionné
+    } else {
+        const allowedExtensions = ['jpg', 'jpeg', 'png'];
+        const file = photoInput.files[0];
+        const extension = file.name.split('.').pop().toLowerCase();
+
+        // Vérifier si l'extension du fichier est autorisée
+        if (allowedExtensions.indexOf(extension) === -1) {
+            photoInput.classList.add('is-invalid');
+            photoError.style.display = 'block';
+            photoError.textContent = "Veuillez sélectionner une image au format JPG, JPEG ou PNG.";
+            return false; // Le fichier n'est pas une image valide
+        } else {
+            photoInput.classList.remove('is-invalid');
+            photoError.style.display = 'none';
+            return true; // Le fichier est une image valide
+        }
+    }
+}
+
 
 
 // Récupérer l'adresse ip du client sa position
@@ -318,16 +356,25 @@ function getIp(callback) {
         .then((resp) => callback(resp.country));
 }
 const input = document.querySelector("#phone");
+const form = document.querySelector("#form")
 const iti = window.intlTelInput(input, {
     autoPlaceholder: "polite",
     initialCountry: "auto",
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
     //nationalMode: true,
-    hiddenInput: () => ({ phone: "full_phone", country: "country_code" }),
+    hiddenInput: function(telephone) {
+        return {
+            phone: "phone_full",
+            country: "country_code"
+        };
+    },
     separateDialCode: true,
     geoIpLookup: getIp,
-    i18n: fr,
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
+    i18n: fr
 });
+
+
+
 
 
 // Exposer la fonction globalement
