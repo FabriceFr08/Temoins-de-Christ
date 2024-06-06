@@ -15,7 +15,8 @@ class Prestataire extends Model
         'email',
         'telephone',
         'ville_id',
-        'promotion_tdc'
+        'promotion_tdc',
+        'photo'
     ];
 
     public function secteur(){

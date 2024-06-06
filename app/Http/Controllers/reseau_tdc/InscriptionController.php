@@ -33,15 +33,19 @@ class InscriptionController extends Controller
         return view('reseau_tdc/inscription', compact('pays', 'villes', 'secteurs'));
     }
 
-    public function store(PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
+    public function store(Request $request, PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
     {
+        dd($request);
         $service = $serviceStoreRequest->validated();
+        if ($prestataireStoreRequest->hasFile('photo')){
+            $path = $prestataireStoreRequest->file('photo')->store('prestataires/'.$prestataireStoreRequest, 'public');
+        }
+        $prestataireStoreRequest['photo'] = $path;   // Association de la photo au prestataire
         $prestataire = Prestataire::create($prestataireStoreRequest->validated());  // Enregistrement du prestataire
-        $service['prestataire_id'] = $prestataire->id;
-        Service::create($service);
+        $service['prestataire_id'] = $prestataire->id;  // Association du prestataire à son service
+        Service::create($service);   // Création du service
 
-        return redirect()->route('reseau.services')->with('success', 'Enregistrement réussi');
-
+        return redirect()->route('reseau_tdc.services')->with('success', 'Service enregistré avec suucès');
 
     }
 
