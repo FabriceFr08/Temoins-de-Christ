@@ -52,10 +52,10 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <select type="text" class="form-select " name="promotion" id="promotion" required>
-                                                <option></option>
-                                                <option> Témoins de Christ</option>
-                                                <option> Victoire avec Christ</option>
+                                            <select class="form-select" name="promotion" id="promotion" required>
+                                                <option value=""></option>
+                                                <option value="Témoins de Christ">Témoins de Christ</option>
+                                                <option value="Victoire avec Christ">Victoire avec Christ</option>
                                             </select>
                                             <div id="promotionError" class="invalid-feedback" style="display: none;"></div>
                                             <label for="promotion">TDC ou Victoire avec Christ * </label>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <select type="text" class="form-select " name="pays_id" id="pays" required>
+                                            <select type="text" class="form-select" name="pays_id" id="pays" required>
                                                 <option></option>
                                                 @foreach($pays as $pays)
                                                     <option value="{{$pays->id}}"> {{$pays->nom}}</option>

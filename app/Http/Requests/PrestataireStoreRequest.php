@@ -22,7 +22,7 @@ class PrestataireStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nom' ,
+            'nom',
             'prenom',
             'email',
             'telephone',
