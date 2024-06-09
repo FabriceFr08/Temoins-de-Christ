@@ -2,7 +2,11 @@
 
 @section('title', 'S\'inscrire')
 @section('content')
-
+    @if(session('success'))
+        <div class="alert alert-success fade show" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="container-fluid blog py-5">
         <div class="container py-5">
             <div class="pb-5">
@@ -61,7 +65,7 @@
                                 <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
                                         <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                                            <img src="{{asset('user.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
+{{--                                            <img src="{{asset('user.jpg')}}" class="img-fluid w-100 rounded" alt="Image">--}}
                                         </div>
                                         <div class="position-relative" style="margin-top: 140px;">
                                             <h5 class="mb-0">{{ $service->prestataire->nom }} {{ $service->prestataire->prenom }}</h5>

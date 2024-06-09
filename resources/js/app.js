@@ -72,7 +72,6 @@ function validateStep2(){
 }
 function validateForm() {
 
-
     let valid = true;
     if (currentStep === 0) {
         valid = validateStep1();
@@ -81,9 +80,11 @@ function validateForm() {
     }
 
     if (valid) {
+        $("#phone").val = iti.getNumber()
         document.getElementsByClassName("step")[currentStep].className += " finish";
+        return valid; //
     }
-    return valid; //
+
 }
 
 
@@ -138,8 +139,9 @@ function validatePays() {
 
 function validatePromotion() {
     const promotion = document.getElementById('promotion');
-    const promotionError = document.getElementById('promotionError')
-    const value = promotion.value.trim();
+    const promotionError = document.getElementById('promotionError');
+    const value = promotion.value;
+
     if (value === "") {
         promotion.classList.add("is-invalid");
         promotionError.textContent = "Veuillez faire un choix";
@@ -147,7 +149,7 @@ function validatePromotion() {
         return false;
     } else {
         promotion.classList.remove("is-invalid");
-        promotion.style.display = "none";
+        promotionError.style.display = "none";
         return true;
     }
 }
@@ -235,7 +237,6 @@ function validatePhone() {
     } else {
         phone.classList.remove('is-invalid');
         phoneError.style.display = 'none';
-        phone.value = iti.getNumber()
 
         return true;
     }
@@ -356,7 +357,6 @@ function getIp(callback) {
         .then((resp) => callback(resp.country));
 }
 const input = document.querySelector("#phone");
-const form = document.querySelector("#form")
 const iti = window.intlTelInput(input, {
     autoPlaceholder: "polite",
     initialCountry: "auto",
@@ -372,9 +372,6 @@ const iti = window.intlTelInput(input, {
     geoIpLookup: getIp,
     i18n: fr
 });
-
-
-
 
 
 // Exposer la fonction globalement
@@ -414,12 +411,6 @@ function updateProgressBar(step) {
     progressBar.style.width = progressPercentage + "%";
 }
 
-
-
-// $('#pays').select2({
-//     placeholder: "Sélectionnez un secteur",
-//     width: '100%',
-// });
 
 $(document).ready(function(){
     $('#donationModal').on('show.bs.modal', function (event) {
