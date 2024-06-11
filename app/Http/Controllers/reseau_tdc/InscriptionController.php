@@ -33,26 +33,35 @@ class InscriptionController extends Controller
         return view('reseau_tdc/inscription', compact('pays', 'villes', 'secteurs'));
     }
 
-    public function store(PrestataireStoreRequest $prestataireStoreRequest, ServiceStoreRequest $serviceStoreRequest)  // Valider la créationd'une nouvelle personne
+    public function store(Request $request)  // Valider la créationd'une nouvelle personne
     {
-        $service = $serviceStoreRequest->validated();
-        $prestataire = Prestataire::create($prestataireStoreRequest->validated());  // Enregistrement du prestataire
-        $service['prestataire_id'] = $prestataire->id;
-        Service::create($service);
+        $prestataire = $request->only(['nom', 'prenom', 'email', 'telephone', 'ville_id', 'promotion', 'photo']);
+        $service = $request->only(['nomService', 'siteWeb', 'tiktok', 'facebook', 'instagram', 'commentaire', 'secteur_id']);
 
-        return redirect()->route('reseau.services')->with('success', 'Enregistrement réussi');
 
+        if ($request->hasFile('photo')){
+            $fileName = $request->file('photo')->getClientOriginalName();
+
+            $path = $request->file('photo')->storeAs('public/images/prestataires/'.$prestataire['nom'], $fileName);
+            $prestataire['photo'] = str_replace('public/', '', $path);   // Association de la photo au prestataire
+        }
+
+        $prestataire = Prestataire::create($prestataire);  // Enregistrement du prestataire
+        $service['prestataire_id'] = $prestataire->id;  // Association du prestataire à son service
+        Service::create($service);   // Création du service
+
+        return redirect()->route('reseau.services')->with('success', 'Service enregistré avec suucès');
 
     }
 
-//    public function checkEmail(Request $request)
-//    {
-//        $email = $request->input('email');
-//        $exists = Prestataire::where('email', $email)->exists();
-//
-//        return response()->json(['exists' => $exists]);
-//    }
+    public function checkEmail(Request $request)
+    {
+        $email = $request->input('email');
+        $exists = Prestataire::where('email', $email)->exists();
+
+        return response()->json(['exists' => $exists]);
     }
+
 
     public function show(Service $service)
     {

@@ -12,29 +12,26 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{route('index')}}" class="nav-item nav-link active">Accueil</a>
 {{--                <a href="{{route('blog')}}" class="nav-item nav-link">Blog</a>--}}
-                <a href="{{route('blog')}}" class="nav-item nav-link">Venir à Christ</a>
-                <a href="{{route('blog')}}" class="nav-item nav-link">Se former</a>
-                <a href="{{route('blog')}}" class="nav-item nav-link">Se déployer</a>
-{{--                <a href="{{route('bibliotheque')}}" class="nav-item nav-link">Bibliothèque HFC</a>--}}
-{{--                <a href="{{route('formation')}}" class="nav-item nav-link">But, vision et mission</a>--}}
-{{--                <div class="nav-item dropdown">--}}
-{{--                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Activités</a>--}}
-{{--                    <div class="dropdown-menu m-0">--}}
-{{--                        <a href="" class="dropdown-item">Evangélisation</a>--}}
-{{--                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSes7lro5XUR3xxn3CBtxNns1M9wyCbX2oc2hL3379cC-F9uYA/viewform" class="dropdown-item">Samedi de Réveil</a>--}}
-{{--                        <a href="" class="dropdown-item">Jeudi des témoins embrasés</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                @if (!request()->routeIs('venir-a-christ'))
+                    <a href="{{route('venir-a-christ')}}" class="nav-item nav-link">Venir à Christ</a>
+                @endif
+                @if (!request()->routeIs('formation'))
+                    <a href="{{route('formation')}}" class="nav-item nav-link">Se former</a>
+                @endif
+                @if (!request()->routeIs('blog'))
+                    <a href="{{route('blog')}}" class="nav-item nav-link">Se déployer</a>
+                @endif
+
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">A propos</a>
                     <div class="dropdown-menu m-0">
-                        <a href="" class="dropdown-item">Notre But</a>
-                        <a href="" class="dropdown-item">Notre Vision</a>
-                        <a href="" class="dropdown-item">Notre Mission</a>
+                        <a href="{{route('but-vision-mission')}}#but" class="dropdown-item">Notre But</a>
+                        <a href="{{route('but-vision-mission')}}#vision" class="dropdown-item">Notre Vision</a>
+                        <a href="{{route('but-vision-mission')}}#mission" class="dropdown-item">Notre Mission</a>
                     </div>
                 </div>
-                <a href="{{route('reseau')}}" class="nav-item nav-link">Réseau ARD</a>
+                <a href="{{route('reseau')}}" class="nav-item nav-link">Réseau ARD-818</a>
 
 {{--                <a href="contact.html" class="nav-item nav-link">Articles</a>--}}
             </div>

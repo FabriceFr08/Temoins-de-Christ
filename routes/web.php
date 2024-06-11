@@ -40,6 +40,10 @@ Route::get('/venir-a-christ', function () {
     return view('venir_a_christ');
 })->name('venir-a-christ');
 
+Route::get('/but-vision-mission', function () {
+    return view('a propos.but_vision_mission');
+})->name('but-vision-mission');
+
 Route::get('/venir-a-christ1', function () {
     return view('venir_a_christ1');
 })->name('venir-a-christ1');

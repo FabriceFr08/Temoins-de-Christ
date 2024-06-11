@@ -22,13 +22,13 @@ class PrestataireStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nom' ,
+            'nom',
             'prenom',
             'email',
             'telephone',
             'ville_id',
             'promotion_tdc',
-            'photo',
+            'photo'
         ];
     }
 }

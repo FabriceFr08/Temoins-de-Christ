@@ -52,10 +52,10 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <select type="text" class="form-select " name="promotion" id="promotion" required>
-                                                <option></option>
-                                                <option value="tdc"> Témoins de Christ</option>
-                                                <option value="vac"> Victoire avec Christ</option>
+                                            <select class="form-select" name="promotion" id="promotion" required>
+                                                <option value=""></option>
+                                                <option value="Témoins de Christ">Témoins de Christ</option>
+                                                <option value="Victoire avec Christ">Victoire avec Christ</option>
                                             </select>
                                             <div id="promotionError" class="invalid-feedback" style="display: none;"></div>
                                             <label for="promotion">TDC ou Victoire avec Christ * </label>
@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <select type="text" class="form-select " name="pays_id" id="pays" required>
+                                            <select type="text" class="form-select" name="pays_id" id="pays" required>
                                                 <option></option>
                                                 @foreach($pays as $pays)
                                                     <option value="{{$pays->id}}"> {{$pays->nom}}</option>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" name="telephone" id="phone" required>
+                                            <input type="tel" class="form-control custom-phone-input" name="telephone" id="phone" required>
                                             <div id="phoneError" class="invalid-feedback" style="display: none;"></div>
                                         </div>
                                     </div>
@@ -143,8 +143,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="file" class="form-control" name="photo" id="site" placeholder="Visuel/Carte de visite/Photo">
-                                            <div id="photoError" class="invalid-feedback"></div>
+                                            <input type="file" class="form-control" name="photo" id="photo" placeholder="Visuel/Carte de visite/Photo">
+                                            <div id="photoError" class="invalid-feedback" style="display: none;"></div>
                                             <label for="site">Visuel/Carte de visite/Photo</label>
                                         </div>
                                     </div>
