@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie', 'https://ipapi.co/json'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', 'https://ipapi.co/json', 'check-email'],
 
     'allowed_methods' => ['*'],
 

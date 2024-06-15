@@ -15,11 +15,15 @@ class Prestataire extends Model
         'email',
         'telephone',
         'ville_id',
-        'promotion_tdc',
+        'promotion',
         'photo'
     ];
 
     public function secteur(){
         return $this->hasMany(Service::class);
+    }
+
+    public function ville(){
+        return $this->belongsTo(Ville::class);
     }
 }
