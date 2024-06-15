@@ -55,6 +55,8 @@ export function nextPrev(n) {
     // if you have reached the end of the form...
     if (currentStep >= x.length) {
         // ... the form gets submitted:
+        const phoneInput = document.querySelector("#phone");
+        phoneInput.value = iti.getNumber();
         document.getElementById("form").submit();
         return false;
     }
@@ -71,7 +73,6 @@ function validateStep2(){
     return validateSecteur() && validateService() && validateSite() && validatePhoto() && validateMessage();
 }
 function validateForm() {
-
     let valid = true;
     if (currentStep === 0) {
         valid = validateStep1();
@@ -80,12 +81,12 @@ function validateForm() {
     }
 
     if (valid) {
-        $("#phone").val = iti.getNumber()
         document.getElementsByClassName("step")[currentStep].className += " finish";
-        return valid; //
     }
 
+    return valid;
 }
+
 
 
 function validateNom() {
@@ -174,7 +175,8 @@ function validateEmail() {
     const email = document.getElementById('email');
     const emailError = document.getElementById('emailError');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+    const unique = checkEmailUniqueness(email.value.trim())
+    console.log(unique)
     if (email.value.trim() === "") {
         email.classList.add('is-invalid');
         emailError.style.display = 'block';
@@ -185,45 +187,33 @@ function validateEmail() {
         emailError.style.display = 'block';
         emailError.textContent = "L'email n'est pas valide.";
         return false;
-    } else {
-        email.classList.remove('is-invalid');
-        emailError.style.display = 'none';
-        return true;
-        // // Vérification AJAX pour l'unicité de l'email
-        // return checkEmailUniqueness(email.value.trim()).then(isUnique => {
-        //     if (!isUnique) {
-        //         email.classList.add('is-invalid');
-        //         emailError.style.display = 'block';
-        //         emailError.textContent = "L'email existe déjà.";
-        //         return false;
-        //     } else {
-        //         email.classList.remove('is-invalid');
-        //         emailError.style.display = 'none';
-        //         return true;
-        //     }
-        // });
+    }else{
+        return true
     }
 }
 
-// function checkEmailUniqueness(email) {
-//     return fetch('/check-email', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//             //'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-//         },
-//         body: JSON.stringify({ email: email })
-//     })
-//         .then(response => response.json())
-//
-//         .then(data => {
-//             return !data.exists; // Retourne true si l'email n'existe pas, false sinon
-//         })
-//         .catch(error => {
-//             console.error('Error:', error);
-//             return false;
-//         });
-// }
+async function checkEmailUniqueness(email) {
+    try {
+        const response = await fetch('/check-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        });
+        return new Promise((resolve) =>{
+            setTimeout(() => {
+                const data =  response.json(); // Convertit la réponse en JSON
+                resolve(data)
+            }, 1)
+        })
+
+    } catch (error) {
+        console.error('Error:', error);
+        return false;
+    }
+}
+
 
 function validatePhone() {
     const phone = document.getElementById('phone');
@@ -358,21 +348,14 @@ function getIp(callback) {
 }
 const input = document.querySelector("#phone");
 const iti = window.intlTelInput(input, {
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.11/build/js/utils.js",
     autoPlaceholder: "polite",
     initialCountry: "auto",
-    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.8/build/js/utils.js",
-    //nationalMode: true,
-    hiddenInput: function(telephone) {
-        return {
-            phone: "phone_full",
-            country: "country_code"
-        };
-    },
+    nationalMode: true,
     separateDialCode: true,
     geoIpLookup: getIp,
     i18n: fr
 });
-
 
 // Exposer la fonction globalement
 window.nextPrev = nextPrev;
@@ -410,7 +393,6 @@ function updateProgressBar(step) {
     var progressPercentage = ((step + 1) / progressItems.length) * 100;
     progressBar.style.width = progressPercentage + "%";
 }
-
 
 $(document).ready(function(){
     $('#donationModal').on('show.bs.modal', function (event) {

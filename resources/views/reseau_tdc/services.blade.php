@@ -2,13 +2,14 @@
 
 @section('title', 'S\'inscrire')
 @section('content')
-    @if(session('success'))
-        <div class="alert alert-success fade show" role="alert">
-            {{ session('success') }}
-        </div>
-    @endif
+
     <div class="container-fluid blog py-5">
         <div class="container py-5">
+            @if(session('success'))
+                <div class="alert alert-secondary fade show" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="pb-5">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Notre réseau</h4>
                 <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">Les différents prestataires de service</h1>
@@ -58,6 +59,7 @@
                 </form>
                 <!-- Recherche -->
 
+
                 <div class="pt-5">
                     <div class="row" id="serviceContainer">
                         @foreach($services as $service)
@@ -65,7 +67,7 @@
                                 <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
                                         <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-{{--                                            <img src="{{asset('user.jpg')}}" class="img-fluid w-100 rounded" alt="Image">--}}
+                                            <img src="{{asset('user.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
                                         </div>
                                         <div class="position-relative" style="margin-top: 140px;">
                                             <h5 class="mb-0">{{ $service->prestataire->nom }} {{ $service->prestataire->prenom }}</h5>
@@ -75,6 +77,9 @@
                                 </a>
                             </div>
                         @endforeach
+                    </div>
+                    <div class="pagination">
+                        {{ $services->links() }}
                     </div>
                 </div>
 

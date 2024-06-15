@@ -20,14 +20,15 @@ class InscriptionController extends Controller
         $secteurs = Secteur::select(['id', 'nom'])->get();
         $pays = Pays::select(['id', 'nom'])->get();
         $villes = Ville::select(['id', 'nom'])->get();
-        $services = Service::with(['prestataire', 'secteur'])->get();
+        $services = Service::with(['prestataire', 'secteur'])->paginate(9); // Paginate with 10 items per page
 
         return view('reseau_tdc.services', compact('secteurs', 'pays', 'villes', 'services'));
     }
 
+
     public function create()  // Fonction pour la vue/formulaire d'inscription pour le réseau des tdc
     {
-        $pays = Pays::select(['id', 'nom'])->get();
+        $pays = Pays::select(['id', 'nom'])->orderBy('nom', 'asc')->get();
         $villes = Ville::with('pays')->select('id', 'nom', 'pays_id')->get();
         $secteurs = Secteur::select('id', 'nom')->get();
         return view('reseau_tdc/inscription', compact('pays', 'villes', 'secteurs'));
@@ -35,6 +36,7 @@ class InscriptionController extends Controller
 
     public function store(Request $request)  // Valider la créationd'une nouvelle personne
     {
+        //dd($request);
         $prestataire = $request->only(['nom', 'prenom', 'email', 'telephone', 'ville_id', 'promotion', 'photo']);
         $service = $request->only(['nomService', 'siteWeb', 'tiktok', 'facebook', 'instagram', 'commentaire', 'secteur_id']);
 
@@ -58,8 +60,7 @@ class InscriptionController extends Controller
     {
         $email = $request->input('email');
         $exists = Prestataire::where('email', $email)->exists();
-
-        return response()->json(['exists' => $exists]);
+        return response()->json($exists);
     }
 
 

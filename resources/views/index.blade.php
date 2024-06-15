@@ -34,7 +34,7 @@
 , à Le servir partout au monde avec puissance et autorité
 - A L\'aimer de tout leur coeur;
 - A mener une vie de louange et d’adoration en tout temps.', 92)}}</p>
-                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="https://docs.google.com/forms/d/e/1FAIpQLSes7lro5XUR3xxn3CBtxNns1M9wyCbX2oc2hL3379cC-F9uYA/viewform">En savoir plus</a>
+                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="{{route('but-vision-mission')}}#but">En savoir plus</a>
                 </div>
             </div>
             <div class="training-item bg-white rounded wow fadeInUp">
@@ -59,7 +59,7 @@ Lesquels auront pour particularités:
 - ⁠De devenir la solution aux problèmes de leurs communautés, assemblées, quartiers, villages ou villes, en étant des Leaders qui prennent des initiatives inspirées.
 - De marcher désormais dans la consécration jusqu’à ce que le Saint-Esprit les mette à part;
 - D’être activement au service du Maitre jusqu’à Son retour', 80)}}</p>
-                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="#">En savoir plus</a>
+                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="{{route('but-vision-mission')}}#vision">En savoir plus</a>
                 </div>
             </div>
             <div class="training-item bg-white rounded">
@@ -77,7 +77,7 @@ Les aider à obtenir toute forme de délivrance dont ils ont besoin pour servir 
 - Leur apprendre et les équiper à prêcher l’évangile du Royaume dans les différents canaux et les différents lieux où le Seigneur les mettra à part
 - Leur apprendre à faire des disciples qui vont eux-aussi engendrer d’autres disciples.
 - Leur apprendre à se déployer au quotidien avec leur don d\'operations pour rendre Christ manifeste dans leur Jérusalem, dans toute la Judée, dans la Samarie et jusqu’aux extrémités de la terre', 92)}}</p>
-                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="#">En savoir plus</a>
+                    <a class="btn btn-success rounded-pill text-white py-2 px-4" href="{{route('but-vision-mission')}}#mission">En savoir plus</a>
                 </div>
             </div>
 
