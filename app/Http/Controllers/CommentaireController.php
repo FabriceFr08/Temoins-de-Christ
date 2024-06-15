@@ -13,13 +13,13 @@ class CommentaireController extends Controller
     {
         $request->validate([
             'commentaire' => 'required|string',
+            'nom' => 'required|string',
         ]);
 
         $commentaire = new Commentaire();
         $commentaire->commentaire = $request->input('commentaire');
+        $commentaire->nom = $request->input('nom');
         $commentaire->article_id = $article->id;
-        // Vous pouvez remplacer '1' par l'ID de l'utilisateur authentifié si vous avez un système d'authentification en place
-        $commentaire->commentateur_id = 1;
         $commentaire->save();
 
         return redirect()->back()->with('success', 'Commentaire ajouté avec succès.');

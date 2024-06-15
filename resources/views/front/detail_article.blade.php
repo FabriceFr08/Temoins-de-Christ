@@ -3,7 +3,7 @@
 @section('title', $article->titre)
 
 @section('content')
- <style>
+<style>
     /* Styles for article page */
     body {
         font-family: Arial, sans-serif;
@@ -52,16 +52,17 @@
         color: #999;
     }
 
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
 </style>
-{{-- <div class="article-container" >
-    <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
-    <h1 class="article-title">{{ $article->titre }}</h1>
-    <p class="article-author">Auteur de l'article</p>
-    <div class="article-content">
-        {!! $article->contenu !!}
-    </div>
-    <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
-</div> --}}
+
 <div class="article-container">
     <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
     <h1 class="article-title">{{ $article->titre }}</h1>
@@ -71,6 +72,13 @@
     </div>
     <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
 
+    <!-- Afficher le message de confirmation -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <div class="card mt-4">
         <div class="card-header">
             Commentaires
@@ -78,7 +86,7 @@
         <div class="card-body">
             @foreach($article->commentaires as $commentaire)
                 <div class="mb-3">
-                    <strong>{{ $commentaire->commentateur->nom }}</strong> :
+                    <strong>{{ $commentaire->nom }}</strong> :
                     <p>{{ $commentaire->commentaire }}</p>
                 </div>
             @endforeach

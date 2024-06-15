@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('commentaire');
             $table->date('datePublication')->nullable();
             $table->foreignId('article_id')->constrained();
-            $table->foreignId('commentateur_id')->constrained();
+            $table->string('nom'); 
+            $table->foreignId('commentateur_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
