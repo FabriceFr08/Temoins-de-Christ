@@ -5,8 +5,8 @@
 @section('content')
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="but">
-        <div class="container py-5">
+    <div class="container-fluid py-3" id="but"> <!-- reduced padding here -->
+        <div class="container py-3"> <!-- reduced padding here -->
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
@@ -15,7 +15,6 @@
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Notre but</h4>
-{{--                    <h3 class="display-3 mb-4">A propos de la formation</h3>--}}
                     <p>
                         Emmener des multitudes :
                     </p>
@@ -25,8 +24,6 @@
                         <li><i class="fas fa-heart"></i> À L'aimer de tout leur cœur</li>
                         <li><i class="fas fa-music"></i> À mener une vie de louange et d’adoration en tout temps</li>
                     </ul>
-
-                    {{--                    <a class="btn btn-success rounded-pill text-white py-3 px-5" href="#">Learn More</a>--}}
                 </div>
             </div>
         </div>
@@ -34,8 +31,8 @@
     <!-- About End -->
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="vision">
-        <div class="container py-5">
+    <div class="container-fluid py-3" id="vision"> <!-- reduced padding here -->
+        <div class="container py-3"> <!-- reduced padding here -->
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
@@ -44,7 +41,6 @@
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Notre vision</h4>
-{{--                    <h3 class="display-3 mb-4">A propos de la formation</h3>--}}
                     <p>
                         Gagner des âmes, mais aussi prendre des rachetés remplis de soif, afin de les transformer en Témoins de Christ selon Actes 1:8.
                     </p>
@@ -65,8 +61,6 @@
                         <li><i class="fas fa-walking"></i> Marcher dans la consécration jusqu'à ce que le Saint-Esprit les mette à part</li>
                         <li><i class="fas fa-hands"></i> Être activement au service du Maître jusqu'à Son retour</li>
                     </ul>
-
-                    {{--                    <a class="btn btn-success rounded-pill text-white py-3 px-5" href="#">Learn More</a>--}}
                 </div>
             </div>
         </div>
@@ -74,8 +68,8 @@
     <!-- About End -->
 
     <!-- About Start - Notre Mission -->
-    <div class="container-fluid py-5" id="mission">
-        <div class="container py-5">
+    <div class="container-fluid py-3" id="mission"> <!-- reduced padding here -->
+        <div class="container py-3"> <!-- reduced padding here -->
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
@@ -98,7 +92,5 @@
         </div>
     </div>
     <!-- About End -->
-
-
 
 @endsection

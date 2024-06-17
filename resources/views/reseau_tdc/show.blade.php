@@ -7,7 +7,7 @@
         <div class="container py-5">
 
             <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Notre réseau</h4>
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Réseau ard-818</h4>
                 <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">Profil du prestataire</h1>
             </div>
             <div class="pt-5">
@@ -18,8 +18,13 @@
                                 <div class="profile-view">
                                     <div class="profile-img-wrap">
                                         <div class="profile-img">
-                                            <a href="#"><img src="{{asset('../../../public/img/c1.jpg')}}" alt="Image">
+                                            @if($service->prestataire->photo !== null)
+                                                <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
+                                            @else
+                                            <a href="#"><img src="../../img/c2.jpg" alt="Image">
+{{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
                                             </a>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="profile-basic">
@@ -40,10 +45,10 @@
                                                         <div class="title">Téléphone:</div>
                                                         <div class="text"><a href="">{{$service->prestataire->telephone}}</a></div>
                                                     </li>
-                                                    <li>
-                                                        <div class="title">Email:</div>
-                                                        <div class="text"><a href="">{{$service->prestataire->email}}</a></div>
-                                                    </li>
+{{--                                                    <li>--}}
+{{--                                                        <div class="title">Email:</div>--}}
+{{--                                                        <div class="text"><a href="">{{$service->prestataire->email}}</a></div>--}}
+{{--                                                    </li>--}}
                                                     <li>
                                                         <div class="title">Pays:</div>
                                                         <div class="text">{{$service->prestataire->ville->pays->nom}}</div>

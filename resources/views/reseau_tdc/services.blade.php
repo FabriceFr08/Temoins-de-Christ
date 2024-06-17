@@ -66,8 +66,16 @@
                             <div class="col-md-4 mb-4 service-item" data-secteur="{{ $service->secteur->id }}" data-pays="{{ $service->prestataire->pays_id }}" data-ville="{{ $service->prestataire->ville_id }}">
                                 <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
-                                        <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">
-                                            <img src="{{asset('user.jpg')}}" class="img-fluid w-100 rounded" alt="Image">
+                                        <div class="profile-img-wrap">
+                                            <div class="profile-img">
+                                                @if($service->prestataire->photo !== null)
+                                                    <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
+                                                @else
+                                                    <a href="#"><img src="../../img/c2.jpg" alt="Image">
+                                                        {{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
+                                                    </a>
+                                                @endif
+                                            </div>
                                         </div>
                                         <div class="position-relative" style="margin-top: 140px;">
                                             <h5 class="mb-0">{{ $service->prestataire->nom }} {{ $service->prestataire->prenom }}</h5>
