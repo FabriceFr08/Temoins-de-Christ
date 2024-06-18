@@ -18,7 +18,7 @@
                     <p>
                         Emmener des multitudes :
                     </p>
-                    <ul>
+                    <ul style="font-size: 1.3em;">
                         <li><i class="fas fa-book"></i> À connaître Dieu et Sa parole en profondeur</li>
                         <li><i class="fas fa-globe"></i> À Le servir partout au monde avec puissance et autorité</li>
                         <li><i class="fas fa-heart"></i> À L'aimer de tout leur cœur</li>
@@ -47,7 +47,7 @@
                     <p>
                         Ces témoins se distingueront par les caractéristiques suivantes :
                     </p>
-                    <ul>
+                    <ul style="font-size: 1.3em;">
                         <li><i class="fas fa-book"></i> Être ancrés dans la connaissance et la profondeur de la parole de vérité, et marcher par l'esprit</li>
                         <li><i class="fas fa-heart"></i> Se transformer en vraies épouses passionnées de Christ par la communion du Saint-Esprit</li>
                         <li><i class="fas fa-cross"></i> Découvrir et s'approprier les réalités et les acquis de la Rédemption</li>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Notre mission</h4>
-                    <ul>
+                    <ul style="font-size: 1.3em;">
                         <li><i class="fas fa-dove icon-dove"></i> Les aider à obtenir toute forme de délivrance dont ils ont besoin pour servir Dieu librement, au travers de la connaissance, l'intelligence et la sagesse.</li>
                         <li><i class="fas fa-book-open icon-book-open"></i> Emmener les « Témoins de Christ » à être ancrés dans la Parole et la démonstration de puissance, au travers d’une formation gratuite en ligne (pour l'heure) et en présentiel (futur proche) pour une durée de 9 mois ou 15 mois (12 mois ou 18 mois).</li>
                         <li><i class="fas fa-crown icon-crown"></i> Leur apprendre à régner dans leur couloir de destinée au travers de la connaissance qui affranchit.</li>

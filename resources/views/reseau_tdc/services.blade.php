@@ -11,8 +11,8 @@
                 </div>
             @endif
             <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Notre réseau</h4>
-                <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">Les différents prestataires de service</h1>
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">ARD-818</h4>
+                <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">Les différents services</h1>
             </div>
             <div class="pt-5">
 
@@ -66,18 +66,16 @@
                             <div class="col-md-4 mb-4 service-item" >
                                 <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
-{{--                                        <div class="profile-img-wrap">--}}
-{{--                                            <div class="profile-img">--}}
-{{--                                                @if($service->prestataire->photo !== null)--}}
-{{--                                                    <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">--}}
-{{--                                                @else--}}
-{{--                                                    <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
-{{--                                                        --}}{{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
-{{--                                                    </a>--}}
-{{--                                                @endif--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-                                        <div class="position-relative" style="margin-top: 140px;">
+                                        <div class="profile-widget">
+
+                                                <a href="{{route('reseau.services.show', $service->id)}}" class="avatar">
+                                                    @if($service->prestataire->photo !== null)
+                                                    <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
+                                                    @else
+                                                        <img src="../../img/c2.jpg" alt="Image">
+                                                    @endif
+                                                </a>
+
                                             <h5 class="mb-0">{{ $service->prestataire->nom }} {{ $service->prestataire->prenom }}</h5>
                                             <p>{{ $service->secteur->nom }}</p>
                                         </div>
@@ -86,11 +84,11 @@
                             </div>
                         @endforeach
                     </div>
-                    <div class="pagination">
-                        {{ $services->links() }}
-                    </div>
-                </div>
 
+                </div>
+{{--                <div class="pagination">--}}
+{{--                    {{ $services->links() }}--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
