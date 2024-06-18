@@ -76,7 +76,7 @@
 
                         </div>
                         <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">11 modules</p>
+                            <p class="border-bottom border-light mb-2 pb-2">16  modules</p>
                             <p class="border-bottom border-light mb-2 pb-2">Accomplir la mission de DIEU</p>
                             <p class="border-bottom border-light mb-2 pb-2">Témoigner de Christ</p>
                             <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>
