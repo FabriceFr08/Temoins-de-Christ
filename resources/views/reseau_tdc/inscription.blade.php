@@ -183,9 +183,9 @@
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button type="button" class="btn btn-secondary rounded-pill text-white py-3 px-5 m-2" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
-                                <button type="button" class="btn btn-secondary rounded-pill text-white py-3 px-5 m-2" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
-                                <button type="submit" class="btn btn-primary rounded-pill text-white py-3 px-5 m-2" id="submitBtn" style="display: none;">Soumettre</button>
+                                <button type="button" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
+                                <button type="button" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
+                                <button type="submit" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="submitBtn" style="display: none;">Soumettre</button>
                             </div>
                         </form>
                     </div>
