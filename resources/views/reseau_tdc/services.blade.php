@@ -63,20 +63,20 @@
                 <div class="pt-5">
                     <div class="row" id="serviceContainer">
                         @foreach($services as $service)
-                            <div class="col-md-4 mb-4 service-item" data-secteur="{{ $service->secteur->id }}" data-pays="{{ $service->prestataire->pays_id }}" data-ville="{{ $service->prestataire->ville_id }}">
+                            <div class="col-md-4 mb-4 service-item" >
                                 <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
-                                        <div class="profile-img-wrap">
-                                            <div class="profile-img">
-                                                @if($service->prestataire->photo !== null)
-                                                    <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
-                                                @else
-                                                    <a href="#"><img src="../../img/c2.jpg" alt="Image">
-                                                        {{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
-                                                    </a>
-                                                @endif
-                                            </div>
-                                        </div>
+{{--                                        <div class="profile-img-wrap">--}}
+{{--                                            <div class="profile-img">--}}
+{{--                                                @if($service->prestataire->photo !== null)--}}
+{{--                                                    <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">--}}
+{{--                                                @else--}}
+{{--                                                    <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
+{{--                                                        --}}{{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
+{{--                                                    </a>--}}
+{{--                                                @endif--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
                                         <div class="position-relative" style="margin-top: 140px;">
                                             <h5 class="mb-0">{{ $service->prestataire->nom }} {{ $service->prestataire->prenom }}</h5>
                                             <p>{{ $service->secteur->nom }}</p>
