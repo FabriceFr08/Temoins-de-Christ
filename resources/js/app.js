@@ -284,7 +284,8 @@ function validateMessage() {
 function validateSite() {
     const siteInput = document.getElementById('site');
     const siteError = document.getElementById('siteError');
-    const siteRegex = /^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
+    const siteRegex = /^[^\s\/$.?#].\S*$/i;
+
 
     if (siteInput.value.trim() === "") {
         // Si le champ est vide, nous ne faisons rien et retournons true
