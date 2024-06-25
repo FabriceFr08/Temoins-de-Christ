@@ -15,8 +15,8 @@
                 @if (!request()->routeIs('venir-a-christ'))
                     <a href="{{route('venir-a-christ')}}" class="nav-item nav-link">Venir à Christ</a>
                 @endif
-                @if (!request()->routeIs('formation'))
-                    <a href="{{route('formation')}}" class="nav-item nav-link">Se former</a>
+                @if (!request()->routeIs('formations.index'))
+                    <a href="{{route('formations.index')}}" class="nav-item nav-link">Se former</a>
                 @endif
                 @if (!request()->routeIs('blog'))
                     <a href="{{route('blog')}}" class="nav-item nav-link">Se déployer</a>

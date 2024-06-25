@@ -4,13 +4,12 @@
 
 @section('content')
 
-    <!-- About Start -->
-    <div class="container-fluid py-3" id="but"> <!-- reduced padding here -->
-        <div class="container py-3"> <!-- reduced padding here -->
+    <div class="container-fluid py-5" id="but">
+        <div class="container py-3">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="col-lg-5 mb-3 mb-lg-0 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
-                        <img src="img/formations/formation_12_mois.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <img src="img/but_vision_mission/but.png" class="img-fluid w-100 rounded" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -36,7 +35,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
-                        <img src="img/formations/formation_12_mois.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <img src="img/but_vision_mission/vision.png" class="img-fluid w-100 rounded" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -73,7 +72,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="border bg-secondary rounded">
-                        <img src="img/formations/formation_12_mois.jpg" class="img-fluid w-100 rounded" alt="Image">
+                        <img src="img/but_vision_mission/but.png" class="img-fluid w-100 rounded" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
