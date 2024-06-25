@@ -24,6 +24,7 @@ export default defineConfig({
                 'resources/js/main.js',
                 'resources/js/app.js',
                 'resources/js/formation.js',
+                'resources/js/reseau.js',
 
             ],
             refresh: true,
