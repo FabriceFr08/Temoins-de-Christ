@@ -18,7 +18,7 @@ p {
     line-height: 1.6;
 }
 
-ol {
+.ol {
     list-style: none;
     counter-reset: list;
     padding: 0 1rem;
@@ -53,14 +53,14 @@ li::before {
     background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
 }
 
-h3 {
+ol h3 {
     display: flex;
     align-items: baseline;
     margin: 0 0 1rem;
     color: rgb(70 70 70);
 }
 
-h3::before {
+ol h3::before {
     display: flex;
     justify-content: center;
     align-items: center;
