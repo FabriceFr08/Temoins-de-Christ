@@ -15,7 +15,7 @@ class FormationController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+        //dd($request->all());
         return redirect()->route('accueil')->with('success', 'Inscription validée avec succès');
     }
 }
