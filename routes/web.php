@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategorieArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\FormationController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -13,10 +15,6 @@ Route::get('/galerie', function () {
     return view('galerie');
 })->name('galerie');
 
-
-Route::get('/formations', function () {
-    return view('formation');
-})->name('formation');
 
 Route::get('/venir-a-christ', function () {
     return view('venir_a_christ');
@@ -59,7 +57,7 @@ Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name(
 
 Route::post('/check-email', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'checkEmail'])->name('check.email');
 
-
+Route::resource('formations', FormationController::class)->except('destroy', 'show', 'update', 'edit');  //
 
 Route::resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
 Route::resource('articles', ArticleController::class);  // Routes pour les articles

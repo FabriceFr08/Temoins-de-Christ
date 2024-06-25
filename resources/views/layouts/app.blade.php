@@ -46,7 +46,7 @@
     @vite('resources/lib/waypoints/waypoints.min.js')
     @vite('resources/lib/easing/easing.min.js')
     @vite('resources/js/main.js')
-    @vite('resources/js/app.js')
+
 </head>
 
 <body>

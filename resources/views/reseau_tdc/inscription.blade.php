@@ -195,3 +195,5 @@
     </div>
     <!-- Contact End -->
 @endsection
+
+@vite('resources/js/reseau.js')
