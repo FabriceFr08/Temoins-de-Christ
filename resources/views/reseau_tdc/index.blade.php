@@ -1,19 +1,18 @@
 @vite('resources/css/reseau.css')
 @extends('layouts.app')
-
 @section('title', 'Réseau ARD-818')
 @section('content')
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-1">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
 
                 <div class="container" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Réseau ard-818</h4>
 
-                    <ol style="--length: 4" role="list">
+                    <ol class="ol" style="--length: 4" role="list">
                         <li style="--i: 1">
                             <h3>Qu'est-ce que le réseau ARD-818 ?</h3>
                             <p>Le Réseau ARD-818, ou Réseau Alliance de Richesse Deutéronome 8:18, est votre portail vers l'abondance. Il s'agit d'une communauté dynamique de partage et de croissance, bien plus qu'un simple réseau de mise en relation.</p>
