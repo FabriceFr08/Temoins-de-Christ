@@ -21,7 +21,7 @@
                             <div class="bg-light rounded-bottom p-4">
                                 <div class="d-flex justify-content-between mb-4">
                                     <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-success"></i> {{ $article->datePublication }}</a>
-                                    <a href="#" class="text-muted"><span class="fa fa-comments text-success"></span> 3 Comments</a>
+                                    <a href="#" class="text-muted"><span class="fa fa-comments text-success"></span> {{ $article->commentaires->count() }} Comments</a>
                                 </div>
                                 <a href="{{ route('article.show', $article->id) }}" class="h4 mb-3 d-block">{{ $article->titre }}</a>
                                 <p class="mb-3" style="height: 100px; overflow: hidden;">{{ Str::limit(strip_tags($article->contenu), 200) }}</p>
@@ -34,7 +34,6 @@
         </div>
     </div>
 </div>
-<!-- Blogs End --> 
-
+<!-- Blogs End -->
 
 @endsection
