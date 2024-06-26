@@ -88,10 +88,12 @@
                 <div class="mb-3">
                     <strong>{{ $commentaire->nom }}</strong> :
                     <p>{{ $commentaire->commentaire }}</p>
+                    <small>Posté le {{ $commentaire->created_at->format('d/m/Y à H:i') }}</small>
                 </div>
             @endforeach
         </div>
     </div>
+
 
     @include('front.partials.comment_form', ['article' => $article])
 
