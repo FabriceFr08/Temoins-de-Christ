@@ -24,7 +24,7 @@
         <div class="training-carousel owl-carousel pt-5 wow fadeInUp">
             <div class="training-item bg-white rounded wow fadeInUp" >
                 <div class="training-img rounded-top">
-                    <img src="img/but_vision_mission/but.png" class="img-fluid rounded-top w-100" alt="Image">
+                    <img src="img/but_vision_mission/but1.jpg" class="img-fluid rounded-top w-100" alt="Image">
                 </div>
                 <div class="rounded-bottom border border-top-0 p-4">
                     <a href="#" class="h5 mb-3 d-block">Notre but</a>
@@ -39,7 +39,7 @@
             </div>
             <div class="training-item bg-white rounded wow fadeInUp">
                 <div class="training-img rounded-top">
-                    <img src="img/but_vision_mission/vision.png" class="img-fluid rounded-top w-100" alt="Image">
+                    <img src="img/but_vision_mission/vision1.jpg" class="img-fluid rounded-top w-100" alt="Image">
                 </div>
                 <div class="rounded-bottom border border-top-0 p-4">
                     <a href="#" class="h5 mb-3 d-block">Notre vision</a>
@@ -64,7 +64,7 @@ Lesquels auront pour particularités:
             </div>
             <div class="training-item bg-white rounded">
                 <div class="training-img rounded-top">
-                    <img src="img/but_vision_mission/but.png" class="img-fluid rounded-top w-100" alt="Image">
+                    <img src="img/but_vision_mission/mission1.jpg" class="img-fluid rounded-top w-100" alt="Image">
 {{--                    <h1 class="fs-1 fw-bold bg-primary text-white d-inline-block rounded p-2 position-absolute" style="top: 0; left: 0;">03</h1>--}}
                 </div>
                 <div class="rounded-bottom border border-top-0 p-4">
