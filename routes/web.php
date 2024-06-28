@@ -11,9 +11,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/galerie', function () {
-    return view('galerie');
-})->name('galerie');
+Route::get('/formations/nos-formations', function () {
+    return view('formations.nos_formations');
+})->name('nos-formations');
+
+Route::get('/formations/nos-formations/premiers-pas', function () {
+    return view('formations.pages.premier_pas');
+})->name('nos-formations.premier_pas');
 
 
 Route::get('/venir-a-christ', function () {

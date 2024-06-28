@@ -7,7 +7,6 @@
 @include('.partials.carousel')
 
 
-
 <!-- Training Start -->
 <div class="container-fluid training py-5">
     <div class="container py-5">
