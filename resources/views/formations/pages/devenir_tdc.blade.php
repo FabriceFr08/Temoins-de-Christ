@@ -31,7 +31,7 @@
             <div class="carousel-caption">
                 <div class="carousel-caption-content p-3" style="max-width: 900px;">
                     <h4 class="text-secondary text-uppercase sub-title fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 3px;">Temoins de Christ | ACTES 1:8</h4>
-                    <h4 class="display-2  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Formation/Devenir Témoin de Christt</h4>
+                    <h4 class="display-4  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Formation/Devenir Témoin de Christt</h4>
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">

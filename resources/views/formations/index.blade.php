@@ -126,14 +126,11 @@
                         </font>
                     </p>
                 </div>
-                <link rel="stylesheet" href="style.css">
 
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class=" rounded video-container">
-                        <video width="520" height="380" controls>
+                        <video width="400" height="380" controls>
                             <source src="video/presentation_yaya.mp4" type="video/mp4">
-                            <!-- Ajoutez d'autres sources pour d'autres types de formats vidéo si nécessaire -->
-                            Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
@@ -145,6 +142,7 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
 @vite('resources/js/counter.js')
 @endsection
 
