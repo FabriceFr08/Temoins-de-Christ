@@ -6,7 +6,7 @@
 
     <div class="header-carousel owl-carousel">
         <div class="header-carousel-item">
-            <img src="{{asset('img/c1.jpg')}}" class="img-fluid w-100" alt="Image">
+            <img src="{{asset('img/donner_vie_christ/carousel.png')}}" class="img-fluid w-100" alt="Image">
             <div class="carousel-caption">
                 <div class="carousel-caption-content p-3" style="max-width: 900px;">
                     <h4 class="text-secondary text-uppercase sub-title fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 3px;">Temoins de Christ | ACTES 1:8</h4>
