@@ -10,7 +10,7 @@
             <div class="carousel-caption">
                 <div class="carousel-caption-content p-3" style="max-width: 900px;">
                     <h4 class="text-secondary text-uppercase sub-title fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 3px;">Temoins de Christ | ACTES 1:8</h4>
-                    <h1 class="display-1  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Nos formations</h1>
+                    <h4 class="display-4  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Nos formations</h4>
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
@@ -61,7 +61,7 @@
                     <a href="{{route('nos-formations.premier_pas')}}">
                         <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
                             <div class="training-img rounded-top">
-                                <img src="/img/service-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <img src="/img/formations/premiers-pas-de-bebe.jpg" class="img-fluid rounded-top w-100" alt="Image">
                                 <h1 class="fs-1 fw-bold bg-secondary text-white d-inline-block rounded p-2 position-absolute" style="top: 0; left: 0;">01</h1>
                             </div>
                             <div class="rounded-bottom border border-top-0 p-4">
@@ -75,7 +75,7 @@
                     <a href="{{route('nos-formations.comment-servir-dieu')}}">
                         <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.3s">
                             <div class="training-img rounded-top">
-                                <img src="/img/service-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <img src="/img/formations/service.png" class="img-fluid rounded-top w-100" alt="Image">
                                 <h1 class="fs-1 fw-bold bg-secondary text-white d-inline-block rounded p-2 position-absolute" style="top: 0; left: 0;">02</h1>
                             </div>
                             <div class="rounded-bottom border border-top-0 p-4">
@@ -89,7 +89,7 @@
                     <a href="{{route('nos-formations.devenir_tdc')}}">
                         <div class="training-item bg-white rounded wow fadeInUp" data-wow-delay="0.5s">
                             <div class="training-img rounded-top">
-                                <img src="/img/service-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                                <img src="/img/formations/tdc.png" class="img-fluid rounded-top w-100" alt="Image">
                                 <h1 class="fs-1 fw-bold bg-secondary text-white d-inline-block rounded p-2 position-absolute" style="top: 0; left: 0;">03</h1>
                             </div>
                             <div class="rounded-bottom border border-top-0 p-4">
