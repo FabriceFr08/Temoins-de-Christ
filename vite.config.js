@@ -9,6 +9,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/css/style.css',
                 'resources/css/reseau.css',
+                'resources/css/counter.css',
                 'resources/css/bootstrap.min.css',
                 'resources/lib/owlcarousel/assets/owl.carousel.min.css',
                 'resources/lib/lightbox/css/lightbox.min.css',
@@ -25,6 +26,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/formation.js',
                 'resources/js/reseau.js',
+                'resources/js/counter.js',
 
             ],
             refresh: true,

@@ -11,9 +11,21 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/galerie', function () {
-    return view('galerie');
-})->name('galerie');
+Route::get('/formations/nos-formations', function () {
+    return view('formations.nos_formations');
+})->name('nos-formations');
+
+Route::get('/formations/nos-formations/premiers-pas', function () {
+    return view('formations.pages.premier_pas');
+})->name('nos-formations.premier_pas');
+
+Route::get('/formations/nos-formations/sevenir-temoin-de-christ', function () {
+    return view('formations.pages.devenir_tdc');
+})->name('nos-formations.devenir_tdc');
+
+Route::get('/formations/nos-formations/comment-servir-dieu', function () {
+    return view('formations.pages.omment_servir');
+})->name('nos-formations.comment-servir-dieu');
 
 
 /*Route::get('/venir-a-christ', function () {
