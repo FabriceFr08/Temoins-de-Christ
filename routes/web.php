@@ -16,9 +16,15 @@ Route::get('/galerie', function () {
 })->name('galerie');
 
 
-Route::get('/venir-a-christ', function () {
+/*Route::get('/venir-a-christ', function () {
     return view('venir_a_christ');
+})->name('venir-a-christ');*/
+
+Route::get('/venir-a-christ', function () {
+    return view('cmt_recevoir_christ');
 })->name('venir-a-christ');
+
+
 
 Route::get('/but-vision-mission', function () {
     return view('a propos.but_vision_mission');
