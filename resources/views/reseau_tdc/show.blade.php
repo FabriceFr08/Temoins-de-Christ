@@ -60,10 +60,10 @@
                                                         <div class="title">Promotion:</div>
                                                         <div class="text">{{$service->prestataire->promotion}}</div>
                                                     </li>
-                                                    <li>
-                                                        <div class="title">Informations sur le service:</div>
-                                                        <div class="text">{{$service->commentaire}}</div>
-                                                    </li>
+{{--                                                    <li>--}}
+{{--                                                        <div class="title">Informations sur le service:</div>--}}
+{{--                                                        <div class="text">{{$service->commentaire}}</div>--}}
+{{--                                                    </li>--}}
 
                                                 </ul>
                                             </div>
@@ -76,6 +76,13 @@
                     </div>
                 </div>
             </div>
+            <br/><br/>
+
+            <div class="text" style="font-size: larger;">
+                {{$service->commentaire}}
+            </div>
+
+
         </div>
     </div>
 
