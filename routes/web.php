@@ -1,6 +1,24 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
 use App\Http\Controllers\CategorieArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
@@ -75,10 +93,13 @@ Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name(
 
 Route::post('/check-email', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'checkEmail'])->name('check.email');
 
+
 Route::resource('formations', FormationController::class)->except('destroy', 'show', 'update', 'edit');  //
 
-Route::resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
-Route::resource('articles', ArticleController::class);  // Routes pour les articles
-Route::resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
+
+Route::middleware('auth')->resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
+Route::middleware('auth')->resource('articles', ArticleController::class);  // Routes pour les articles
+Route::middleware('auth')->resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
+
 
 
