@@ -78,10 +78,10 @@
             </div>
             <br/><br/>
 
+            <div class="title h4">Informations sur le service:</div>
             <div class="text" style="font-size: larger;">
                 {{$service->commentaire}}
             </div>
-
 
         </div>
     </div>
