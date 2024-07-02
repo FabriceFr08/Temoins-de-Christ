@@ -22,7 +22,6 @@
                                                 <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
                                             @else
                                             <a href="#"><img src="../../img/c2.jpg" alt="Image">
-{{--                                                <a href="#"><img src="../../img/c2.jpg" alt="Image">--}}
                                             </a>
                                             @endif
                                         </div>
@@ -36,7 +35,7 @@
                                                     <small class="text-muted">{{$service->nomService}}</small>
 {{--                                                    <div class="staff-id">Employee ID : FT-0001</div>--}}
                                                     <div class="small doj text-muted">Date d'entrée : {{ $service->created_at->format('M d, Y') }}</div>
-                                                    <div class="staff-msg"><a class="btn btn-primary" href="#">Contacter</a></div>
+                                                    <div class="staff-msg"><a class="btn btn-success" href="https://wa.me/{{$service->prestataire->telephone}}" target="_blank"><i class="fab fa-whatsapp"></i> Contacter</a></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-7">
@@ -70,7 +69,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i class="fa fa-pencil"></i></a></div>
+{{--                                    <div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i class="fab fa-pencil"></i></a></div>--}}
                                 </div>
                             </div>
                         </div>

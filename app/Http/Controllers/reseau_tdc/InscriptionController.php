@@ -20,7 +20,7 @@ class InscriptionController extends Controller
         $secteurs = Secteur::select(['id', 'nom'])->get();
         $pays = Pays::select(['id', 'nom'])->get();
         $villes = Ville::select(['id', 'nom'])->get();
-        $services = Service::with(['prestataire', 'secteur'])->paginate(9); // Paginate with 10 items per page
+        $services = Service::with(['prestataire', 'secteur'])->get() /*->paginate(9)*/; // Paginate with 10 items per page
 
         return view('reseau_tdc.services', compact('secteurs', 'pays', 'villes', 'services'));
     }
@@ -36,23 +36,43 @@ class InscriptionController extends Controller
 
     public function store(Request $request)  // Valider la créationd'une nouvelle personne
     {
+
+        $messages = [
+            'email' => 'Le champ :attribute doit être une adresse email valide.',
+            'unique' => 'L\' :attribute est déjà utilisée.',
+            // Ajoutez d'autres messages selon vos besoins
+        ];
+        //dd($validated);
+
         //dd($request);
-        $prestataire = $request->only(['nom', 'prenom', 'email', 'telephone', 'ville_id', 'promotion', 'photo']);
-        $service = $request->only(['nomService', 'siteWeb', 'tiktok', 'facebook', 'instagram', 'commentaire', 'secteur_id']);
+        $validated = $request->validate([
+           'email' => 'required|unique:prestataires|email',
+            //'telephone' => 'required|unique:prestataires',
+        ], $messages);
+        //dd($validated);
+        if($validated){
+            $prestataire = $request->only(['nom', 'prenom', 'email', 'telephone', 'ville_id', 'promotion', 'photo']);
+            $service = $request->only(['nomService', 'siteWeb', 'tiktok', 'facebook', 'instagram', 'commentaire', 'secteur_id']);
 
 
-        if ($request->hasFile('photo')){
-            $fileName = $request->file('photo')->getClientOriginalName();
+            if ($request->hasFile('photo')){
+                $fileName = $request->file('photo')->getClientOriginalName();
 
-            $path = $request->file('photo')->storeAs('public/images/prestataires/'.$prestataire['nom'], $fileName);
-            $prestataire['photo'] = str_replace('public/', '', $path);   // Association de la photo au prestataire
+                $path = $request->file('photo')->storeAs('public/images/prestataires/'.$prestataire['nom'], $fileName);
+                $prestataire['photo'] = str_replace('public/', '', $path);   // Association de la photo au prestataire
+            }
+
+            $prestataire = Prestataire::create($prestataire);  // Enregistrement du prestataire
+            $service['prestataire_id'] = $prestataire->id;  // Association du prestataire à son service
+            Service::create($service);   // Création du service
+            return redirect()->route('reseau.services')->with('success', 'Service enregistré avec suucès');
+        } else{
+            dd($request->errors);
+            //return redirect()->route('reseau.services')->with('success', 'Service enregistré avec suucès');
         }
 
-        $prestataire = Prestataire::create($prestataire);  // Enregistrement du prestataire
-        $service['prestataire_id'] = $prestataire->id;  // Association du prestataire à son service
-        Service::create($service);   // Création du service
 
-        return redirect()->route('reseau.services')->with('success', 'Service enregistré avec suucès');
+
 
     }
 
