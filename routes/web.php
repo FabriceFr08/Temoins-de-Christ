@@ -93,7 +93,9 @@ Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name(
 
 Route::post('/check-email', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'checkEmail'])->name('check.email');
 
+
 Route::resource('formations', FormationController::class)->except('destroy', 'show', 'update', 'edit');  //
+
 
 Route::middleware('auth')->resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
 Route::middleware('auth')->resource('articles', ArticleController::class);  // Routes pour les articles
