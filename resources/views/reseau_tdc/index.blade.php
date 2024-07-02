@@ -29,14 +29,14 @@
                         <li style="--i: 4">
                             <h3>Pourquoi Rejoindre le Réseau ARD-818 ?</h3>
                             <p>Pourquoi attendre ? Rejoignez-nous dès aujourd'hui et plongez dans un monde où les opportunités abondent. Inscrivez-vous et commencez à proposer vos services.</p>
-                            <a href="{{ route('reseau.inscription') }}" style="color: green; text-decoration: none;" class="">Inscrivez-vous maintenant</a>
+{{--                            <a href="{{ route('reseau.inscription') }}" style="color: green; text-decoration: none;" class="">Inscrivez-vous maintenant</a>--}}
                         </li>
 
                     </ol>
                     <div class="d-flex justify-content-end">
-                        <a class="btn btn-success rounded-pill text-white py-3 px-5"  href="{{route('reseau.services')}}">Voir service</a>
+                        <a class="btn btn-success rounded-pill text-white py-3 px-5"  href="{{route('reseau.inscription')}}">S'inscrire</a>
+                        <a class="btn btn-success rounded-pill text-white py-3 px-5"  href="{{route('reseau.services')}}">Services</a>
                     </div>
-
 
 
                 </div>

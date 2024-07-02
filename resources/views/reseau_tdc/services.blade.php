@@ -10,6 +10,16 @@
                     {{ session('success') }}
                 </div>
             @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             <div class="pb-5">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">ARD-818</h4>
                 <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">Les différents services</h1>

@@ -5,10 +5,21 @@
     <!-- Formulaire pour s'enregistrer sur le réseau des témoins de Christ -->
     <div class="container-fluid contact py-5">
         <div class="container py-5">
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <div class="pb-5">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Réseau ard-818</h4>
                 <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>
             </div>
+
             <div class="bg-light rounded p-4 pb-0">
                 <div class="row g-5 align-items-center">
                     <div class="col wow fadeInLeft" data-wow-delay="0.1s">
