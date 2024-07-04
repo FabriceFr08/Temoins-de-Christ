@@ -119,11 +119,11 @@
                         </div>
                         <h5 class="card-title text-success mt-2">VERSION AUDIO</h5>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <audio src="{{ asset('video/This_is_two_way.mp3') }}" controls></audio>
+                            <audio src="{{ asset('video/audio_appel_salut_tdc.mp3') }}" controls></audio>
                         </div>
                         <h5 class="card-title text-success mt-2">VERSION VIDEO</h5>
                         <div class="embed-responsive embed-responsive-16by9">
-                            <video src="{{ asset('video/video.mp4') }}" controls type="video/mp4" width="100%" height="360"></video>
+                            <video src="{{ asset('video/video_appel_salut_tdc.mp4') }}" controls type="video/mp4" width="100%" height="360"></video>
                         </div>
                     </div>
                 </div>
