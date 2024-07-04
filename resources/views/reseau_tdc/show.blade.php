@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                     </div>
-{{--                                    <div class="pro-edit"><a data-target="#profile_info" data-toggle="modal" class="edit-icon" href="#"><i class="fab fa-pencil"></i></a></div>--}}
+{{--                                    <div class="pro-edit"><a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#"><i class="bi bi-pencil"></i></a></div>--}}
                                 </div>
                             </div>
                         </div>
@@ -84,6 +84,33 @@
             </div>
 
         </div>
+
+
+        <div class="modal fade" id="profile_info" tabindex="-1" role="dialog" aria-labelledby="profile_infoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="profile_infoLabel">Mettre à jour vos informations</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="email_form">
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Email :</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="button" class="btn btn-primary" onclick="submitEmail()">Enregistrer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 

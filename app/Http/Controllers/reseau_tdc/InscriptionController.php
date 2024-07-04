@@ -10,6 +10,7 @@ use App\Models\Prestataire;
 use App\Models\Secteur;
 use App\Models\Service;
 use App\Models\Ville;
+use Hashids\Hashids;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
@@ -21,6 +22,9 @@ class InscriptionController extends Controller
         $pays = Pays::select(['id', 'nom'])->get();
         $villes = Ville::select(['id', 'nom'])->get();
         $services = Service::with(['prestataire', 'secteur'])->get() /*->paginate(9)*/; // Paginate with 10 items per page
+        foreach ($services as $service) {
+            $service->hashedId = \Torann\Hashids\Facade\Hashids::encode($service->id);
+        }
 
         return view('reseau_tdc.services', compact('secteurs', 'pays', 'villes', 'services'));
     }
@@ -40,7 +44,7 @@ class InscriptionController extends Controller
         $messages = [
             'email' => 'Le champ :attribute doit être une adresse email valide.',
             'unique' => 'L\' :attribute est déjà utilisée.',
-            // Ajoutez d'autres messages selon vos besoins
+
         ];
         //dd($validated);
 
@@ -84,8 +88,11 @@ class InscriptionController extends Controller
     }
 
 
-    public function show(Service $service)
+    public function show($hashedId)
     {
+        $decodedId = \Torann\Hashids\Facade\Hashids::decode($hashedId);
+        $service = Service::where('id', $decodedId[0])->with(['prestataire', 'secteur'])->firstOrFail();
+
         return view('reseau_tdc.show', compact('service'));
     }
 

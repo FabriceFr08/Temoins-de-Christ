@@ -74,7 +74,7 @@ Route::get('/profil', function () {
 
 Route::controller(\App\Http\Controllers\reseau_tdc\InscriptionController::class)->group(function () {
     Route::get('/reseau/services', 'index')->name('reseau.services');
-    Route::get('/reseau/services/{service}', 'show')->name('reseau.services.show');
+    Route::get('/reseau/services/{hashedId}', 'show')->name('reseau.services.show');
     Route::get('/reseau/inscription', 'create')->name('reseau.inscription');
     Route::post('/reseau/inscription', 'store')->name('reseau.store');
     Route::get('/reseau/filter', 'filter')->name('services.filter');

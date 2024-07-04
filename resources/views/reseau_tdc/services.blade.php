@@ -1,8 +1,31 @@
 @extends('layouts.app')
 
-@section('title', 'S\'inscrire')
+@section('title', 'Services')
 @section('content')
+    <style>
 
+        .avatar {
+            display: block;
+            position: relative;
+            width: 150px; /* Largeur du cadre */
+            height: 150px; /* Hauteur du cadre */
+            overflow: hidden;
+            border-radius: 50%; /* Pour des images circulaires */
+            margin: 0 auto; /* Pour centrer horizontalement dans son conteneur parent */
+            padding: 10px; /* Ajuster le padding pour réduire la taille de l'image à l'intérieur */
+            box-sizing: border-box; /* Inclure le padding dans la taille totale du conteneur */
+        }
+
+        .avatar img {
+            width: calc(100% - 20px); /* Ajuster la taille de l'image en fonction du padding */
+            height: calc(100% - 20px); /* Ajuster la taille de l'image en fonction du padding */
+            object-fit: cover; /* Pour couvrir tout le conteneur sans déformer */
+            object-position: center; /* Pour centrer l'image */
+            border-radius: 50%; /* Pour garder l'image circulaire */
+        }
+
+
+    </style>
     <div class="container-fluid blog py-5">
         <div class="container py-5">
             @if(session('success'))
@@ -74,11 +97,11 @@
                     <div class="row" id="serviceContainer">
                         @foreach($services as $service)
                             <div class="col-md-4 mb-4 service-item" >
-                                <a href="{{route('reseau.services.show', $service->id)}}" class="text-decoration-none">
+                                <a href="{{route('reseau.services.show', $service->hashedId)}}" class="text-decoration-none">
                                     <div class="testimonial-item border text-center rounded">
                                         <div class="profile-widget">
 
-                                                <a href="{{route('reseau.services.show', $service->id)}}" class="avatar">
+                                                <a href="{{route('reseau.services.show', $service->hashedId)}}" class="avatar">
                                                     @if($service->prestataire->photo !== null)
                                                     <img src="{{ asset('storage/' . $service->prestataire->photo) }}" alt="Image">
                                                     @else
