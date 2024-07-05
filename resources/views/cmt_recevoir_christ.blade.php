@@ -76,6 +76,16 @@
                             <p class="text-dark fw-bold">« Car Dieu a tant aimé le monde qu’il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu’il ait la vie éternelle. Dieu, en effet, n’a pas envoyé son Fils dans le monde pour qu’il juge le monde, mais pour que le monde soit sauvé par lui. Celui qui croit en lui n’est point jugé ; mais celui qui ne croit pas est déjà jugé, parce qu’il n’a pas cru au nom du Fils unique de Dieu »</p>
                         </div>
                     </div>
+                    <div class="card text-center bg-light">
+                        <div class="card-header">
+                            <h3 class="text-secondary fw-bold text-center">DIEU PEUT VOUS DELIVRER</h3>
+                            <img src="img/donner_vie_christ/delivrance.jpg" class="card-img" alt="Nouvelle naissance">
+                        </div>
+                        <div class="card-body  mb-3">
+                            <a class="btn btn-success rounded-pill text-white py-3 px-5" href="{{route('victoire_pour_christ')}}">Besoin de delivrance ?</a>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card bg-light">
