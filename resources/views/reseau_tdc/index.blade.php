@@ -1,6 +1,23 @@
 @vite('resources/css/reseau.css')
 @extends('layouts.app')
 @section('title', 'Réseau ARD-818')
+
+@section('head')
+    <!-- Open Graph Meta Tags pour cette page spécifique -->
+    <meta property="og:title" content="Réseau ARD-818" />
+    <meta property="og:description" content="Découvrez notre réseau et connectez-vous." />
+    <meta property="og:image" content="https://temoinsdechrist.com/img/reseau_meta.jpg" />
+    <meta property="og:url" content="https://temoinsdechrist.com/reseau" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags spécifiques pour /reseau (optionnel) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Réseau ARD-818" />
+    <meta name="twitter:description" content="Découvrez notre réseau et connectez-vous." />
+    <meta name="twitter:image" content="https://temoinsdechrist.com/img/reseau_meta.jpg" />
+    <meta name="twitter:url" content="https://temoinsdechrist.com/reseau" />
+@endsection
+
 @section('content')
 
 
