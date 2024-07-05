@@ -99,11 +99,9 @@
     <!-- Dance Class End -->
 
     <!-- Testimonial Start -->
-    <div class="container-fluid testimonial pb-5">
-        <div class="container pb-5">
-            <div class="pb-5">
-{{--                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">OUR CLIENTS RIVIEWS</h4>--}}
-{{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">What Our Clients Say</h1>--}}
+    <div class="container-fluid testimonial pb-3">
+        <div class="container pb-3">
+            <div class="pb-3">
             </div>
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
@@ -111,18 +109,18 @@
                     <h6 class="display-6 mb-4">Pourquoi se faire former ?</h6>
                     <p>
                         <font size="4">
-                        Dieu nous appelle à impacter dans Son Royaume. Et cela passe par la formation. Pourquoi ?
-                        Pour saisir le cœur du projet de notre Seigneur Jésus Christ qui est d'agrandir Son Royaume et
-                        de bâtir Son Église. Pourquoi ? Pour dépeupler le royaume de satan et amener le plus grand
-                        nombre à la connaissance de la vérité.
-                        Pourquoi se faire former ?parce qu'il y’a beaucoup de convertis, pas assez de rachetés formés
-                        et très peu de leaders inspirés qui se lèvent pour accomplir le cœur de la mission de notre
-                        Seigneur Jésus Christ. Or, nous lisons bien dans nos Bibles que le Seigneur Jésus revient bientôt
-                        et nous le voyons également par les signes des temps de la fin.
-                        Pouvons-nous, pendant juste un instant, prêter une oreille attentive au cri du cœur du
-                        Créateur de tous ces hommes qui s'en vont jour après jour et en grand nombre à la perdition ?
-                        Devons-nous rester indifférents à la mission du Seigneur Jésus qui est automatiquement
-                        devenue la nôtre dès l'instant où nous avons rejoint Son Corps ?
+                            Dieu nous appelle à impacter dans Son Royaume. Et cela passe par la formation. Pourquoi ?
+                            Pour saisir le cœur du projet de notre Seigneur Jésus Christ qui est d'agrandir Son Royaume et
+                            de bâtir Son Église. Pourquoi ? Pour dépeupler le royaume de satan et amener le plus grand
+                            nombre à la connaissance de la vérité.
+                            Pourquoi se faire former ?parce qu'il y’a beaucoup de convertis, pas assez de rachetés formés
+                            et très peu de leaders inspirés qui se lèvent pour accomplir le cœur de la mission de notre
+                            Seigneur Jésus Christ. Or, nous lisons bien dans nos Bibles que le Seigneur Jésus revient bientôt
+                            et nous le voyons également par les signes des temps de la fin.
+                            Pouvons-nous, pendant juste un instant, prêter une oreille attentive au cri du cœur du
+                            Créateur de tous ces hommes qui s'en vont jour après jour et en grand nombre à la perdition ?
+                            Devons-nous rester indifférents à la mission du Seigneur Jésus qui est automatiquement
+                            devenue la nôtre dès l'instant où nous avons rejoint Son Corps ?
                         </font>
                     </p>
                 </div>
@@ -134,16 +132,74 @@
                         </video>
                     </div>
                 </div>
-
-
-
             </div>
-
         </div>
     </div>
     <!-- Testimonial End -->
 
-@vite('resources/js/counter.js')
+    <!-- Training Start -->
+    <!-- Content Start -->
+    <div class="container-fluid content py-4">
+        <div class="container py-4">
+            <div class="pb-4">
+                <div class="row g-4 align-items-end">
+                    <div class="col-xl-8">
+                        <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">CONTENU</h4>
+                        <h4 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.3s">Ressources de la formation</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-4 mb-5">
+                    <div class="content-item bg-white rounded wow fadeInUp">
+                        <div class="content-img rounded-top">
+                            <img src="img/formations/contenu/9 MOIS DE FORMATION TDC - PROMOTION 09.jpeg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="content-item bg-white rounded wow fadeInUp">
+                        <div class="content-img rounded-top">
+                            <img src="img/formations/contenu/15 MOIS DE FORMATION TDC - PROMOTION 09.jpeg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="content-item bg-white rounded wow fadeInUp">
+                        <div class="content-img rounded-top">
+                            <img src="img/formations/formation_promo_9.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 mb-4">
+                    <div class="pdf-item bg-white rounded p-4 wow fadeInUp">
+                        <iframe src="img/formations/contenu/FORMATION TEMOINS DE CHRIST - PRESENTATION DETAILLEE (1).pdf#zoom=70" class="img-fluid rounded-top w-100" style="height: 500px;" alt="Image"></iframe>
+                        <div class="mt-3">
+                            <a href="img/formations/contenu/FORMATION TEMOINS DE CHRIST - PRESENTATION DETAILLEE (1).pdf" class="btn btn-success rounded-pill text-white py-2 px-4" download>Télécharger</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="pdf-item bg-white rounded p-4 wow fadeInUp">
+                        <iframe src="img/formations/contenu/FORMATION TEMOINS DE CHRIST - PRESENTATION POWERPOINT.pdf#zoom=20" class="img-fluid rounded-top w-100" style="height: 500px;" alt="Image"></iframe>
+                        <div class="mt-3">
+                            <a href="img/formations/contenu/FORMATION TEMOINS DE CHRIST - PRESENTATION POWERPOINT.pdf" class="btn btn-success rounded-pill text-white py-2 px-4" download>Télécharger</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+
+
+    <!-- Training End -->
+
+
+    @vite('resources/js/counter.js')
 @endsection
 
 
