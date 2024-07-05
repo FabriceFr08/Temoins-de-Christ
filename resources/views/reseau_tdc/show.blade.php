@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                     </div>
-{{--                                    <div class="pro-edit"><a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#"><i class="bi bi-pencil"></i></a></div>--}}
+                                    <div class="pro-edit"><a data-bs-target="#profile_info" data-bs-toggle="modal" class="edit-icon" href="#"><i class="bi bi-pencil"></i></a></div>
                                 </div>
                             </div>
                         </div>

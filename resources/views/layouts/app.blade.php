@@ -9,6 +9,13 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Réseau ARD818" />
+    <meta property="og:description" content="Découvrez notre réseau et connectez-vous." />
+    <meta property="og:image" content="https://temoinsdechrist.com/img/reseau_meta.jpg" />
+    <meta property="og:url" content="https://temoinsdechrist.com/reseau" />
+    <meta property="og:type" content="website" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
