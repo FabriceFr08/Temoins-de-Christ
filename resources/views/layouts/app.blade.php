@@ -4,17 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>@yield('title') - Temoins de Christ</title>
+    @yield('head')
     <link rel="icon" type="image/x-icon" href="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Réseau ARD818" />
-    <meta property="og:description" content="Découvrez notre réseau et connectez-vous." />
-    <meta property="og:image" content="https://temoinsdechrist.com/img/reseau_meta.jpg" />
-    <meta property="og:url" content="https://temoinsdechrist.com/reseau" />
-    <meta property="og:type" content="website" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
