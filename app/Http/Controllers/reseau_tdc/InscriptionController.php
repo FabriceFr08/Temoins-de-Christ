@@ -98,30 +98,33 @@ class InscriptionController extends Controller
 
     public function filter(Request $request)
     {
+        // Récupérer toutes les données nécessaires pour les filtres
         $secteurs = Secteur::all();
         $pays = Pays::all();
         $villes = Ville::all();
 
+        // Créer une requête de base pour les services
         $query = Service::query();
 
-        if ($request->has('secteur_id') && $request->secteur_id) {
+        // Filtrer par secteur si secteur_id est présent dans la requête
+        if ($request->filled('secteur_id')) {
             $query->where('secteur_id', $request->secteur_id);
         }
 
-//        if ($request->has('pays_id') && $request->pays_id) {
-//            $query->whereHas('prestataire', function ($q) use ($request) {
-//                $q->where('pays_id', $request->pays_id);
-//            });
-//        }
-
-        if ($request->has('ville_id') && $request->ville_id) {
+        // Filtrer par ville si ville_id est présent dans la requête
+        if ($request->filled('ville_id')) {
             $query->whereHas('prestataire', function ($q) use ($request) {
                 $q->where('ville_id', $request->ville_id);
             });
         }
 
-        $services = $query->get();
+        // Récupérer les résultats de la requête
+        $services = $query->with(['prestataire', 'secteur'])->get();
+        foreach ($services as $service) {
+            $service->hashedId = \Torann\Hashids\Facade\Hashids::encode($service->id);
+        }
 
+        // Retourner la vue avec les données filtrées
         return view('reseau_tdc.services', compact('services', 'secteurs', 'pays', 'villes'));
     }
 
