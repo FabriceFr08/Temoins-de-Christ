@@ -55,13 +55,12 @@ Route::get('/venir-a-christ', function () {
 })->name('venir-a-christ');
 
 
-
 Route::get('/but-vision-mission', function () {
     return view('a propos.but_vision_mission');
 })->name('but-vision-mission');
 
-Route::get('/venir-a-christ1', function () {
-    return view('venir_a_christ1');
+Route::get('/victoire-avec-christ', function () {
+    return view('victoire_avec_christ');
 })->name('venir-a-christ1');
 
 Route::get('/reseau', function () {
@@ -78,8 +77,16 @@ Route::controller(\App\Http\Controllers\reseau_tdc\InscriptionController::class)
     Route::get('/reseau/inscription', 'create')->name('reseau.inscription');
     Route::post('/reseau/inscription', 'store')->name('reseau.store');
     Route::get('/reseau/filter', 'filter')->name('services.filter');
-
 });
+
+//Route::get('/verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verificationCode'])->name('verificationCode');
+//Route::post('/send-verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'sendVerificationCode'])->name('sendVerificationCode');
+//Route::get('/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'showVerificationForm'])->name('showVerificationForm');
+//Route::post('/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verifyCode'])->name('verifyCode');
+//Route::get('/update-prestataire/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'updatePrestataire'])->name('updatePrestataire');
+//Route::post('/update-prestataires/{prestataire}', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'update'])->name('update');
+
+
 
 Route::get('/don', function () {
     return view('don');
