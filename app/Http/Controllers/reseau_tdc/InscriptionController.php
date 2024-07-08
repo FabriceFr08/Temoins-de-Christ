@@ -5,6 +5,7 @@ namespace App\Http\Controllers\reseau_tdc;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PrestataireStoreRequest;
 use App\Http\Requests\ServiceStoreRequest;
+use App\Mail\VerificationCodeMail;
 use App\Models\Pays;
 use App\Models\Prestataire;
 use App\Models\Secteur;
@@ -13,6 +14,7 @@ use App\Models\Ville;
 use Hashids\Hashids;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class InscriptionController extends Controller
 {
@@ -46,12 +48,9 @@ class InscriptionController extends Controller
             'unique' => 'L\' :attribute est déjà utilisée.',
 
         ];
-        //dd($validated);
 
-        //dd($request);
         $validated = $request->validate([
            'email' => 'required|unique:prestataires|email',
-            //'telephone' => 'required|unique:prestataires',
         ], $messages);
         //dd($validated);
         if($validated){
@@ -125,6 +124,59 @@ class InscriptionController extends Controller
 
         return view('reseau_tdc.services', compact('services', 'secteurs', 'pays', 'villes'));
     }
+
+    public function update(Request $request, Prestataire $prestataire)
+    {
+        dd($request);
+        $messages = [
+            'email' => 'Le champ :attribute doit être une adresse email valide.',
+            'unique' => 'L\':attribute est déjà utilisée.',
+        ];
+
+        // Valider les données
+        $validated = $request->validate([
+            'email' => 'required|email|unique:prestataires,email,' . $prestataire->id,
+        ], $messages);
+
+        if ($validated) {
+            // Mettre à jour les informations du prestataire
+            $prestataire->nom = $request->input('nom');
+            $prestataire->prenom = $request->input('prenom');
+            $prestataire->email = $request->input('email');
+            $prestataire->telephone = $request->input('telephone');
+            $prestataire->ville_id = $request->input('ville_id');
+            $prestataire->promotion = $request->input('promotion');
+
+            // Vérifier et enregistrer la nouvelle photo si elle est fournie
+            if ($request->hasFile('photo')) {
+                $fileName = $request->file('photo')->getClientOriginalName();
+                $path = $request->file('photo')->storeAs('public/images/prestataires/' . $prestataire->nom, $fileName);
+                $prestataire->photo = str_replace('public/', '', $path);
+            }
+
+            // Sauvegarder les modifications du prestataire
+            $prestataire->save();
+
+            // Mettre à jour les informations du service associé
+            $service = $prestataire->service; // Assurez-vous que cette relation est correctement définie dans votre modèle Prestataire
+            if ($service) {
+                $service->nomService = $request->input('nomService');
+                $service->siteWeb = $request->input('siteWeb');
+                $service->tiktok = $request->input('tiktok');
+                $service->facebook = $request->input('facebook');
+                $service->instagram = $request->input('instagram');
+                $service->commentaire = $request->input('commentaire');
+                $service->secteur_id = $request->input('secteur_id');
+                $service->save();
+            }
+
+            return redirect()->route('reseau.services')->with('success', 'Informations mises à jour avec succès');
+        } else {
+            // Rediriger avec les erreurs de validation si elles existent
+            return back()->withErrors($validated)->withInput();
+        }
+    }
+
 
 
 }
