@@ -46,9 +46,9 @@ Route::get('/formations/nos-formations/comment-servir-dieu', function () {
 })->name('nos-formations.comment-servir-dieu');
 
 
-/*Route::get('/venir-a-christ', function () {
+Route::get('/victoire_pour_christ', function () {
     return view('venir_a_christ');
-})->name('venir-a-christ');*/
+})->name('victoire_pour_christ');
 
 Route::get('/venir-a-christ', function () {
     return view('cmt_recevoir_christ');
