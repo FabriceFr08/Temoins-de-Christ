@@ -83,12 +83,12 @@ Route::controller(\App\Http\Controllers\reseau_tdc\InscriptionController::class)
     Route::get('/reseau/filter', 'filter')->name('services.filter');
 });
 
-//Route::get('/verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verificationCode'])->name('verificationCode');
-//Route::post('/send-verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'sendVerificationCode'])->name('sendVerificationCode');
-//Route::get('/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'showVerificationForm'])->name('showVerificationForm');
-//Route::post('/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verifyCode'])->name('verifyCode');
-//Route::get('/update-prestataire/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'updatePrestataire'])->name('updatePrestataire');
-//Route::post('/update-prestataires/{prestataire}', [\App\Http\Controllers\reseau_tdc\InscriptionController::class, 'update'])->name('update');
+Route::get('/reseau/send-verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verificationCode'])->name('verificationCode');
+Route::post('/reseau/send-verification-code', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'sendVerificationCode'])->name('sendVerificationCode');
+Route::get('/reseau/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'showVerificationForm'])->name('showVerificationForm');
+Route::post('/reseau/verify-code/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'verifyCode'])->name('verifyCode');
+Route::get('/reseau/update-prestataire/{prestataire}/{code}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'edit'])->name('updatePrestataire');
+Route::post('/reseau/update-prestataires/{prestataire}', [\App\Http\Controllers\reseau_tdc\ReseauController::class, 'update'])->name('update');
 
 
 

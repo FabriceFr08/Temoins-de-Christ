@@ -53,7 +53,10 @@
                     <div class="d-flex justify-content-end">
                         <a class="btn btn-success rounded-pill text-white py-3 px-5"  href="{{route('reseau.inscription')}}">S'inscrire</a>
                         <a class="btn btn-success rounded-pill text-white py-3 px-5"  href="{{route('reseau.services')}}">Services</a>
-                    </div>
+                    </div><br/>
+                    <p class="text-center">
+                        <a href="{{ route('verificationCode') }}" class="text-decoration-none text-success fs-5">Déjà membre mais je souhaite modifier mes informations</a>
+                    </p>
 
 
                 </div>

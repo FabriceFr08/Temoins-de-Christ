@@ -17,24 +17,16 @@
             @endif
             <div class="pb-5">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Réseau ard-818</h4>
-                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Mettre à jour les informations </h1>
+                <h6 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.3s">Mettre à jour les informations </h6>
             </div>
 
             <div class="bg-light rounded p-4 pb-0">
                 <div class="row g-5 align-items-center">
                     <div class="col wow fadeInLeft" data-wow-delay="0.1s">
-                        <h3 class="display-6 mb-2">Veuillez remplir et soumettre le formulaire</h3>
-                        <p class="mb-4">Les champs avec * sont obligatoires {{$prestataire}}<a class="text-primary fw-bold" href=""></a>.</p>
-                        <form method="PATCH" action="{{ route('update', ['prestataire' => $prestataire->id]) }}">
+                        <h6 class="display-6 mb-2">Veuillez remplir et soumettre le formulaire</h6>
+                        <p class="mb-4">Les champs avec * sont obligatoires<a class="text-primary fw-bold" href=""></a>.</p>
+                        <form method="POST" id="form" enctype="multipart/form-data" action="{{ route('update', $prestataire_id) }}">
                             @csrf
-                            <ul id="progressbar">
-                                <li class="active" id="info"><strong>Informations personnelles</strong></li>
-                                <li id="service-info"><strong>Informations sur le service à proposer</strong></li>
-                                <li id="service-info"><strong>Récapitulatif</strong></li>
-                            </ul>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 33%"></div>
-                            </div> <br/><br/>
 
                             <div class="step">
                                 <!-- Step 1 content goes here -->
@@ -195,7 +187,7 @@
                             <div class="d-flex justify-content-end">
                                 <button type="button" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
                                 <button type="button" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
-                                <button type="submit" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="submitBtn" style="display: none;">Mettre à jour</button>
+                                <button type="submit" class="btn btn-success rounded-pill text-white py-3 px-5 m-2" id="submitBtn" style="display: none;">Valider</button>
                             </div>
                         </form>
                     </div>
@@ -206,4 +198,4 @@
     <!-- Contact End -->
 @endsection
 
-@vite('resources/js/reseau.js')
+@vite('resources/js/update.js')
