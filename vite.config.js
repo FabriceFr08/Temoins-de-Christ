@@ -27,6 +27,7 @@ export default defineConfig({
                 'resources/js/app.js',
                 'resources/js/formation.js',
                 'resources/js/reseau.js',
+                'resources/js/update.js',
                 'resources/js/counter.js',
 
             ],

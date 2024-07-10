@@ -14,10 +14,10 @@
                 <div class="row g-5 align-items-center">
                     <div class="col wow fadeInLeft" data-wow-delay="0.1s">
                         <h6 class="display-6 mb-2">Veuillez entrer le code reçu par email</h6>
-                        <form action="{{ route('verifyCode', ['prestataire' => $prestataire]) }}" method="POST">
+                        <form action="{{ route('verifyCode', $prestataire) }}" method="POST">
                             @csrf
                             <!-- Step 1 content goes here -->
-                            <input type="hidden" name="prestataire" value="{{ $prestataire}}">
+                            <input type="hidden" name="prestataire" value="{{ $prestataire[0]}}">
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="form-floating">

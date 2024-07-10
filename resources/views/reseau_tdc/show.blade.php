@@ -13,7 +13,7 @@
             <div class="pt-5">
                 <div class="card mb-0">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row" style="font-size: larger;">
                             <div class="col-md-12">
                                 <div class="profile-view">
                                     <div class="profile-img-wrap">
@@ -60,10 +60,30 @@
                                                         <div class="title">Promotion:</div>
                                                         <div class="text">{{$service->prestataire->promotion}}</div>
                                                     </li>
-{{--                                                    <li>--}}
-{{--                                                        <div class="title">Informations sur le service:</div>--}}
-{{--                                                        <div class="text">{{$service->commentaire}}</div>--}}
-{{--                                                    </li>--}}
+                                                    @if($service->siteWeb != null)
+                                                    <li>
+                                                        <div class="title">Site web:</div>
+                                                        <div class="text">{{$service->siteWeb}}</div>
+                                                    </li>
+                                                    @endif
+                                                    @if($service->tiktok != null)
+                                                        <li>
+                                                            <div class="title">Page Tiktok:</div>
+                                                            <div class="text">{{$service->tiktok}}</div>
+                                                        </li>
+                                                    @endif
+                                                    @if($service->instagram != null)
+                                                        <li>
+                                                            <div class="title">Page Instagram:</div>
+                                                            <div class="text">{{$service->instagram}}</div>
+                                                        </li>
+                                                    @endif
+                                                    @if($service->facebook != null)
+                                                        <li>
+                                                            <div class="title">Page Facebook:</div>
+                                                            <div class="text">{{$service->facebook}}</div>
+                                                        </li>
+                                                    @endif
 
                                                 </ul>
                                             </div>
@@ -86,30 +106,6 @@
         </div>
 
 
-        <div class="modal fade" id="profile_info" tabindex="-1" role="dialog" aria-labelledby="profile_infoLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="profile_infoLabel">Mettre à jour vos informations</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="email_form">
-                            <div class="form-group">
-                                <label for="email" class="col-form-label">Email :</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="button" class="btn btn-primary" onclick="submitEmail()">Enregistrer</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 
