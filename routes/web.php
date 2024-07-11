@@ -54,18 +54,11 @@ Route::get('/venir-a-christ', function () {
     return view('cmt_recevoir_christ');
 })->name('venir-a-christ');
 
-Route::get('/victoire_pour_christ', function () {
-    return view('venir_a_christ');
-})->name('victoire_pour_christ');
-
 
 Route::get('/but-vision-mission', function () {
     return view('a propos.but_vision_mission');
 })->name('but-vision-mission');
 
-Route::get('/victoire-avec-christ', function () {
-    return view('victoire_avec_christ');
-})->name('venir-a-christ1');
 
 Route::get('/reseau', function () {
     return view('reseau_tdc.index');
