@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Accueil')
+@section('title', 'Se déployer')
 
 @section('content')
     <div class="header-carousel owl-carousel">
