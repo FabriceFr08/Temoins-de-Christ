@@ -1018,6 +1018,10 @@
     color: #8e8e8e;
     display: block;
     overflow: hidden;
+
+    a{
+        color : var(--bs-secondary);
+    }
 }
 .personal-info li {
     margin-bottom: 10px;
@@ -1089,14 +1093,7 @@
     background-color: var(--bs-secondary);
     color: #fff;
 }
-.delete-icon {
-    color: #e30b0b;
-    float: right;
-    font-size: 18px;
-}
-.delete-icon:hover {
-    color: #e30b0b;
-}
+
 .staff-msg {
     margin-top: 30px;
 }
@@ -1192,10 +1189,10 @@
     padding: 10px 15px;
 }
 .add-more a {
-    color: #f43b48;
+    color:  var(--bs-secondary);
 }
 .add-more a:hover {
-    color: #f10e1d;
+    color: var(--bs-secondary);;
 }
 .avatar-box {
     float: left;

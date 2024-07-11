@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'S\'inscrire')
+@section('title', 'Profil du prestataire')
 @section('content')
 
     <div class="container-fluid blog py-5">
@@ -63,7 +63,7 @@
                                                     @if($service->siteWeb != null)
                                                     <li>
                                                         <div class="title">Site web:</div>
-                                                        <div class="text">{{$service->siteWeb}}</div>
+                                                        <div class="text"><a href="https://{{$service->siteWeb}}" target="_blank">{{$service->siteWeb}}</a></div>
                                                     </li>
                                                     @endif
                                                     @if($service->tiktok != null)
