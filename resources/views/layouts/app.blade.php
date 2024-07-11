@@ -4,11 +4,21 @@
 <head>
     <meta charset="utf-8">
     <title>@yield('title') - Temoins de Christ</title>
+
     <link rel="icon" type="image/x-icon" href="{{asset('LOGO_TEMOINS_DE_CHRIST_fond_transparent-300x300.png')}}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    @hasSection('og-meta')
+        @yield('og-meta')
+    @endif
+
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.11/build/css/intlTelInput.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +28,10 @@
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 
     <!-- Libraries Stylesheet -->
 
@@ -38,7 +52,7 @@
     @vite('resources/lib/waypoints/waypoints.min.js')
     @vite('resources/lib/easing/easing.min.js')
     @vite('resources/js/main.js')
-    @vite('resources/js/app.js')
+
 </head>
 
 <body>
@@ -56,7 +70,7 @@
 
 @include('.partials.navbar')
 
-{{-- @include('.partials.carousel') --}}
+
 
 
 {{--@include('.partials.banner')--}}
@@ -75,6 +89,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" ></script>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.11/build/js/intlTelInput.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
 </body>

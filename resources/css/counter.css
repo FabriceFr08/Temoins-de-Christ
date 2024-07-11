@@ -1,0 +1,39 @@
+.timer-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 0 5%; /* Reduced padding */
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 20%;
+    margin: 5px; /* Reduced margin */
+}
+
+.label {
+    font-size: 1.5em;
+    margin-bottom: 5px; /* Reduced margin */
+    color: #343a40;
+}
+
+.value {
+    font-size: 3em;
+    background: #f7f7f7;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.action-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-register {
+    font-size: 1.2em;
+    padding: 10px 30px;
+}

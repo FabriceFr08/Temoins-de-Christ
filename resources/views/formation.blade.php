@@ -6,15 +6,42 @@
 
     <!-- Pricing Plan Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 75px;">
+
+        <div class="container py-5">
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>
+                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
+            </div>
+            <p class="h4">
+                Besoin de délivrance dans un domaine ? Veuillez cliquer ici
+            </p>
+            <a href="{{route('venir-a-christ')}}"  class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">J'ai besoin de délivrance</a>
+
+        </div>
         <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">FORMATIONS</h5>
-                <h1 class="display-5 mb-0">Nos différentes offres</h1>
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Nos formations</h4>
+                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
             </div>
             <div class="row g-5">
+{{--                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">--}}
+{{--                    <div class="position-relative border border-secondary rounded">--}}
+{{--                        <div class="bg-secondary text-center pt-5 pb-4">--}}
+{{--                            <h4 class="text-white">Comment Servir le Seigneur</h4>--}}
+
+{{--                        </div>--}}
+{{--                        <div class="text-center py-5">--}}
+{{--                            <p class="border-bottom border-light mb-2 pb-2">10 modules</p>--}}
+{{--                            <p class="border-bottom border-light mb-2 pb-2">Pouvoir servir le Seigneur</p>--}}
+{{--                            <p class="border-bottom border-light mb-2 pb-2">Impacter sa communauté</p>--}}
+{{--                            <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>--}}
+{{--                        </div>--}}
+{{--                        <a href="" class="btn btn-secondary py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
+                    <div class="position-relative border border-success rounded">
+                        <div class="bg-secondary text-center pt-5 pb-4">
                             <h3 class="text-white">Premiers Pas</h3>
 
                         </div>
@@ -28,7 +55,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="position-relative border border-secondary rounded">
+                    <div class="position-relative border border-success rounded">
                         <div class="bg-secondary text-center pt-5 pb-4">
                             <h4 class="text-white">Comment Servir le Seigneur</h4>
 
@@ -39,17 +66,17 @@
                             <p class="border-bottom border-light mb-2 pb-2">Impacter sa communauté</p>
                             <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>
                         </div>
-                        <a href="" class="btn btn-secondary py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
+                        <a href="" class="btn btn-success py-2 px-4 position-absolute top-100 start-50 translate-middle">S'inscrire</a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="position-relative border border-primary rounded">
-                        <div class="bg-primary text-center pt-5 pb-4">
+                    <div class="position-relative border border-success rounded">
+                        <div class="bg-secondary text-center pt-5 pb-4">
                             <h4 class="text-white">Devenir un Témoin de Christ</h4>
 
                         </div>
                         <div class="text-center py-5">
-                            <p class="border-bottom border-light mb-2 pb-2">11 modules</p>
+                            <p class="border-bottom border-light mb-2 pb-2">16  modules</p>
                             <p class="border-bottom border-light mb-2 pb-2">Accomplir la mission de DIEU</p>
                             <p class="border-bottom border-light mb-2 pb-2">Témoigner de Christ</p>
                             <p class="mb-2 pb-2">Examen prévu à la fin de chque module</p>

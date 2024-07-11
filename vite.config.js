@@ -5,9 +5,12 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-
+                // 'resources/css/app_admin.css',
+                'resources/js/app_admin.js',
                 'resources/css/app.css',
                 'resources/css/style.css',
+                'resources/css/reseau.css',
+                'resources/css/counter.css',
                 'resources/css/bootstrap.min.css',
                 'resources/lib/owlcarousel/assets/owl.carousel.min.css',
                 'resources/lib/lightbox/css/lightbox.min.css',
@@ -22,9 +25,19 @@ export default defineConfig({
                 'resources/lib/easing/easing.min.js',
                 'resources/js/main.js',
                 'resources/js/app.js',
+                'resources/js/formation.js',
+                'resources/js/reseau.js',
+                'resources/js/update.js',
+                'resources/js/counter.js',
+
             ],
             refresh: true,
         }),
+    ]
+    /*,
 
-    ],
+    server : {
+        host: '127.0.0.1',
+        port: 3000
+    }*/
 });
