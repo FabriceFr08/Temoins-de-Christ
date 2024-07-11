@@ -17,15 +17,13 @@ class Article extends Model
 
     ];
 
-   // Relation avec les commentaires
-   public function commentaires()
-   {
-       return $this->hasMany(Commentaire::class);
-   }
+    public function categorie()
+    {
+        return $this->belongsTo(CategorieArticle::class, 'categorie_article_id');
+    }
 
-   // Relation avec la catégorie d'article
-   public function categorie()
-   {
-       return $this->belongsTo(CategorieArticle::class, 'categorie_article_id');
-   }
+    public function commentaires()
+    {
+        return $this->hasMany(Commentaire::class);
+    }
 }
