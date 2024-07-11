@@ -1,3 +1,4 @@
+@vite('resources/js/search.js')
 @extends('layouts.app')
 
 @section('title', 'Services')
@@ -77,9 +78,9 @@
                         <div class="col-12 col-sm-6 col-md-3 mb-3">
                             <div class="form-floating">
                                 <select class="form-select" name="ville_id" id="ville" >
-                                    <option value="">Sélectionner</option>
+                                    <option value=""></option>
                                     @foreach($villes as $ville)
-                                        <option value="{{$ville->id}}" data-pays="{{$ville->pays_id}}" {{ request()->ville_id == $ville->id ? 'selected' : '' }}>{{$ville->nom}}</option>
+                                        <option value="{{$ville->id}}" data-pays="{{$ville->pays_id}}" style="display: none;" {{ request()->ville_id == $ville->id ? 'selected' : '' }}>{{$ville->nom}}</option>
                                     @endforeach
                                 </select>
                                 <label for="ville">Ville</label>

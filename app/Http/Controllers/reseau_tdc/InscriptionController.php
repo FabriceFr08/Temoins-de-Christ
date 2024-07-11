@@ -21,8 +21,8 @@ class InscriptionController extends Controller
 
     public function index(){
         $secteurs = Secteur::select(['id', 'nom'])->get();
-        $pays = Pays::select(['id', 'nom'])->get();
-        $villes = Ville::select(['id', 'nom'])->get();
+        $pays = Pays::select(['id', 'nom'])->orderBy('nom', 'asc')->get();
+        $villes = Ville::with('pays')->select('id', 'nom', 'pays_id')->get();
         $services = Service::with(['prestataire', 'secteur'])->get() /*->paginate(9)*/; // Paginate with 10 items per page
         foreach ($services as $service) {
             $service->hashedId = \Torann\Hashids\Facade\Hashids::encode($service->id);
