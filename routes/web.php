@@ -22,6 +22,7 @@ require __DIR__.'/auth.php';
 use App\Http\Controllers\CategorieArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\CommentaireController;
 use App\Http\Controllers\FormationController;
 
 
@@ -113,4 +114,16 @@ Route::middleware('auth')->resource('articles', ArticleController::class);  // R
 Route::middleware('auth')->resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
 
 
+
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
+Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
+Route::put('/articles/{article}', [ArticleController::class, 'update'])->name('articles.update');
+Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy');
+
+
+Route::post('/articles/{article}/commentaires', [CommentaireController::class, 'store'])->name('commentaires.store');
 
