@@ -45,6 +45,8 @@ class ArticleController extends Controller
             $articleData['image'] = str_replace('public/', '', $imagePath);
         }
 
+        dd($request, $articleData);
+
         Article::create($articleData);
 
         return redirect()->route('articles.index')->with('success', 'Article créé avec succès.');

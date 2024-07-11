@@ -13,7 +13,7 @@
                 <label for="commentaire">Votre commentaire:</label>
                 <textarea class="form-control" id="commentaire" name="commentaire" rows="3" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">Ajouter un commentaire</button>
+            <button type="submit" class="btn btn-secondary mt-4">Ajouter un commentaire</button>
         </form>
     </div>
 </div>
