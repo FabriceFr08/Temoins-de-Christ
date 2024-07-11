@@ -22,7 +22,6 @@ require __DIR__.'/auth.php';
 use App\Http\Controllers\CategorieArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FrontController;
-use App\Http\Controllers\CommentaireController;
 use App\Http\Controllers\FormationController;
 
 
@@ -115,6 +114,7 @@ Route::middleware('auth')->resource('villes', \App\Http\Controllers\VilleControl
 
 
 
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
 Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
@@ -125,4 +125,5 @@ Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->nam
 
 
 Route::post('/articles/{article}/commentaires', [CommentaireController::class, 'store'])->name('commentaires.store');
+
 
