@@ -57,7 +57,7 @@
                                                         <div class="text">{{$service->prestataire->ville->nom}}</div>
                                                     </li>
                                                     <li>
-                                                        <div class="title">Promotion:</div>
+                                                        <div class="title">Ministère:</div>
                                                         <div class="text">{{$service->prestataire->promotion}}</div>
                                                     </li>
                                                     @if($service->siteWeb != null)
