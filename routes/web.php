@@ -113,7 +113,7 @@ Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])->name
 Route::put('/articles/{article}', [ArticleController::class, 'update'])->name('articles.update');
 Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->name('articles.destroy');
 
-Route::post('/articles/{article}/commentaires', [CommentaireController::class, 'store'])->name('commentaires.store');
+// Route::post('/articles/{article}/commentaires', [CommentaireController::class, 'store'])->name('commentaires.store');
 
 
 
