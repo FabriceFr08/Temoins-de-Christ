@@ -3,8 +3,7 @@
         Ajouter un commentaire
     </div>
     <div class="card-body">
-<!--         <form action="{{ route('commentaires.store', $article->id) }}" method="POST"> -->
-        <form >
+        <form action="{{ route('commentaires.store', $article->id) }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="nom">Votre nom:</label>
