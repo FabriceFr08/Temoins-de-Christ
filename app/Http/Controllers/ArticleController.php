@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\CategorieArticle;
+use Illuminate\Support\Facades\Storage;
 
 // use App\Models\CategorieArticle;
 
