@@ -3,100 +3,64 @@
 @section('title', $article->titre)
 
 @section('content')
-    <style>
-        /* Styles for article page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
+<style>
+    /* Styles for article page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+    }
 
-        .article-container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .article-container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-        .article-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    .article-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
 
-        .article-title {
-            font-size: 24px;
-            color: #333;
-        }
+    .article-title {
+        font-size: 24px;
+        color: #333;
+    }
 
-        .article-author {
-            font-style: italic;
-            color: #666;
-        }
+    .article-author {
+        font-style: italic;
+        color: #666;
+    }
 
-        .article-content {
-            color: #444;
-            line-height: 1.6;
-        }
+    .article-content {
+        color: #444;
+        line-height: 1.6;
+    }
 
-        .article-content p {
-            margin-bottom: 20px;
-        }
+    .article-content p {
+        margin-bottom: 20px;
+    }
 
-        .article-date {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #999;
-        }
+    .article-date {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #999;
+    }
 
-        .alert-success {
-            color: #155724;
-            background-color: #d4edda;
-            border-color: #c3e6cb;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-    </style>
-
-    <div class="article-container">
-        <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
-        <h1 class="article-title">{{ $article->titre }}</h1>
-        <p class="article-author">Auteur de l'article</p>
-        <div class="article-content">
-            {!! $article->contenu !!}
-        </div>
-        <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
-
-        <!-- Afficher le message de confirmation -->
-        @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
-
-        <div class="card mt-4">
-            <div class="card-header">
-                Commentaires
-            </div>
-            <div class="card-body">
-                @foreach($article->commentaires as $commentaire)
-                    <div class="mb-3">
-                        <strong>{{ $commentaire->nom }}</strong> :
-                        <p>{{ $commentaire->commentaire }}</p>
-                        <small>Posté le {{ $commentaire->created_at->format('d/m/Y à H:i') }}</small>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-
-        @include('front.partials.comment_form', ['article' => $article])
-
+</style>
+<div class="article-container">
+    <img class="article-image" src="{{ asset('storage/' . $article->image) }}" alt="Image de l'article">
+    <h1 class="article-title">{{ $article->titre }}</h1>
+    <p class="article-author">Auteur de l'article</p>
+    <div class="article-content">
+        {!! $article->contenu !!} 
     </div>
+    <p class="article-date">Date de publication : {{ $article->datePublication }}</p>
+</div>
 
 @endsection
