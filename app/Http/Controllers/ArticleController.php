@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use App\Models\CategorieArticle;
+use Illuminate\Support\Facades\Storage;
 
 // use App\Models\CategorieArticle;
 
@@ -14,23 +15,6 @@ use App\Models\CategorieArticle;
 
 class ArticleController extends Controller
 {
-
-
-    // public function index()
-    // {
-    //     // $categories = CategorieArticle::all();
-    //     //dd($categories);
-
-    //     return view('back.blog.articles', [
-    //         // 'categories' => $categories
-    //     ]);
-    // }
-
-    // public function detail()
-    // {
-    //     return view('blog.blog_detail', [
-    //     ]);
-    // }
 
      // Afficher la liste des articles
      public function index()
@@ -124,8 +108,6 @@ class ArticleController extends Controller
 
        public function indexa()
     {
-        // $categories = CategorieArticle::all();
-        //dd($categories);
 
         return view('back.articles.articles', [
         ]);
