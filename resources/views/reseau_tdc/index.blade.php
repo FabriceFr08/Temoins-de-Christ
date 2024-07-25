@@ -30,7 +30,7 @@
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
-                            <audio controls autoplay>
+                            <audio id="background-audio" controls autoplay>
                                 <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mpeg">
                                 Votre navigateur ne supporte pas l'élément audio.
                             </audio>
@@ -90,4 +90,16 @@
         </div>
     </div>
     <!-- About End -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.currentTime = 0; // Reset audio to the beginning
+                audio.play().catch(function(error) {
+                    console.log("Audio autoplay prevented by the browser:", error);
+                });
+            }
+        });
+    </script>
 @endsection
