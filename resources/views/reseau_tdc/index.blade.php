@@ -95,9 +95,16 @@
         document.addEventListener("DOMContentLoaded", function() {
             var audio = document.getElementById('background-audio');
             if (audio) {
-                audio.currentTime = 0; // Reset audio to the beginning
                 audio.play().catch(function(error) {
                     console.log("Audio autoplay prevented by the browser:", error);
+                });
+
+                // Prevent audio from being downloaded
+                audio.addEventListener('play', function() {
+                    var src = audio.querySelector('source');
+                    src.setAttribute('src', src.getAttribute('src') + '?preventCache=' + new Date().getTime());
+                    audio.load();
+                    audio.play();
                 });
             }
         });
