@@ -20,7 +20,6 @@
 
 @section('content')
 
-
     <!-- About Start -->
     <div class="container-fluid py-1">
         <div class="container py-5">
