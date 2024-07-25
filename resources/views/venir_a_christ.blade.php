@@ -20,6 +20,7 @@
         </div>
     </div>
 
+    <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
@@ -30,31 +31,50 @@
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">VICTOIRE AVEC CHRIST</h4>
-                    <h6 class="display-6 mb-4"><strong class="text-success">Pour avoir la victoire dans tous les domaines</strong></h6>
-                    <h4>
-                        Bienvenue sur notre plateforme Victoire avec Christ. Nous sommes ravis de vous accueillir parmi nous. Pour bénéficier pleinement de toutes nos ressources et rester connecté avec la communauté, nous vous invitons à rejoindre notre groupe WhatsApp. Si vous n'êtes pas encore membre, veuillez cliquer sur le lien ci-dessous pour nous rejoindre. Cela vous permettra de recevoir des mises à jour régulières, de participer aux discussions et de partager des moments de prière et de soutien avec d'autres membres.<br/>
-                    </h4>
-                    <a href="https://chat.whatsapp.com/GTHzBqg6rLSHeZeVBzyb2n" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Rejoindre le groupe</a>
+                    <h6 class="display-6 mb-4">Présentation</h6>
+                    <p>
+                        <font size="4"> <!-- Vous pouvez ajuster le chiffre pour augmenter ou diminuer la taille -->
+                            VICTOIRE AVEC CHRIST
 
+                            Groupe dédié à la délivrance par la connaissance, l’intelligence et la sagesse (Jean 8:32).
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>&#x2794; Pour emmener la victoire de Christ dans chaque domaine de nos vies.</li>
+                                <li>&#x2794; Pour que le Troupeau du Père aille librement Le servir et L’adorer</li>
+                                <li>&#x2794; Pour enfin entrer dans notre héritage.</li>
+                                <li>&#x2794; Pour que le « Jacob que nous sommes », possède enfin ses possessions, à cause de la delivrance qu’il y a sur la montagne de Sion (Abdias 1:17).</li>
+                            </ul>
+
+                            <strong>Au nom suprême de Jésus</strong><br/>
+
+                            En Christ, et en rapport avec tous nos combats actuels : nous sommes plus que vainqueurs (Romains 8:37)<br/>
+
+                            Frère Elior Favor Kossia et Equipe <br/>
+                            Pour inviter les nouvelles personnes à rejoindre le groupe :
+                        </font>
+                    </p>
+
+
+                    <a class="btn btn-success rounded-pill text-white py-3 px-5" href="https://chat.whatsapp.com/GTHzBqg6rLSHeZeVBzyb2n">Rejoindre le groupe</a>
                 </div>
             </div>
         </div>
-
-        <div class="container py-5">
-            <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>
-                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
-            </div>
-            <p class="h4">
-                Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>
-
-            </p><br/>
-            <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire mon bilan</a>
-
-        </div>
-
-
     </div>
+    <!-- About End -->
+
+    {{--    <div class="container-fluid py-5">--}}
+    {{--        <div class="container py-5">--}}
+    {{--            <div class="pb-5">--}}
+    {{--                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>--}}
+    {{--                                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
+    {{--            </div>--}}
+    {{--            <p class="h4">--}}
+    {{--                Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>--}}
+
+    {{--            </p><br/>--}}
+    {{--            <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire mon bilan</a>--}}
+
+    {{--        </div>--}}
+    {{--    </div>--}}
 
 
 @endsection
