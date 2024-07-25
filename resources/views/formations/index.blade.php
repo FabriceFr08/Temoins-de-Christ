@@ -16,7 +16,7 @@
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
-                        <a class="btn btn-secondary rounded-pill text-white py-3 px-5" target="_blank" href="https://shorturl.at/xIeWD">S'inscrire</a>
+                        <a class="btn btn-secondary rounded-pill text-white py-3 px-5" target="_blank" href="">S'inscrire</a>
 
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="action-section">
-                <a class="btn btn-success rounded-pill text-white py-3 px-5" target="_blank" href="https://shorturl.at/xIeWD">Je m'inscris</a>
+                <a class="btn btn-success rounded-pill text-white py-3 px-5" target="_blank" href="">Je m'inscris</a>
 
             </div>
 
