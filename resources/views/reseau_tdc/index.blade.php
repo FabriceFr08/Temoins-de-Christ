@@ -30,10 +30,7 @@
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
-                        <audio id="background-audio" controls autoplay>
-                            <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mp4">
-                            Votre navigateur ne supporte pas l'élément audio.
-                        </audio>
+
                     </div>
                 </div>
             </div>
@@ -48,6 +45,11 @@
 
                 <div class="container" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Réseau ard-818</h4>
+
+                    <audio controls autoplay>
+                        <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mp4">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
 
                     <ol class="ol" style="--length: 4" role="list">
                         <li style="--i: 0">
