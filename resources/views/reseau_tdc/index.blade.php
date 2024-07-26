@@ -30,11 +30,10 @@
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
-                            <audio id="background-audio" controls autoplay>
-                                <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mp4">
-                                Votre navigateur ne supporte pas l'élément audio.
-                            </audio>
-
+                        <audio id="background-audio" controls autoplay>
+                            <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mp4">
+                            Votre navigateur ne supporte pas l'élément audio.
+                        </audio>
                     </div>
                 </div>
             </div>
@@ -91,26 +90,4 @@
     </div>
     <!-- About End -->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var audio = document.getElementById('background-audio');
-            if (audio) {
-                // Prevent multiple instances
-                if (!audio.getAttribute('data-loaded')) {
-                    audio.setAttribute('data-loaded', 'true');
-                    audio.play().catch(function(error) {
-                        console.log("Audio autoplay prevented by the browser:", error);
-                    });
-
-                    // Prevent audio from being downloaded
-                    audio.addEventListener('play', function() {
-                        var src = audio.querySelector('source');
-                        src.setAttribute('src', src.getAttribute('src') + '?preventCache=' + new Date().getTime());
-                        audio.load();
-                        audio.play();
-                    });
-                }
-            }
-        });
-    </script>
 @endsection
