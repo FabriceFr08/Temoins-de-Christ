@@ -31,7 +31,7 @@
                     {{--                </p>--}}
                     <div class="pt-2">
                         <audio controls autoplay>
-                            <source src="audio/pouvoir_de_prospere_reseau.mp3" type="audio/mp3">
+                            <source src="audio/pouvoir_de_prospere_reseau.mp3">
                             Votre navigateur ne supporte pas l'élément audio.
                         </audio>
                     </div>
