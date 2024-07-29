@@ -30,13 +30,13 @@
                     {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
                     {{--                </p>--}}
                     <div class="pt-2">
-                        <audio controls autoplay>
-                            <source src="audio/pouvoir_de_prospere_reseau.mp3">
-                            Votre navigateur ne supporte pas l'élément audio.
+                        <audio src="{{asset('audio/pouvoir_de_prospere_reseau.mp3')}}" controls autoplay>
                         </audio>
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -82,7 +82,6 @@
                     <p class="text-center">
                         <a href="{{ route('verificationCode') }}" class="text-decoration-none text-success fs-5">Déjà membre mais je souhaite modifier mes informations</a>
                     </p>
-
 
                 </div>
             </div>
