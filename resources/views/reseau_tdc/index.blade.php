@@ -45,6 +45,11 @@
                 <div class="container" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">Réseau ard-818</h4>
 
+                    <div class="pt-2">
+                        <audio src="{{asset('audio/pouvoir_de_prospere_reseau.mp3')}}" controls autoplay>
+                        </audio>
+                    </div>
+
                     <ol class="ol" style="--length: 4" role="list">
                         <li style="--i: 0">
                             <h3>Deutéronome 8:17-18 SEMEUR</h3>
@@ -79,10 +84,6 @@
                         <a href="{{ route('verificationCode') }}" class="text-decoration-none text-success fs-5">Déjà membre mais je souhaite modifier mes informations</a>
                     </p>
 
-                    <div class="pt-2">
-                        <audio src="{{asset('audio/pouvoir_de_prospere_reseau.mp3')}}" controls autoplay>
-                        </audio>
-                    </div>
 
                 </div>
             </div>
