@@ -28,10 +28,7 @@
                     <h4 class="text-secondary text-uppercase sub-title fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 3px;">Temoins de Christ | ACTES 1:8</h4>
                     <h1 class="display-1  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Réseau ARD-818</h1>
 
-                    <div class="pt-2">
-                        <audio src="{{asset('audio/pouvoir_de_prospere_reseau.mp3')}}" controls autoplay>
-                        </audio>
-                    </div>
+
 
                 </div>
             </div>
@@ -81,6 +78,11 @@
                     <p class="text-center">
                         <a href="{{ route('verificationCode') }}" class="text-decoration-none text-success fs-5">Déjà membre mais je souhaite modifier mes informations</a>
                     </p>
+
+                    <div class="pt-2">
+                        <audio src="{{asset('audio/pouvoir_de_prospere_reseau.mp3')}}" controls autoplay>
+                        </audio>
+                    </div>
 
                 </div>
             </div>
