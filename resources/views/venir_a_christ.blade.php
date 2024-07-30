@@ -53,7 +53,6 @@
                         </font>
                     </p>
 
-
                     <a class="btn btn-success rounded-pill text-white py-3 px-5" href="https://chat.whatsapp.com/GTHzBqg6rLSHeZeVBzyb2n">Rejoindre le groupe</a>
                 </div>
             </div>
@@ -61,20 +60,31 @@
     </div>
     <!-- About End -->
 
-    {{--    <div class="container-fluid py-5">--}}
-    {{--        <div class="container py-5">--}}
-    {{--            <div class="pb-5">--}}
-    {{--                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>--}}
-    {{--                                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
-    {{--            </div>--}}
-    {{--            <p class="h4">--}}
-    {{--                Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>--}}
+    <!-- Counter Facts Start -->
+    <div class="container-fluid counter-facts py-5">
+        <div class="container">
+            <div class="row">
+                <p class="h4">
+                    Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>
+                </p>
+                <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-3 px-5">Je fais mon bilan</a>
+            </div>
+        </div>
+    </div>
+    <!-- Counter Facts End -->
 
-    {{--            </p><br/>--}}
-    {{--            <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire mon bilan</a>--}}
 
-    {{--        </div>--}}
-    {{--    </div>--}}
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5">
+        <div class="container py-5">
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">TEMOIGNAGES</h4>
+                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">What Our Clients Say</h1>--}}
+            </div>
+
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
 
 @endsection
