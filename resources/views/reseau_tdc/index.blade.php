@@ -20,6 +20,31 @@
 
 @section('content')
 
+
+
+    <div class="header-carousel owl-carousel">
+        <div class="header-carousel-item">
+            <img src="{{asset('img/reseau/ard818.jpg')}}" class="img-fluid w-100" alt="Image">
+            <div class="carousel-caption">
+                <div class="carousel-caption-content p-3" style="max-width: 900px;">
+                    <h4 class="text-secondary text-uppercase sub-title fw-bold mb-4 wow fadeInUp" data-wow-delay="0.1s" style="letter-spacing: 3px;">Temoins de Christ | ACTES 1:8</h4>
+                    <h1 class="display-1  text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">Réseau ARD-818</h1>
+                    {{--                <p class="fs-5 wow fadeInUp" data-wow-delay="0.5s">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,--}}
+                    {{--                </p>--}}
+                    <div class="pt-2">
+{{--                            <audio id="background-audio" controls autoplay>--}}
+{{--                                <source src="video/pouvoir_de_prospere_reseau.mp4" type="audio/mpeg">--}}
+{{--                                Votre navigateur ne supporte pas l'élément audio.--}}
+{{--                            </audio>--}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- About Start -->
     <div class="container-fluid py-1">
         <div class="container py-5">
@@ -29,6 +54,11 @@
                     <h4 class="text-secondary sub-title fw-bold">Réseau ard-818</h4>
 
                     <ol class="ol" style="--length: 4" role="list">
+                        <li style="--i: 0">
+                            <h3>Deutéronome 8:17-18 SEMEUR</h3>
+                            <p style="font-size: 20px">Prends donc garde de ne pas te dire : « C'est par mes propres forces et ma puissance que j'ai acquis toutes ces richesses. » 18 Souviens-toi au contraire que c'est l'Eternel ton Dieu qui te donne la force de parvenir à la prospérité et qu'il le fait aujourd'hui pour tenir envers toi les engagements qu'il a pris par serment en concluant alliance avec tes ancêtres.</p>
+
+                        </li>
                         <li style="--i: 1">
                             <h3>Qu'est-ce que le réseau ARD-818 ?</h3>
                             <p>Le Réseau ARD-818, ou Réseau Alliance de Richesse Deutéronome 8:18, est votre portail vers l'abondance. Il s'agit d'une communauté dynamique de partage et de croissance, bien plus qu'un simple réseau de mise en relation.</p>
@@ -63,4 +93,16 @@
         </div>
     </div>
     <!-- About End -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.currentTime = 0; // Reset audio to the beginning
+                audio.play().catch(function(error) {
+                    console.log("Audio autoplay prevented by the browser:", error);
+                });
+            }
+        });
+    </script>
 @endsection
