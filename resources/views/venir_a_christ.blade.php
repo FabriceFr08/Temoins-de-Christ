@@ -53,7 +53,6 @@
                         </font>
                     </p>
 
-
                     <a class="btn btn-success rounded-pill text-white py-3 px-5" href="https://chat.whatsapp.com/GTHzBqg6rLSHeZeVBzyb2n">Rejoindre le groupe</a>
                 </div>
             </div>
@@ -61,20 +60,112 @@
     </div>
     <!-- About End -->
 
-{{--    <div class="container-fluid py-5">--}}
-{{--        <div class="container py-5">--}}
-{{--            <div class="pb-5">--}}
-{{--                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Bilan Spirituel</h4>--}}
-{{--                                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">S'inscrire</h1>--}}
+    <!-- Counter Facts Start -->
+    <div class="container-fluid counter-facts py-5">
+        <div class="container">
+            <div class="row">
+                <p class="h4">
+                    Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>
+                </p>
+                <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-3 px-5">Je fais mon bilan</a>
+            </div>
+        </div>
+    </div>
+    <!-- Counter Facts End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5">
+        <div class="container py-5">
+            <div class="pb-5">
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">TEMOIGNAGES</h4>
+{{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">What Our Clients Say</h1>--}}
+            </div>
+{{--            <div class="owl-carousel testimonial-carousel pt-5 wow fadeInUp" data-wow-delay="0.2s">--}}
+{{--                <div class="testimonial-item border text-center rounded">--}}
+{{--                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">--}}
+{{--                        <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="img">--}}
+{{--                    </div>--}}
+{{--                    <div class="position-relative" style="margin-top: 140px;">--}}
+{{--                        <h5 class="mb-0">Person Name</h5>--}}
+{{--                        <p>Profession</p>--}}
+{{--                        <div class="d-flex justify-content-center">--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star"></i>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="testimonial-content p-4">--}}
+{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="testimonial-item border text-center rounded">--}}
+{{--                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">--}}
+{{--                        <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="img">--}}
+{{--                    </div>--}}
+{{--                    <div class="position-relative" style="margin-top: 140px;">--}}
+{{--                        <h5 class="mb-0">Person Name</h5>--}}
+{{--                        <p>Profession</p>--}}
+{{--                        <div class="d-flex justify-content-center">--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star"></i>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="testimonial-content p-4">--}}
+{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="testimonial-item border text-center rounded">--}}
+{{--                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">--}}
+{{--                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" alt="img">--}}
+{{--                    </div>--}}
+{{--                    <div class="position-relative" style="margin-top: 140px;">--}}
+{{--                        <h5 class="mb-0">Person Name</h5>--}}
+{{--                        <p>Profession</p>--}}
+{{--                        <div class="d-flex justify-content-center">--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star"></i>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="testimonial-content p-4">--}}
+{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="testimonial-item border text-center rounded">--}}
+{{--                    <div class="rounded-circle position-absolute" style="width: 100px; height: 100px; top: 25px; left: 50%; transform: translateX(-50%);">--}}
+{{--                        <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" alt="img">--}}
+{{--                    </div>--}}
+{{--                    <div class="position-relative" style="margin-top: 140px;">--}}
+{{--                        <h5 class="mb-0">Person Name</h5>--}}
+{{--                        <p>Profession</p>--}}
+{{--                        <div class="d-flex justify-content-center">--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star text-secondary"></i>--}}
+{{--                            <i class="fas fa-star"></i>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="testimonial-content p-4">--}}
+{{--                        <p class="fs-5 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati eiusmod tempor incididunt.--}}
+{{--                        </p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 {{--            </div>--}}
-{{--            <p class="h4">--}}
-{{--                Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>--}}
-
-{{--            </p><br/>--}}
-{{--            <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Faire mon bilan</a>--}}
-
-{{--        </div>--}}
-{{--    </div>--}}
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
 
 @endsection

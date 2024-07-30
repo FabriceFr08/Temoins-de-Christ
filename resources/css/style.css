@@ -386,7 +386,7 @@
 /*** Counter Facts Start ***/
 
 .counter-facts {
-    background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 0.7)), url(../img/counter-bg.jpg);
+    background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, 0.7)), url(../img/delivrance.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -416,33 +416,6 @@
     border-radius: 10px 10px 0 0;
     background-color: var(--bs-primary);
 
-}
-.counter-facts .counter .counter-icon {
-    position: relative;
-    width: 120px;
-    height: 100px;
-    border-radius: 10px 10px 0 0;
-    font-size: 50px;
-    line-height: 90px;
-    color: var(--bs-primary) !important;
-    display: flex;
-
-}
-
-.counter-facts .counter h3 {
-    color: var(--bs-white);
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0 0 5px 0;
-    display: flex;
-}
-.counter-facts .counter .counter-value {
-    font-size: 30px;
-    font-weight: 700;
-    display: block;
-    color: var(--bs-secondary);
 }
 
 @media screen and (max-width: 1200px) {
