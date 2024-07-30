@@ -33,7 +33,6 @@ const startTimer = () => {
 
         if (timeLeft.total <= 0) {
             clearInterval(interval);
-            alert('Formation débutée!');
         }
     }, 1);
 };
