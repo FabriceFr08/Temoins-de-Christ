@@ -83,8 +83,11 @@
                     <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-3 px-5">Je fais mon bilan</a>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bDfmAVN7024?si=ezP-omDq7LcAMMRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/bDfmAVN7024?si=ezP-omDq7LcAMMRQ" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
