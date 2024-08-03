@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{ route('index') }}" class="nav-item nav-link {{ request()->routeIs('index') ? 'active' : '' }}">Accueil</a>
-                {{-- <a href="{{ route('blog') }}" class="nav-item nav-link {{ request()->routeIs('blog') ? 'active' : '' }}">Blog</a> --}}
                 <a href="{{ route('venir-a-christ') }}" class="nav-item nav-link {{ request()->routeIs('venir-a-christ') ? 'active' : '' }}">Venir à Christ</a>
                 <a href="{{ route('formations.index') }}" class="nav-item nav-link {{ request()->routeIs('formations.index') ? 'active' : '' }}">Se former</a>
                 <a href="{{ route('blog') }}" class="nav-item nav-link {{ request()->routeIs('blog') ? 'active' : '' }}">Se déployer</a>
@@ -22,8 +21,8 @@
                         <a href="{{ route('but-vision-mission') }}#mission" class="dropdown-item">Notre Mission</a>
                     </div>
                 </div>
-                <a href="{{ route('reseau') }}" class="nav-item nav-link {{ request()->routeIs('reseau') ? 'active' : '' }}">Réseau ARD-818</a>
-                {{-- <a href="contact.html" class="nav-item nav-link">Articles</a> --}}
+                <a href="{{ route('reseau') }}" class="nav-item nav-link {{ request()->routeIs('reseau') ? 'active' : '' }}">ARD-818</a>
+                <a href="{{ route('victoire_pour_christ') }}" class="nav-item nav-link {{ request()->routeIs('victoire_pour_christ') ? 'active' : '' }}">Victoire avec Christ</a>
             </div>
             <a href="{{ route('don') }}" class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0 {{ request()->routeIs('don') ? 'active' : '' }}">Faire un don</a>
         </div>

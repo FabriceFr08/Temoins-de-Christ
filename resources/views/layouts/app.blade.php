@@ -71,10 +71,6 @@
 @include('.partials.navbar')
 
 
-
-
-{{--@include('.partials.banner')--}}
-
 @yield('content')
 
 @include('.partials.footer')
@@ -82,7 +78,7 @@
 @include('.partials.copyright')
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-success btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+{{--<a href="#" class="btn btn-success btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>--}}
 
 
 <!-- JavaScript Libraries -->
