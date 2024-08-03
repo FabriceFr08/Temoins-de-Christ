@@ -20,13 +20,13 @@
         </div>
     </div>
 
-    <!-- About Start -->
+    <!-- Présentation de VAC -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="border bg-secondary rounded">
-                        <img src="img/LOGO_Transparent.png" class="img-fluid w-100 rounded" alt="Image">
+                    <div class="">
+                        <img src="img/LOGO VAC.jpg" class="img-fluid w-100 " alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
@@ -58,33 +58,52 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- Fin section -->
 
-    <!-- Counter Facts Start -->
-    <div class="container-fluid counter-facts py-5">
-        <div class="container">
-            <div class="row">
-                <p class="h4">
-                    Faire un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie<br/>
-                </p>
-                <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-3 px-5">Je fais mon bilan</a>
+    <!-- Section témoignage -->
+    <div class="container-fluid py-4">
+        <div class="container py-4">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <h4 class="text-secondary sub-title fw-bold">BILAN SPIRITUEL</h4>
+                    <p>
+                        <font size="4"> <!-- Vous pouvez ajuster le chiffre pour augmenter ou diminuer la taille -->
+                            Vous sentez-vous encore en proie à des combats spirituels non résolus ? Il est temps de prendre des mesures et de chercher votre délivrance. Voici comment nous pouvons vous aider :
+
+                            <ul style="list-style-type: none; padding-left: 0;">
+                                <li>&#x2794; Recherchez votre délivrance.</li>
+                                <li>&#x2794; Comprenez que s’ils ont encore des combats à finir, ils doivent venir chercher et compléter leur délivrance.</li>
+                                <li>&#x2794; Faites un bilan spirituel afin de découvrir les principaux combats spirituels à achever dans votre vie.</li>
+                                <li>&#x2794; Prenez en main votre transformation spirituelle dès aujourd'hui.</li>
+                            </ul>
+
+                        </font>
+                    </p>
+
+                    <a href="https://shorturl.at/hmMW9" target="_blank" class="btn btn-success rounded-pill text-white py-3 px-5">Je fais mon bilan</a>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/bDfmAVN7024?si=ezP-omDq7LcAMMRQ" title="YouTube video player" allowfullscreen></iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- Counter Facts End -->
+    <!-- Fin section-->
 
+{{--    <!-- Testimonial Start -->--}}
+{{--    <div class="container-fluid testimonial py-5">--}}
+{{--        <div class="container py-5">--}}
+{{--            <div class="pb-5">--}}
+{{--                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">TEMOIGNAGES</h4>--}}
+{{--                --}}{{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">What Our Clients Say</h1>--}}
+{{--            </div>--}}
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial py-5">
-        <div class="container py-5">
-            <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">TEMOIGNAGES</h4>
-                {{--                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">What Our Clients Say</h1>--}}
-            </div>
-
-        </div>
-    </div>
-    <!-- Testimonial End -->
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <!-- Testimonial End -->--}}
 
 
 @endsection

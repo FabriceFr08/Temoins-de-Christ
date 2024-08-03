@@ -4,9 +4,6 @@ use App\Http\Controllers\CommentaireController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -110,7 +107,6 @@ Route::resource('formations', FormationController::class)->except('destroy', 'sh
 
 
 Route::middleware('auth')->resource('categories', CategorieArticleController::class);  // Routes pour les catégories d'articles
-//Route::middleware('auth')->resource('articles', ArticleController::class);  // Routes pour les articles
 Route::middleware('auth')->resource('villes', \App\Http\Controllers\VilleController::class);  // Routes pour les villes
 
 
