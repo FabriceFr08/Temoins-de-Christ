@@ -95,7 +95,7 @@ Route::get('/don', function () {
 })->name('don');
 
 
-Route::get('/se-deployer', [FrontController::class, 'articles'])->name('se-deployer');
+Route::get('/blog', [FrontController::class, 'articles'])->name('blog');
 
 Route::get('/accueil', [FrontController::class, 'index'])->name('index');
 Route::get('/article/{article}', [FrontController::class, 'showArticle'])->name('article.show');
