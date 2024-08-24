@@ -12,7 +12,7 @@
                 <a href="{{ route('index') }}" class="nav-item nav-link {{ request()->routeIs('index') ? 'active' : '' }}">Accueil</a>
                 <a href="{{ route('venir-a-christ') }}" class="nav-item nav-link {{ request()->routeIs('venir-a-christ') ? 'active' : '' }}">Venir à Christ</a>
                 <a href="{{ route('formations.index') }}" class="nav-item nav-link {{ request()->routeIs('formations.index') ? 'active' : '' }}">Se former</a>
-                <a href="{{ route('se-deployer') }}" class="nav-item nav-link {{ request()->routeIs('se-deployer') ? 'active' : '' }}">Se déployer</a>
+                <a href="{{ route('blog') }}" class="nav-item nav-link {{ request()->routeIs('blog') ? 'active' : '' }}">Se déployer</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('but-vision-mission') ? 'active' : '' }}" data-bs-toggle="dropdown">A propos</a>
                     <div class="dropdown-menu m-0">

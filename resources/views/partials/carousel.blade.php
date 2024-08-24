@@ -42,7 +42,7 @@
 {{--                </p>--}}
                 <div class="pt-2">
 {{--                    <a class="btn btn-success rounded-pill text-white py-3 px-5 m-2 wow fadeInLeft" data-wow-delay="0.1s" href="#">Join Now</a>--}}
-                    <a class="btn btn-secondary rounded-pill text-white py-3 px-5 m-2 wow fadeInRight" data-wow-delay="0.3s" href="{{route('se-deployer')}}">Embarquez</a>
+                    <a class="btn btn-secondary rounded-pill text-white py-3 px-5 m-2 wow fadeInRight" data-wow-delay="0.3s" href="{{route('blog')}}">Embarquez</a>
                 </div>
             </div>
         </div>

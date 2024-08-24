@@ -23,53 +23,13 @@
         </div>
     </div>
 
-    <!-- Présentation de VAC -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-                    <div class="">
-                        <img src="img/don_operation.jpg" class="img-fluid w-100 " alt="Image">
-                    </div>
-                </div>
-                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
-                    <h4 class="text-secondary sub-title fw-bold">SE DEPLOYER</h4>
-{{--                    <h6 class="display-6 mb-4">SE DÉPLOYER AVEC NOTRE DON D’OPÉRATION, DANS NOTRE APPEL, NOTRE MISSION AVEC NOTRE VISION DIVINE POUR ACCOMPLIR LES BONNES OEUVRES QUE DIEU A PRÉPARÉES POUR NOUS</h6>--}}
-                    <p>
-                        <font size="4"> <!-- Vous pouvez ajuster le chiffre pour augmenter ou diminuer la taille -->
-                            Dans la proclamation de la bonne nouvelle, le service, l’exhortation, l’enseignement, le donner, le leadership et la compassion.
-
-                            Romains 12:6:8 Français Courant :
-
-                            «  Nous avons des dons différents à utiliser selon ce que Dieu a accordé gratuitement à chacun : L'un de nous a-t-il le don de transmettre des messages reçus de la part de Dieu ? Qu'il le fasse selon la foi.
-                            7 Un autre a-t-il le don de servir ? Qu'il serve. Quelqu'un a-t-il le don d'enseigner ? Qu'il enseigne.
-                            8 Quelqu'un a-t-il le don d'encourager les autres ? Qu'il les encourage. Que celui qui donne ses biens le fasse avec une entière générosité. Que celui qui dirige le fasse avec soin. Que celui qui aide les malheureux le fasse avec joie ».
-
-                            Chaque être humain a un don d’opération. Celui devient efficace et développé quand nous venons à Christ, et que nous recevons le baptême du Saint-Esprit, qui nous confère alors l’onction du Saint-Esprit pour le ministère.
-
-                            Mais ce don fondateur est déjà en nous depuis notre naissance, même si la majorité d’être humains, y compris les rachetés les ignorent.
-
-                            Si toi aussi tu veux enfin découvrir ton don d’opération pour couler avec en tant que Témoins de Christ qui porte beaucoup de fruits : viens vite t’inscrire à notre formation , et tu comprendras enfin le but de ton existence et pourquoi tu es si précieux dans le corps du Christ.<br/>
-
-                            <strong>Frère Elior Favor Kossia</strong>
-                        </font>
-                    </p>
-
-{{--                    <a class="btn btn-success rounded-pill text-white py-3 px-5" href="https://chat.whatsapp.com/GTHzBqg6rLSHeZeVBzyb2n">Rejoindre le groupe</a>--}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Fin section -->
-
     <!-- Blogs Start -->
     <div class="container-fluid blog pb-5">
         <div class="container pb-5">
 
             <div class="pb-5">
-                <h4 class="text-secondary sub-title fw-bold wow fadeInUp mt-4" data-wow-delay="0.1s">Articles</h4>
-                <h6 class="mb-0 wow fadeInUp" data-wow-delay="0.3s"><big><big>Nos articles ci-dessous sont en fait les expériences de ceux qui ont déjà complété leur formation ou sont en train de l’achever, en agissant comme Témoins de Christ là où le Seigneur les a positionné, ce qui leur vaut plusieurs témoignages. Alléluia !</big></big></h6>
-                </h6>
+                <h4 class="text-secondary sub-title fw-bold wow fadeInUp mt-4" data-wow-delay="0.1s">Blog</h4>
+                <h1 class="display-6 mb-0 wow fadeInUp" data-wow-delay="0.3s">Nos Articles</h1>
             </div>
             <div class="blog-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
                 @foreach($articles as $article)
