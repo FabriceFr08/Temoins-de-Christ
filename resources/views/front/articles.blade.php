@@ -75,7 +75,7 @@
                 @foreach($articles as $article)
                     <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
                         <div class="blog-img rounded-top">
-                            <img src="{{ asset('storage/' . $article->image ) }}" class="img-fluid rounded-top w-100" alt="Image">
+                            <img src="{{ asset('storage/' . $article->image) }}" class="img-fluid rounded-top w-100" alt="Image">
                         </div>
                         <div class="bg-light rounded-bottom p-4">
                             <div class="d-flex justify-content-between mb-4">
