@@ -47,8 +47,10 @@ class ArticleController extends Controller
 
          // Gérer l'ajout d'une image
          if ($request->hasFile('image')) {
-             $imagePath = $request->file('image')->store('images/articles');
-             $articleData['image'] = $imagePath;
+             $fileName = $request->file('image')->getClientOriginalName();
+             $imagePath = $request->file('image')->storeAs('public/images/articles', $fileName);
+             $articleData['image'] = str_replace('public/', '', $imagePath);
+
          }
 
          Article::create($articleData);
