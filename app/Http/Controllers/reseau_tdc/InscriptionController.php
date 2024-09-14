@@ -56,7 +56,6 @@ class InscriptionController extends Controller
             $prestataire = $request->only(['nom', 'prenom', 'email', 'telephone', 'ville_id', 'promotion', 'photo']);
             $service = $request->only(['nomService', 'siteWeb', 'tiktok', 'facebook', 'instagram', 'commentaire', 'secteur_id']);
 
-
             if ($request->hasFile('photo')){
                 $fileName = $request->file('photo')->getClientOriginalName();
 

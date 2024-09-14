@@ -32,4 +32,3 @@ class FrontController extends Controller
         return view('front.articles', compact('articles'));
     }
 }
- 
